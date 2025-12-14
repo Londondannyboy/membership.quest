@@ -12,44 +12,43 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mobility Scooter Insurance UK | Compare Quotes from £4/month",
-    template: "%s | Mobility Scooter Insurance UK"
+    default: "Yoga Teacher Insurance UK 2025 | Compare Quotes from £15/month",
+    template: "%s | Yoga Teacher Insurance UK"
   },
-  description: "Mobility scooter insurance UK - compare quotes from specialist insurers. Get insurance for mobility scooter, powerchair or wheelchair. Cheap cover from £4/month with theft, damage & breakdown protection.",
+  description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.",
   keywords: [
-    "mobility scooter insurance",
-    "mobility scooter insurance uk",
-    "insurance for mobility scooter",
-    "insurance mobility scooter",
-    "scooter mobility insurance",
-    "insurance for mobility scooter uk",
-    "do you need insurance for mobility scooter",
-    "cheap mobility scooter insurance",
-    "best mobility scooter insurance uk",
-    "compare mobility scooter insurance",
-    "class 3 mobility scooter insurance",
-    "mobility scooter insurance and breakdown cover",
-    "electric wheelchair insurance"
+    "yoga teacher insurance",
+    "yoga teacher insurance uk",
+    "yoga instructor insurance",
+    "insurance for yoga teachers",
+    "insurance for yoga teachers uk",
+    "yoga teachers insurance",
+    "professional indemnity yoga",
+    "yoga teacher liability insurance",
+    "yoga studio insurance",
+    "best yoga teacher insurance uk",
+    "compare yoga teacher insurance",
+    "yoga training insurance"
   ],
-  authors: [{ name: "Mobility Scooter Insurance UK" }],
-  creator: "Mobility Scooter Insurance UK",
-  publisher: "Mobility Scooter Insurance UK",
-  metadataBase: new URL("https://mobilityscooterinsurance.quest"),
+  authors: [{ name: "Yoga Teacher Insurance UK" }],
+  creator: "Yoga Teacher Insurance UK",
+  publisher: "Yoga Teacher Insurance UK",
+  metadataBase: new URL("https://yogateacherinsurance.quest"),
   alternates: {
-    canonical: "https://mobilityscooterinsurance.quest",
+    canonical: "https://yogateacherinsurance.quest",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://mobilityscooterinsurance.quest",
-    siteName: "Mobility Scooter Insurance UK",
-    title: "Mobility Scooter Insurance UK | Best Quotes 2025",
-    description: "Mobility scooter insurance UK - get insurance for mobility scooter from specialist providers. Compare cheap quotes with theft, accidental damage & breakdown cover.",
+    url: "https://yogateacherinsurance.quest",
+    siteName: "Yoga Teacher Insurance UK",
+    title: "Yoga Teacher Insurance UK 2025 | Compare Quotes",
+    description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors & studio owners.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobility Scooter Insurance UK | Compare Quotes",
-    description: "Mobility scooter insurance from UK specialists. Compare cheap quotes for scooter, powerchair & wheelchair cover.",
+    title: "Yoga Teacher Insurance UK | Compare Quotes",
+    description: "Yoga teacher insurance from UK specialists. Compare quotes for yoga instructors, trainers & studio owners.",
   },
   robots: {
     index: true,
@@ -67,40 +66,40 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://mobilityscooterinsurance.quest/#website",
-  name: "Mobility Scooter Insurance UK",
-  alternateName: ["Insurance for Mobility Scooter UK", "Scooter Mobility Insurance"],
-  url: "https://mobilityscooterinsurance.quest",
-  description: "Mobility scooter insurance UK comparison service. Get insurance for mobility scooter, powerchair or electric wheelchair from specialist UK insurers.",
+  "@id": "https://yogateacherinsurance.quest/#website",
+  name: "Yoga Teacher Insurance UK",
+  alternateName: ["Yoga Instructor Insurance UK", "Insurance for Yoga Teachers", "Professional Indemnity Yoga"],
+  url: "https://yogateacherinsurance.quest",
+  description: "Yoga teacher insurance UK comparison service. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners from specialist UK insurers.",
   inLanguage: "en-GB",
   publisher: {
     "@type": "Organization",
-    name: "Mobility Scooter Insurance UK",
-    url: "https://mobilityscooterinsurance.quest"
+    name: "Yoga Teacher Insurance UK",
+    url: "https://yogateacherinsurance.quest"
   }
 }
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://mobilityscooterinsurance.quest/#service",
-  name: "Mobility Scooter Insurance UK Comparison",
-  alternateName: "Insurance for Mobility Scooter Comparison",
-  description: "Compare mobility scooter insurance UK quotes from specialist providers. Find cheap insurance for mobility scooter with theft, damage and breakdown cover. Compare Surewise, Age UK, Mark Bates and more.",
+  "@id": "https://yogateacherinsurance.quest/#service",
+  name: "Yoga Teacher Insurance UK Comparison",
+  alternateName: "Insurance for Yoga Teachers Comparison",
+  description: "Compare yoga teacher insurance UK quotes from specialist providers. Find professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Compare Yoga Alliance, Balens, specialist providers and more.",
   provider: {
     "@type": "Organization",
-    name: "Mobility Scooter Insurance UK"
+    name: "Yoga Teacher Insurance UK"
   },
   areaServed: {
     "@type": "Country",
     name: "United Kingdom"
   },
-  serviceType: "Mobility Scooter Insurance Comparison",
+  serviceType: "Yoga Teacher Insurance Comparison",
   offers: {
     "@type": "Offer",
     price: "0",
     priceCurrency: "GBP",
-    description: "Free mobility scooter insurance quotes UK"
+    description: "Free yoga teacher insurance quotes UK"
   }
 }
 
@@ -111,8 +110,8 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Mobility Scooter Insurance",
-      item: "https://mobilityscooterinsurance.quest"
+      name: "Yoga Teacher Insurance",
+      item: "https://yogateacherinsurance.quest"
     }
   ]
 }

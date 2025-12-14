@@ -1,0 +1,29 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Yoga Alliance Insurance | Official Member Cover",
+  description: "Yoga Alliance insurance for registered members in the UK. Official professional indemnity and public liability.",
+  alternates: {
+    canonical: "https://yogateacherinsurance.quest/yoga-alliance-insurance-uk",
+  },
+}
+
+export default function Page() {
+  return (
+    <div className="min-h-screen py-16 px-4">
+      <article className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-6">Yoga Alliance Insurance</h1>
+        <p className="text-lg text-slate-400 mb-8">Official insurance for Yoga Alliance registered members. Learn about coverage and how to get insured.</p>
+        
+        <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6 mb-8">
+          <a href="/#calculator" className="inline-block px-8 py-3 bg-blue-500 text-white font-semibold rounded-xl hover:bg-blue-600 transition-colors">Get Quote Now</a>
+        </div>
+
+        <div className="prose prose-invert max-w-none">
+          <h2 className="text-2xl font-bold text-white mb-4">Learn More</h2>
+          <p className="text-slate-400">Browse our comprehensive guides to find the insurance coverage that best fits your needs. Compare providers, learn about coverage types, and get affordable quotes from specialist UK insurers.</p>
+        </div>
+      </article>
+    </div>
+  )
+}

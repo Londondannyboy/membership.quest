@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import { QuoteCalculator } from '@/components/QuoteCalculator'
 
 export const metadata: Metadata = {
-  title: 'Mobility Scooter Insurance UK | Compare Quotes from £4/month',
-  description: 'Mobility scooter insurance UK - compare quotes from specialist insurers. Get insurance for mobility scooter, powerchair or wheelchair. Cheap cover from £4/month with theft, damage & breakdown protection.',
+  title: 'Yoga Teacher Insurance UK 2025 | Compare Quotes from £15/month',
+  description: 'Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.',
   alternates: {
-    canonical: 'https://mobilityscooterinsurance.quest',
+    canonical: 'https://yogateacherinsurance.quest',
   },
 }
 
@@ -15,58 +15,66 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do I legally need mobility scooter insurance in the UK?',
+      name: 'Do yoga teachers need insurance in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No, mobility scooter insurance is not a legal requirement in the UK. However, it is highly recommended to protect your investment. Class 3 scooters must be registered with DVLA but don\'t require compulsory insurance like cars do.',
+        text: 'While not legally required by law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against claims from students and provides essential financial protection.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does mobility scooter insurance cost?',
+      name: 'What does yoga teacher insurance cover?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Mobility scooter insurance typically costs between £50 and £150 per year, depending on the scooter\'s value, cover level, and your location. That works out to roughly £4-£12 per month. Cheap mobility scooter insurance options start from around £40 per year for basic theft cover.',
+        text: 'Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections. Many providers also offer additional coverage for yoga alliances and online classes.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does mobility scooter insurance cover?',
+      name: 'How much does yoga teacher insurance cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Comprehensive mobility scooter insurance typically covers theft, accidental damage, fire damage, vandalism, and public liability. Many policies also offer optional breakdown cover and personal accident protection.',
+        text: 'Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the difference between Class 2 and Class 3 mobility scooters?',
+      name: 'What is the difference between professional indemnity and public liability insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Class 2 scooters have a maximum speed of 4mph and are for pavement use only - they don\'t need registration. Class 3 scooters can travel up to 8mph on roads, must be registered with DVLA, and need lights, indicators, and a horn.',
+        text: 'Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. Combined policies are often more cost-effective than buying separately.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Will my home insurance cover my mobility scooter?',
+      name: 'Do trainee yoga teachers need insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Some home insurance policies include limited cover for mobility scooters, but it\'s often restricted to theft from your home only. Specialist mobility scooter insurance provides more comprehensive protection including cover away from home, accidental damage, and breakdown.',
+        text: 'Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I insure a second-hand mobility scooter?',
+      name: 'What is yoga teacher liability insurance?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, most insurers will cover second-hand mobility scooters. You\'ll need to provide details of the scooter\'s age, value, and condition. Insurance will be based on current market value rather than the original purchase price.',
+        text: 'Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is mobility scooter breakdown cover?',
+      name: 'Can hot yoga or aerial yoga be insured?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Mobility scooter breakdown cover provides roadside assistance if your scooter breaks down while you\'re out. It typically includes recovery to your home or a repair centre. Many insurers like Surewise and Age UK offer this as an add-on.',
+        text: 'Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. Hot yoga requires coverage for heat-related injury risks, while aerial yoga requires coverage for fall and equipment risks. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do studio owners need different yoga insurance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer\'s liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies.',
       },
     },
   ],
@@ -84,24 +92,23 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
-            Mobility Scooter Insurance
+            Yoga Teacher Insurance
             <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"> UK 2025</span>
           </h1>
           <p className="text-lg text-slate-400 mb-2">
-            Compare <strong>mobility scooter insurance quotes</strong> from specialist UK insurers.
-            Find the <strong>best mobility scooter insurance UK</strong> providers and get
-            <strong> insurance for mobility scooters</strong> with comprehensive cover.
+            Compare <strong>yoga teacher insurance quotes</strong> from specialist UK providers.
+            Get <strong>professional indemnity & public liability insurance</strong> for yoga instructors,
+            trainers & studio owners.
           </p>
           <p className="text-sm text-slate-500 mb-4">
-            <strong>Cheap mobility scooter insurance</strong> from £4/month. Whether you need
-            <strong> class 3 mobility scooter insurance</strong>, breakdown cover, or third party
-            liability - <strong>compare mobility scooter insurance</strong> and save.
+            <strong>Yoga teacher insurance from £15/month</strong>. Whether you need professional indemnity,
+            public liability, or combined coverage - compare quotes and save.
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-xs text-slate-500">
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Theft Cover</span>
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Accidental Damage</span>
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Breakdown Cover</span>
+            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Professional Indemnity</span>
             <span className="px-3 py-1 bg-slate-800/50 rounded-full">Public Liability</span>
+            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Student Protection</span>
+            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Yoga Alliance</span>
           </div>
         </div>
       </section>
@@ -115,12 +122,12 @@ export default function HomePage() {
       <section id="coverage" className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Why Do You Need Mobility Scooter Insurance?
+            Why Do Yoga Teachers Need Insurance?
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            <strong>Mobility scooter insurance</strong> protects your essential mobility equipment
-            from theft, damage and breakdown. With scooter thefts on the rise, the right insurance
-            provides peace of mind and financial protection.
+            <strong>Yoga teacher insurance</strong> protects you from liability claims and provides
+            essential coverage for your professional practice. With increasing litigation, the right
+            insurance gives you peace of mind while you teach.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,10 +137,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Theft Protection</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Professional Protection</h3>
               <p className="text-sm text-slate-400">
-                Mobility scooter theft is increasing. Insurance covers replacement costs if your
-                scooter is stolen from home, in public, or from your vehicle.
+                Professional indemnity insurance covers claims that your teaching advice or
+                instruction caused injury to a student due to negligence or poor practice.
               </p>
             </div>
 
@@ -143,10 +150,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Protect Your Investment</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Student Protection</h3>
               <p className="text-sm text-slate-400">
-                Quality mobility scooters cost £1,000 to £5,000+. Insurance protects this significant
-                investment against accidental damage, vandalism and mechanical breakdown.
+                Public liability insurance covers injury to students or damage to property
+                during your classes. Essential for protecting your students and your business.
               </p>
             </div>
 
@@ -156,10 +163,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Public Liability</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Legal Support</h3>
               <p className="text-sm text-slate-400">
-                Third party liability cover protects you if your scooter causes injury to someone
-                or damages their property while you&apos;re out and about.
+                Coverage includes legal fees and compensation costs if a claim is made against
+                you. Protects your financial security and professional reputation.
               </p>
             </div>
 
@@ -169,10 +176,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Breakdown Cover</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Peace of Mind</h3>
               <p className="text-sm text-slate-400">
-                Get roadside assistance if your scooter breaks down. Many policies include
-                recovery to your home or a repair centre if needed.
+                Focus on teaching while knowing you're protected. Insurance covers defense
+                against claims and helps resolve disputes professionally.
               </p>
             </div>
 
@@ -182,10 +189,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Personal Accident</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Studio Requirements</h3>
               <p className="text-sm text-slate-400">
-                Some policies include personal accident cover, providing financial support
-                if you&apos;re injured while using your mobility scooter.
+                Most yoga studios require teachers to carry insurance. Some insurers provide
+                coverage that meets studio owner requirements and Yoga Alliance standards.
               </p>
             </div>
 
@@ -195,10 +202,10 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Accessory Cover</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Affordable Rates</h3>
               <p className="text-sm text-slate-400">
-                Cover for accessories like baskets, canopies, and battery chargers.
-                Protect all your mobility equipment under one policy.
+                Yoga teacher insurance is reasonably priced. Specialist insurers offer
+                competitive rates from as little as £15/month for comprehensive coverage.
               </p>
             </div>
           </div>
@@ -209,36 +216,36 @@ export default function HomePage() {
       <section id="providers" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            UK Mobility Scooter Insurance Providers
+            Leading Yoga Teacher Insurance Providers
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Compare quotes from the UK&apos;s leading <strong>mobility scooter insurance</strong> specialists.
-            We help you find the best cover at the best price.
+            Compare quotes from the UK's leading <strong>yoga teacher insurance</strong> specialists.
+            We help you find the best coverage at the best price.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Surewise</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-2">Yoga Alliance</h3>
               <p className="text-slate-400 text-sm mb-4">
-                Leading specialist in mobility equipment insurance with excellent reviews.
+                Official insurance for Yoga Alliance registered members. Recognized and trusted provider.
               </p>
-              <p className="text-sm text-slate-500">390+ monthly searches</p>
+              <p className="text-sm text-slate-500">Professional + Public Liability</p>
             </div>
 
             <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Age UK</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-2">Balens</h3>
               <p className="text-slate-400 text-sm mb-4">
-                Trusted charity partner offering competitive mobility scooter cover.
+                Specialist fitness and yoga professional insurance with competitive rates.
               </p>
-              <p className="text-sm text-slate-500">320+ monthly searches</p>
+              <p className="text-sm text-slate-500">Comprehensive Coverage</p>
             </div>
 
             <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Mark Bates Ltd</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-2">Specialist Providers</h3>
               <p className="text-slate-400 text-sm mb-4">
-                Specialist broker with comprehensive disability equipment policies.
+                UK insurers specializing in yoga, fitness, and wellness professionals.
               </p>
-              <p className="text-sm text-slate-500">320+ monthly searches</p>
+              <p className="text-sm text-slate-500">Flexible Options Available</p>
             </div>
           </div>
         </div>
@@ -248,118 +255,118 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Types of Mobility Scooter Insurance Cover
+            Types of Yoga Teacher Insurance Cover
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Class 2 Scooter Insurance</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Professional Indemnity</h3>
               <p className="text-slate-400 mb-4">
-                For pavement-only scooters with max speed of 4mph. These don&apos;t require
-                registration but still benefit from comprehensive insurance cover.
+                Covers claims of professional negligence, poor advice, or inadequate instruction
+                that causes injury to a student. Essential for protecting your professional practice.
               </p>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Theft from home or public places
+                  Covers negligence claims
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Accidental damage cover
+                  Legal defense included
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Public liability optional
+                  Compensation costs covered
                 </li>
               </ul>
             </div>
 
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Class 3 Scooter Insurance</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Public Liability</h3>
               <p className="text-slate-400 mb-4">
-                For road-legal scooters up to 8mph. Must be registered with DVLA and
-                have rear lights, indicators and a horn.
+                Covers injury to students or damage to property during your classes.
+                Recommended for all yoga teachers, required by most studios.
               </p>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Comprehensive road use cover
+                  Student injury covered
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Third party liability included
+                  Property damage covered
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Breakdown assistance available
+                  Studio requirements met
                 </li>
               </ul>
             </div>
 
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Electric Wheelchair Insurance</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Combined Coverage</h3>
               <p className="text-slate-400 mb-4">
-                Specialist cover for powerchairs and electric wheelchairs.
-                Protects your essential mobility equipment.
+                Both professional indemnity and public liability insurance in one policy.
+                Best value for comprehensive protection and peace of mind.
               </p>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Indoor and outdoor use cover
+                  Comprehensive professional protection
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Battery and charger included
+                  Cost-effective bundled rate
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Hire chair while yours is repaired
+                  Single renewal and invoice
                 </li>
               </ul>
             </div>
 
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Multi-Scooter Insurance</h3>
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Specialized Coverage</h3>
               <p className="text-slate-400 mb-4">
-                Cover multiple mobility scooters or wheelchairs under one policy.
-                Ideal for couples or households with multiple users.
+                Additional options for hot yoga, aerial yoga, online classes, and studio owners.
+                Customize coverage to match your teaching specialty.
               </p>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Discounted multi-vehicle rates
+                  Hot and aerial yoga
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Single renewal date
+                  Online class coverage
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
-                  Mix of scooter types allowed
+                  Studio owner policies
                 </li>
               </ul>
             </div>
@@ -371,142 +378,106 @@ export default function HomePage() {
       <section id="faq" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Mobility Scooter Insurance FAQs
+            Yoga Teacher Insurance FAQs
           </h2>
 
           <div className="space-y-6">
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do I legally need mobility scooter insurance?
+                Do yoga teachers need insurance in the UK?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                No, mobility scooter insurance is not a legal requirement in the UK. However,
-                it&apos;s highly recommended to protect your investment. Class 3 scooters
-                (road-legal, up to 8mph) must be registered with DVLA but don&apos;t require
-                compulsory insurance like cars do. That said, insurance provides valuable
-                protection against theft, damage, and third-party liability claims.
+                While not legally required by UK law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against potential claims from students and provides essential financial protection for your teaching business.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                How much does mobility scooter insurance cost?
+                What does yoga teacher insurance cover?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Mobility scooter insurance typically costs between £50 and £150 per year,
-                depending on the scooter&apos;s value, the level of cover chosen, and where
-                you live. Comprehensive policies including theft, accidental damage, and
-                breakdown cover will be at the higher end, while basic theft-only cover
-                can be much cheaper.
+                Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections for comprehensive coverage. Many providers also offer additional coverage for yoga alliances and online classes.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What&apos;s the difference between Class 2 and Class 3 scooters?
+                How much does yoga teacher insurance cost?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Class 2 scooters have a maximum speed of 4mph and are designed for pavement
-                use only. They don&apos;t need to be registered. Class 3 scooters can travel
-                up to 8mph on roads (4mph on pavements), must be registered with DVLA, and
-                need lights, indicators, a horn, and rear reflectors. Class 3 scooters can
-                use the road but not motorways or cycle lanes.
+                Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year. Get a personalized quote based on your teaching profile using our calculator.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Will my home insurance cover my mobility scooter?
+                What is the difference between professional indemnity and public liability insurance?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Some home insurance policies include limited cover for mobility scooters,
-                but it&apos;s often restricted to theft from your home only. Cover for use
-                away from home, accidental damage, and breakdown is typically not included.
-                Specialist mobility scooter insurance provides more comprehensive protection
-                and is usually better value than adding to your home insurance.
+                Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. Combined policies are often more cost-effective than buying separately, typically providing better value for money.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Can I insure a second-hand mobility scooter?
+                Do trainee yoga teachers need insurance?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yes, most insurers will cover second-hand mobility scooters. You&apos;ll need
-                to provide details of the scooter&apos;s age, value, and condition. Some
-                insurers may have maximum age limits (e.g., 10 years) or require a recent
-                service history. The insurance will be based on the current market value
-                rather than the original purchase price.
+                Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees. This is an important investment in your teaching career from the start.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is mobility scooter breakdown cover?
+                What is yoga teacher liability insurance?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                <strong>Mobility scooter breakdown cover</strong> provides 24/7 roadside assistance
-                if your scooter breaks down while you&apos;re out. It typically includes recovery
-                to your home or a repair centre. Providers like Surewise and Age UK offer
-                <strong> mobility scooter insurance and breakdown cover</strong> as a combined package,
-                which is often better value than buying separately.
+                Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions. Having this coverage demonstrates professionalism to students and studios.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is mobility scooter third party insurance?
+                Can hot yoga or aerial yoga be insured?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                <strong>Mobility scooter third party insurance</strong> (also called public liability)
-                covers you if your scooter causes injury to someone or damages their property.
-                While not legally required, <strong>mobility scooter liability insurance</strong> provides
-                peace of mind when using your scooter in public places. Most comprehensive
-                policies include this as standard.
+                Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. Hot yoga requires coverage for heat-related injury risks, while aerial yoga requires coverage for fall and equipment risks. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates. When getting quotes, always mention your specific yoga specialties.
+              </p>
+            </details>
+
+            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
+              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
+                Do studio owners need different yoga insurance?
+                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <p className="mt-4 text-slate-400">
+                Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer's liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies designed to provide comprehensive protection for the entire business.
               </p>
             </details>
           </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-blue-500/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Get Your Mobility Scooter Insurance Quote Today
-          </h2>
-          <p className="text-slate-400 mb-6">
-            <strong>Insurance for mobility scooter UK</strong> owners has never been easier.
-            Compare quotes from the <strong>cheapest mobility scooter insurance</strong> providers
-            and find the right cover for your needs.
-          </p>
-          <a
-            href="#calculator"
-            className="inline-block px-8 py-4 bg-blue-500 text-white font-semibold rounded-xl hover:bg-blue-600 transition-colors"
-          >
-            Compare Quotes Now
-          </a>
         </div>
       </section>
     </div>

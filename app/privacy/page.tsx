@@ -1,81 +1,47 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy Policy for Mobility Scooter Insurance UK comparison service.',
+  title: 'Privacy Policy | Yoga Teacher Insurance UK',
+  description: 'Privacy policy for Yoga Teacher Insurance UK. How we collect, use, and protect your personal data.',
+  alternates: {
+    canonical: 'https://yogateacherinsurance.quest/privacy',
+  },
 }
 
-export default function PrivacyPage() {
+export default function Page() {
   return (
-    <div className="min-h-screen py-12 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-white mb-8">Privacy Policy</h1>
+    <div className="min-h-screen py-16 px-4">
+      <article className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
+        <p className="text-slate-400 mb-6">Last updated: December 2025</p>
 
-        <div className="space-y-8 text-slate-400">
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">1. Introduction</h2>
-            <p>
-              Mobility Scooter Insurance UK operates the mobilityscooterinsurance.quest website.
-              This Privacy Policy explains our data practices and your privacy rights.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">2. Information We Collect</h2>
-            <p>
-              We collect information you voluntarily provide when using our quote calculator
-              or contact form, including postcode, scooter details, and contact information.
-              We also collect anonymous usage data through cookies and analytics.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">3. How We Use Your Information</h2>
-            <p>
-              We use your information to provide quote estimates, connect you with insurance
-              providers, improve our service, and respond to your enquiries. We do not sell
-              your personal information to third parties.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">4. Cookies</h2>
-            <p>
-              We use cookies to remember your preferences and understand how visitors use
-              our website. You can control cookie settings through your browser.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">5. Third-Party Links</h2>
-            <p>
-              Our website contains links to insurance provider websites. We are not responsible
-              for the privacy practices of these third-party sites. Please review their privacy
-              policies before providing any personal information.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">6. Your Rights</h2>
-            <p>
-              Under UK GDPR, you have rights to access, correct, or delete your personal data.
-              Contact us if you wish to exercise these rights.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white mb-3">7. Contact</h2>
-            <p>
-              For privacy-related questions, please use our contact form or email us at
-              privacy@mobilityscooterinsurance.quest.
-            </p>
-          </section>
-
-          <p className="text-sm text-slate-500 pt-4">
-            Last updated: December 2024
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+          <p className="text-slate-400 mb-4">
+            Yoga Teacher Insurance UK operates the yogateacherinsurance.quest website. We are committed to protecting your privacy and ensuring you have a positive experience on our site.
           </p>
-        </div>
-      </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
+          <p className="text-slate-400 mb-4">We may collect information you provide directly, information collected automatically through cookies and analytics, and information about your insurance quote preferences.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">3. How We Use Information</h2>
+          <p className="text-slate-400">We use collected information to provide quote calculator functionality, send quotes and follow-up information, improve our website and services, and comply with legal obligations.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">4. Data Protection</h2>
+          <p className="text-slate-400">We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.</p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
+          <p className="text-slate-400">If you have questions about this Privacy Policy, please contact us at: support@yogateacherinsurance.quest</p>
+        </section>
+      </article>
     </div>
   )
 }
