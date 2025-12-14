@@ -111,12 +111,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/do-you-need-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✓ Professional Requirements</p>
-              <p className="text-sm text-slate-400">Who needs insurance</p>
+              <p className="font-semibold text-blue-400">✓ Do You Need Yoga Teacher Insurance?</p>
+              <p className="text-sm text-slate-400">Professional requirements for RYA members</p>
             </Link>
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">⭐ Top Providers</p>
-              <p className="text-sm text-slate-400">RYA-recommended insurers</p>
+              <p className="font-semibold text-blue-400">⭐ Best Yoga Teacher Insurance UK</p>
+              <p className="text-sm text-slate-400">RYA-recommended insurance providers</p>
             </Link>
           </div>
         </section>

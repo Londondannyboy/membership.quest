@@ -272,20 +272,20 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Insurance Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/hot-yoga-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance</p>
-              <p className="text-sm text-slate-400">Thermal conditions coverage</p>
+              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance UK</p>
+              <p className="text-sm text-slate-400">Specialized thermal conditions coverage</p>
             </Link>
             <Link href="/how-much-yoga-teacher-insurance-cost" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💰 Pricing by Specialty</p>
-              <p className="text-sm text-slate-400">Aerial yoga cost comparison</p>
+              <p className="font-semibold text-blue-400">💰 How Much Does Yoga Insurance Cost?</p>
+              <p className="text-sm text-slate-400">Aerial yoga equipment insurance pricing</p>
             </Link>
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">⭐ Top Providers</p>
-              <p className="text-sm text-slate-400">Aerial yoga specialists</p>
+              <p className="font-semibold text-blue-400">⭐ Best Yoga Teacher Insurance UK</p>
+              <p className="text-sm text-slate-400">Top providers covering aerial yoga</p>
             </Link>
             <Link href="/do-you-need-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✓ Do You Need Insurance</p>
-              <p className="text-sm text-slate-400">Risk assessment guide</p>
+              <p className="font-semibold text-blue-400">✓ Do You Need Yoga Teacher Insurance?</p>
+              <p className="text-sm text-slate-400">Risk assessment for aerial yoga</p>
             </Link>
           </div>
         </section>

@@ -150,12 +150,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Fitness Insurance</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/fitness-instructor-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💪 General Fitness Insurance</p>
-              <p className="text-sm text-slate-400">All fitness professional coverage</p>
+              <p className="font-semibold text-blue-400">💪 Fitness Instructor Insurance UK</p>
+              <p className="text-sm text-slate-400">All fitness professional coverage options</p>
             </Link>
             <Link href="/how-much-yoga-teacher-insurance-cost" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💰 Pricing Guide</p>
-              <p className="text-sm text-slate-400">Compare insurance costs</p>
+              <p className="font-semibold text-blue-400">💰 How Much Does Yoga Teacher Insurance Cost?</p>
+              <p className="text-sm text-slate-400">Group fitness instructor insurance pricing</p>
             </Link>
           </div>
         </section>

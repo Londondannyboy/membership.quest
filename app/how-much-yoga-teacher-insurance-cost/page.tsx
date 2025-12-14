@@ -42,7 +42,7 @@ export default function Page() {
               <ul className="text-slate-400 space-y-2 mb-4">
                 <li>• <strong>Coverage typically includes:</strong> Basic professional indemnity (£1-2 million), public liability (£6 million)</li>
                 <li>• <strong>Best for:</strong> Recent graduates gaining experience before establishing independent practice</li>
-                <li>• <strong>See more:</strong> <Link href="/trainee-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300">Trainee yoga teacher insurance guide</Link></li>
+                <li>• <strong>See more:</strong> <Link href="/trainee-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300">Trainee yoga teacher insurance guide</Link> and <Link href="/yoga-teacher-training-insurance" className="text-blue-400 hover:text-blue-300">yoga teacher training insurance</Link></li>
               </ul>
               <p className="text-slate-400 text-sm border-l-4 border-blue-400 pl-4">
                 💡 Many trainee teachers get insurance through their training provider as part of their course completion requirements.
@@ -385,20 +385,20 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Pricing Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">⭐ Best Providers Comparison</p>
-              <p className="text-sm text-slate-400">Compare top insurers and their pricing</p>
+              <p className="font-semibold text-blue-400">⭐ Best Yoga Teacher Insurance UK</p>
+              <p className="text-sm text-slate-400">Compare top UK yoga instructor insurance providers</p>
             </Link>
             <Link href="/hot-yoga-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance</p>
-              <p className="text-sm text-slate-400">Higher cost specialty yoga coverage</p>
+              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance UK</p>
+              <p className="text-sm text-slate-400">Specialized heated yoga coverage pricing</p>
             </Link>
             <Link href="/aerial-yoga-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✈️ Aerial Yoga Insurance</p>
-              <p className="text-sm text-slate-400">Premium coverage for suspended yoga</p>
+              <p className="font-semibold text-blue-400">✈️ Aerial Yoga Insurance UK</p>
+              <p className="text-sm text-slate-400">Equipment-based suspended yoga costs</p>
             </Link>
             <Link href="/trainee-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">📚 Trainee Teacher Insurance</p>
-              <p className="text-sm text-slate-400">Budget-friendly student coverage</p>
+              <p className="font-semibold text-blue-400">📚 Trainee Yoga Teacher Insurance</p>
+              <p className="text-sm text-slate-400">Affordable student teacher coverage</p>
             </Link>
           </div>
         </section>

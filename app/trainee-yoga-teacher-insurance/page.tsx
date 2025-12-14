@@ -192,20 +192,24 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/do-you-need-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✓ Do You Need Insurance?</p>
-              <p className="text-sm text-slate-400">Assessment for trainees</p>
+              <p className="font-semibold text-blue-400">✓ Do You Need Yoga Teacher Insurance?</p>
+              <p className="text-sm text-slate-400">Training requirements assessment</p>
             </Link>
             <Link href="/how-much-yoga-teacher-insurance-cost" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💰 Pricing Guide</p>
-              <p className="text-sm text-slate-400">Trainee costs breakdown</p>
+              <p className="font-semibold text-blue-400">💰 How Much Does Yoga Teacher Insurance Cost?</p>
+              <p className="text-sm text-slate-400">Trainee insurance pricing</p>
             </Link>
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">⭐ Top Providers</p>
-              <p className="text-sm text-slate-400">Compare insurers</p>
+              <p className="font-semibold text-blue-400">⭐ Best Yoga Teacher Insurance UK</p>
+              <p className="text-sm text-slate-400">Compare top insurers for trainees</p>
             </Link>
             <Link href="/yoga-alliance-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🏛️ Yoga Alliance</p>
-              <p className="text-sm text-slate-400">Professional standards</p>
+              <p className="font-semibold text-blue-400">🏛️ Yoga Alliance UK Insurance</p>
+              <p className="text-sm text-slate-400">Professional qualification standards</p>
+            </Link>
+            <Link href="/yoga-teacher-training-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <p className="font-semibold text-blue-400">📖 Yoga Teacher Training Insurance</p>
+              <p className="text-sm text-slate-400">Comprehensive coverage during training programs</p>
             </Link>
           </div>
         </section>

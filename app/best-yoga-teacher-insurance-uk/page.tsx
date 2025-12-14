@@ -105,7 +105,7 @@ export default function Page() {
             <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-bold text-blue-400 mb-3">1. Compare Coverage Limits</h3>
               <p className="text-slate-400 mb-2">
-                Check professional indemnity limits (£1-6 million), public liability limits (£6-10 million), and whether specialized coverage like aerial yoga or hot yoga is included.
+                Check professional indemnity limits (£1-6 million), public liability limits (£6-10 million), and whether specialized coverage like aerial yoga or hot yoga is included. <Link href="/yoga-teacher-training-insurance" className="text-blue-400 hover:text-blue-300">Training requirements</Link> differ for trainees starting their teaching journey.
               </p>
             </div>
 
@@ -133,7 +133,7 @@ export default function Page() {
             <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
               <h3 className="text-xl font-bold text-blue-400 mb-3">5. Look for Industry Recognition</h3>
               <p className="text-slate-400 mb-2">
-                Providers recommended by <Link href="/yoga-alliance-insurance-uk" className="text-blue-400 hover:text-blue-300">Yoga Alliance UK</Link> and recognized by major studios provide added credibility and often streamline studio hiring.
+                Providers recommended by <Link href="/yoga-alliance-insurance-uk" className="text-blue-400 hover:text-blue-300">Yoga Alliance UK membership requirements</Link> and recognized by major studios provide added credibility and often streamline studio hiring.
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function Page() {
           <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6">
             <h3 className="text-xl font-bold text-blue-400 mb-4">Find Your Perfect Policy</h3>
             <ol className="text-slate-400 space-y-3 mb-6">
-              <li><strong>1. Assess your needs:</strong> Determine your teaching style, student numbers, and risk level (see <Link href="/do-you-need-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300">who needs insurance</Link>)</li>
+              <li><strong>1. Assess your needs:</strong> Determine your teaching style, student numbers, and risk level (see <Link href="/do-you-need-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300">do you need yoga teacher insurance</Link>)</li>
               <li><strong>2. Get quotes:</strong> Use our calculator to get free quotes from multiple providers in minutes</li>
               <li><strong>3. Compare coverage:</strong> Review policies side-by-side, checking limits and exclusions</li>
               <li><strong>4. Check reviews:</strong> Look for feedback from other yoga teachers on your chosen provider</li>
@@ -234,20 +234,20 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Insurance Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/how-much-yoga-teacher-insurance-cost" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💰 Insurance Pricing Guide</p>
+              <p className="font-semibold text-blue-400">💰 How Much Does Yoga Teacher Insurance Cost?</p>
               <p className="text-sm text-slate-400">Detailed breakdown of costs by experience level</p>
             </Link>
             <Link href="/balens-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✓ Balens Review</p>
-              <p className="text-sm text-slate-400">In-depth look at the top recommended provider</p>
+              <p className="font-semibold text-blue-400">✓ Balens Yoga Teacher Insurance</p>
+              <p className="text-sm text-slate-400">Top UK provider review with detailed coverage</p>
             </Link>
             <Link href="/hot-yoga-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance</p>
+              <p className="font-semibold text-blue-400">🔥 Hot Yoga Insurance UK</p>
               <p className="text-sm text-slate-400">Specialized coverage for heated yoga classes</p>
             </Link>
             <Link href="/yoga-alliance-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🏛️ Yoga Alliance Guide</p>
-              <p className="text-sm text-slate-400">Insurance requirements for professional membership</p>
+              <p className="font-semibold text-blue-400">🏛️ Yoga Alliance UK Insurance</p>
+              <p className="text-sm text-slate-400">Professional requirements and membership benefits</p>
             </Link>
           </div>
         </section>

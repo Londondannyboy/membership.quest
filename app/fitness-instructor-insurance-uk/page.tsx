@@ -116,12 +116,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Discipline-Specific Insurance Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/pilates-instructor-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🧘 Pilates Insurance</p>
-              <p className="text-sm text-slate-400">Equipment and mat pilates coverage</p>
+              <p className="font-semibold text-blue-400">🧘 Pilates Instructor Insurance UK</p>
+              <p className="text-sm text-slate-400">Equipment and mat pilates professional coverage</p>
             </Link>
             <Link href="/group-fitness-instructor-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">👥 Group Fitness Insurance</p>
-              <p className="text-sm text-slate-400">Class-based fitness instructor coverage</p>
+              <p className="font-semibold text-blue-400">👥 Group Fitness Instructor Insurance</p>
+              <p className="text-sm text-slate-400">Class-based fitness teaching coverage</p>
             </Link>
           </div>
         </section>

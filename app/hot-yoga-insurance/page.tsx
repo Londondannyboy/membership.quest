@@ -305,20 +305,20 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">Related Specialty Yoga Insurance</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link href="/aerial-yoga-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">✈️ Aerial Yoga Insurance</p>
-              <p className="text-sm text-slate-400">Equipment-based suspended yoga</p>
+              <p className="font-semibold text-blue-400">✈️ Aerial Yoga Insurance UK</p>
+              <p className="text-sm text-slate-400">Equipment-based suspended yoga insurance</p>
             </Link>
             <Link href="/how-much-yoga-teacher-insurance-cost" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">💰 Pricing by Style</p>
-              <p className="text-sm text-slate-400">Hot yoga cost comparison</p>
+              <p className="font-semibold text-blue-400">💰 How Much Does Yoga Teacher Insurance Cost?</p>
+              <p className="text-sm text-slate-400">Hot yoga insurance pricing by style</p>
             </Link>
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">⭐ Top Providers</p>
-              <p className="text-sm text-slate-400">Specialists in hot yoga coverage</p>
+              <p className="font-semibold text-blue-400">⭐ Best Yoga Teacher Insurance UK</p>
+              <p className="text-sm text-slate-400">Top providers with hot yoga coverage</p>
             </Link>
-            <Link href="/yoga-teacher-liability-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400">🛡️ Liability Guide</p>
-              <p className="text-sm text-slate-400">Professional indemnity basics</p>
+            <Link href="/balens-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <p className="font-semibold text-blue-400">✓ Balens Yoga Teacher Insurance</p>
+              <p className="text-sm text-slate-400">Recommended provider covering hot yoga</p>
             </Link>
           </div>
         </section>
