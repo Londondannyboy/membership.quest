@@ -46,7 +46,14 @@ export default function ArticlePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-900 to-slate-900 py-12 md:py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-6">
+          <div className="mb-8">
+            <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-indigo-500/20">
+              <img
+                src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=1200&h=600&fit=crop"
+                alt="public liability professional indemnity insurance comparison yoga teachers coverage"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <span className="inline-block bg-indigo-500/30 text-indigo-300 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               Insurance Education
             </span>

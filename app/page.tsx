@@ -251,6 +251,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Our Service Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-12">
+            Why Choose Yoga Teacher Insurance UK
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">⚡ Instant Quotes</h3>
+              <p className="text-slate-400">
+                Get personalized insurance quotes in minutes. Our calculator analyzes your specific teaching situation to provide accurate pricing.
+              </p>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">🏆 Specialist Providers</h3>
+              <p className="text-slate-400">
+                We work exclusively with UK insurers who specialize in yoga teacher coverage, understanding your unique risks and needs.
+              </p>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">📊 Transparent Pricing</h3>
+              <p className="text-slate-400">
+                No hidden fees or surprises. See exactly what you're paying for with clear breakdowns of professional indemnity and public liability costs.
+              </p>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">✓ Quick Comparison</h3>
+              <p className="text-slate-400">
+                Compare multiple providers side-by-side to find the best coverage at the best price for your teaching situation and requirements.
+              </p>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">🎯 Specialized Coverage</h3>
+              <p className="text-slate-400">
+                Whether you teach hot yoga, aerial yoga, or standard classes, we help you find insurance tailored to your specific teaching style.
+              </p>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-blue-400 mb-3">🚀 Expert Support</h3>
+              <p className="text-slate-400">
+                Our guides and resources help you understand insurance options, making informed decisions about protecting your yoga teaching career.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Types of Cover Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
@@ -371,6 +419,157 @@ export default function HomePage() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Who Needs Yoga Insurance Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-slate-800/20 to-blue-900/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-12">
+            Who Needs Yoga Teacher Insurance?
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-green-400 mb-4">✓ You Need Insurance If You:</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Teach yoga classes to students (group or private)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Are self-employed or run a yoga studio</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Are training to become a yoga teacher</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Teach specialized styles (hot yoga, aerial yoga)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Are a Yoga Alliance member or want accreditation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Work at studios or venues that require insurance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-blue-400 mb-4">📚 Teacher Types We Serve:</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>Experienced teachers</strong> - Established practices seeking comprehensive coverage</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>New teachers</strong> - Recently qualified instructors starting their careers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>Trainees</strong> - Students completing yoga teacher training programs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>Studio owners</strong> - Multi-teacher studios needing comprehensive protection</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>Freelance instructors</strong> - Teaching at multiple venues or online</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span><strong>Specialists</strong> - Hot yoga, aerial yoga, therapeutic practitioners</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Get Insured Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-12">
+            How to Get Yoga Teacher Insurance in 4 Steps
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
+              <div className="absolute top--4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">1</div>
+              <div className="mt-6">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Share Your Details</h3>
+                <p className="text-slate-400 text-sm">
+                  Tell us about your yoga teaching practice - styles you teach, experience level, number of students, and whether you teach online or in-person.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
+              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">2</div>
+              <div className="mt-6">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Instant Quotes</h3>
+                <p className="text-slate-400 text-sm">
+                  Receive personalized quotes from multiple specialist insurers within minutes. See pricing for different coverage options and compare providers.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
+              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">3</div>
+              <div className="mt-6">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Choose Your Policy</h3>
+                <p className="text-slate-400 text-sm">
+                  Select the coverage option that best fits your teaching practice and budget. Choose professional indemnity, public liability, or combined policies.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
+              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">4</div>
+              <div className="mt-6">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Protected</h3>
+                <p className="text-slate-400 text-sm">
+                  Complete your policy and receive your certificate. You're now fully insured and can start teaching with complete peace of mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Matters Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Why Yoga Teacher Insurance Matters
+          </h2>
+          <p className="text-slate-300 text-lg mb-6">
+            A single injury claim could cost you thousands in legal fees and compensation. Without insurance, you could face:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <p className="text-red-400 font-bold text-xl mb-2">£10,000+</p>
+              <p className="text-slate-300 text-sm">Average legal defense costs</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <p className="text-red-400 font-bold text-xl mb-2">£50,000+</p>
+              <p className="text-slate-300 text-sm">Potential compensation claims</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <p className="text-red-400 font-bold text-xl mb-2">Career Risk</p>
+              <p className="text-slate-300 text-sm">Loss of reputation and income</p>
+            </div>
+          </div>
+          <p className="text-slate-300 mt-8">
+            Yoga teacher insurance protects your livelihood, reputation, and financial security. For less than £30/month, you get complete peace of mind to focus on teaching.
+          </p>
         </div>
       </section>
 

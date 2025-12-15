@@ -9,6 +9,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '8 min read',
       featured: true,
+      image: 'https://images.unsplash.com/photo-1542654291-526a40ef6050?w=600&h=400&fit=crop',
+      imageAlt: 'yoga teacher insurance costs 2025 UK pricing guide budget breakdown',
+      color: 'from-green-900',
     },
     {
       slug: 'hot-yoga-insurance-coverage',
@@ -17,6 +20,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '7 min read',
       featured: true,
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+      imageAlt: 'hot yoga insurance bikram yoga heated class coverage requirements',
+      color: 'from-orange-900',
     },
     {
       slug: 'aerial-yoga-insurance-explained',
@@ -25,6 +31,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '8 min read',
       featured: true,
+      image: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&h=400&fit=crop',
+      imageAlt: 'aerial yoga insurance suspension equipment protection inversion classes',
+      color: 'from-purple-900',
     },
     {
       slug: 'public-liability-vs-professional-indemnity',
@@ -33,6 +42,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '7 min read',
       featured: true,
+      image: 'https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=600&h=400&fit=crop',
+      imageAlt: 'public liability professional indemnity insurance comparison yoga teachers',
+      color: 'from-indigo-900',
     },
     {
       slug: 'yoga-alliance-insurance-requirements',
@@ -41,6 +53,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '8 min read',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop',
+      imageAlt: 'yoga alliance insurance requirements accreditation standards membership',
+      color: 'from-teal-900',
     },
     {
       slug: 'trainee-yoga-teacher-insurance',
@@ -49,6 +64,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '6 min read',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1588568694645-e7a7c7ed65b9?w=600&h=400&fit=crop',
+      imageAlt: 'trainee yoga teacher insurance student coverage training course protection',
+      color: 'from-amber-900',
     },
     {
       slug: 'best-yoga-insurance-providers-2025',
@@ -57,6 +75,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '9 min read',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+      imageAlt: 'best yoga insurance providers 2025 comparison UK specialists',
+      color: 'from-emerald-900',
     },
     {
       slug: 'yoga-instructor-insurance-requirements-by-location',
@@ -65,6 +86,9 @@ export default function ArticlesPage() {
       date: 'December 2024',
       readTime: '7 min read',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+      imageAlt: 'yoga instructor insurance requirements UK location venue liability',
+      color: 'from-rose-900',
     },
   ]
 
@@ -97,21 +121,26 @@ export default function ArticlesPage() {
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
-                className="group bg-slate-800 hover:bg-slate-700 rounded-xl p-8 transition-all hover:shadow-xl hover:shadow-blue-500/20 border border-slate-700 hover:border-blue-500/50"
+                className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all hover:shadow-xl hover:shadow-blue-500/20 border border-slate-700 hover:border-blue-500/50"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors mb-3">
-                      {article.title}
-                    </h3>
-                    <p className="text-slate-300 mb-4 line-clamp-2">
-                      {article.description}
-                    </p>
-                  </div>
+                <div className="relative h-48 overflow-hidden bg-slate-700">
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-                  <span className="text-sm text-slate-400">{article.date}</span>
-                  <span className="text-sm text-blue-400 font-semibold">{article.readTime}</span>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors mb-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-slate-300 mb-4 text-sm line-clamp-2">
+                    {article.description}
+                  </p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-700">
+                    <span className="text-xs text-slate-400">{article.date}</span>
+                    <span className="text-xs text-blue-400 font-semibold">{article.readTime}</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -119,30 +148,31 @@ export default function ArticlesPage() {
 
           {/* All Articles */}
           <h2 className="text-3xl font-bold mb-12">All Articles</h2>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularArticles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
-                className="group flex items-start gap-6 bg-slate-800/50 hover:bg-slate-800 p-6 rounded-lg transition-all border border-slate-700 hover:border-blue-500/50"
+                className="group bg-slate-800/50 hover:bg-slate-800 rounded-lg overflow-hidden transition-all border border-slate-700 hover:border-blue-500/50"
               >
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors mb-2">
+                <div className="relative h-40 overflow-hidden bg-slate-700">
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold group-hover:text-blue-400 transition-colors mb-2">
                     {article.title}
                   </h3>
-                  <p className="text-slate-400 mb-4">
+                  <p className="text-slate-400 text-sm mb-4 line-clamp-2">
                     {article.description}
                   </p>
-                  <div className="flex items-center gap-4 text-sm text-slate-500">
+                  <div className="flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-700">
                     <span>{article.date}</span>
-                    <span>•</span>
                     <span>{article.readTime}</span>
                   </div>
-                </div>
-                <div className="flex-shrink-0 text-blue-400 group-hover:translate-x-1 transition-transform">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </div>
               </Link>
             ))}

@@ -58,7 +58,14 @@ export default function ArticlePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-slate-900 py-12 md:py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-6">
+          <div className="mb-8">
+            <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
+              <img
+                src="https://images.unsplash.com/photo-1542654291-526a40ef6050?w=1200&h=600&fit=crop"
+                alt="yoga teacher insurance costs 2025 UK pricing guide budget breakdown comparison"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <span className="inline-block bg-blue-500/30 text-blue-300 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               Insurance Costs Guide
             </span>
