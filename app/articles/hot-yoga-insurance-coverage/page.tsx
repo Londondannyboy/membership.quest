@@ -162,7 +162,7 @@ export default function ArticlePage() {
             Yin yoga performed in heated environments (typically 32-35°C) combines the low-movement nature of yin with heat exposure. The longer holds in yin yoga can intensify heat effects, though the lower intensity reduces some injury risks. Premium increases typically range from 10-20%.
           </p>
 
-          <h4 className="text-xl font-bold mb-3 mt-6">Extremely High Temperature Yoga (>40°C)</h4>
+          <h4 className="text-xl font-bold mb-3 mt-6">Extremely High Temperature Yoga (&gt;40°C)</h4>
           <p className="text-slate-300 leading-relaxed mb-4">
             Some specialized studios maintain temperatures above 40°C. These extreme temperatures carry the highest risk profiles and may result in 40-50% premium increases or could be declined entirely by some insurers. Always disclose exact room temperatures to potential providers.
           </p>
