@@ -21,6 +21,14 @@ export default function Page() {
           If you're completing a yoga teacher training certification, you'll likely need professional indemnity insurance for supervised teaching practice. This guide explains trainee insurance requirements, affordable coverage options, and how training programs can help you get insured.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-green-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1200&h=600&crop=entropy"
+            alt="trainee yoga teacher certification student practice class learning teaching"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-green-400 mb-4">Budget-Friendly Student Coverage</h2>
           <p className="text-slate-300 mb-4">

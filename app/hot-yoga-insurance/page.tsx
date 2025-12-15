@@ -21,6 +21,14 @@ export default function Page() {
           Hot yoga and heated yoga classes carry increased liability risks due to the heated environment, dehydration concerns, and higher injury potential. This guide explains why hot yoga requires specialized insurance, what coverage you need, and how to get the best rates.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-orange-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=600&crop=entropy"
+            alt="hot yoga instructor teaching heated bikram class with thermal environment"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-orange-500/10 border border-orange-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-orange-400 mb-4">Why Hot Yoga Insurance Costs More</h2>
           <p className="text-slate-300 mb-4">

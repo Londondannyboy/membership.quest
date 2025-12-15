@@ -19,6 +19,14 @@ export default function Page() {
           Yoga Alliance UK (RYA) is the principal professional body for yoga teachers in the UK. While professional indemnity insurance isn't legally mandated, it's strongly recommended and increasingly required by studios. This guide explains RYA membership levels, insurance recommendations, and how professional insurance supports your teaching career.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&crop=entropy"
+            alt="yoga alliance UK registered teacher professional standards insurance requirements"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-blue-400 mb-4">Professional Standard</h2>
           <p className="text-slate-300 mb-4">RYA membership combined with professional insurance is the gold standard for UK yoga teachers, providing credibility with studios and confidence for students.</p>

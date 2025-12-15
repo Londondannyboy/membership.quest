@@ -19,6 +19,14 @@ export default function Page() {
           Balens is one of the UK's most established and recommended yoga teacher insurance providers. This guide explains their coverage, pricing, and why Balens is the top choice for many UK yoga professionals.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-green-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=1200&h=600&crop=entropy"
+            alt="Balens yoga teacher insurance provider professional coverage specialist"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-green-400 mb-4">⭐ Yoga Alliance Recommended</h2>
           <p className="text-slate-300 mb-4">Balens is recommended by Yoga Alliance UK for professional indemnity insurance. Trusted by thousands of UK yoga teachers for comprehensive coverage and excellent customer service.</p>

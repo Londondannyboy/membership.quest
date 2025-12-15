@@ -21,6 +21,14 @@ export default function Page() {
           Aerial yoga (suspended yoga, flying yoga) is the highest-risk yoga discipline and requires premium insurance coverage. This comprehensive guide explains equipment liability, safety protocols, coverage needs, and why aerial yoga insurance costs significantly more than standard yoga insurance.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-red-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1588568694645-e7a7c7ed65b9?w=1200&h=600&crop=entropy"
+            alt="aerial yoga instructor performing suspension equipment inversion practice"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-red-400 mb-4">Highest Risk Yoga Discipline</h2>
           <p className="text-slate-300 mb-4">

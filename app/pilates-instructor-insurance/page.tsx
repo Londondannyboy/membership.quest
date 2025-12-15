@@ -19,6 +19,14 @@ export default function Page() {
           Pilates instructors require specialized professional liability insurance to protect against injury claims and equipment-related accidents. This guide explains pilates-specific coverage, pricing, and how to find the best insurance for your pilates teaching.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1200&h=600&crop=entropy"
+            alt="pilates instructor mat equipment class reformer professional insurance coverage"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-blue-400 mb-4">Specialized Fitness Coverage</h2>
           <p className="text-slate-300 mb-4">Pilates involves specialized equipment and techniques requiring specific insurance coverage. Professional indemnity insurance protects you from injury claims and equipment liability.</p>

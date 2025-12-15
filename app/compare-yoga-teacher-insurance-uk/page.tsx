@@ -21,6 +21,14 @@ export default function Page() {
           Compare professional indemnity and public liability insurance quotes from the UK's leading yoga teacher insurance specialists. Find the best coverage at the best price.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=1200&h=600&crop=entropy"
+            alt="yoga teachers comparing insurance coverage options and quotes"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6 mb-12">
           <h2 className="text-2xl font-bold text-blue-400 mb-4">Get Your Personalized Quote</h2>
           <p className="text-slate-300 mb-4">

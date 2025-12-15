@@ -21,6 +21,14 @@ export default function Page() {
           Choosing the right yoga teacher insurance provider is essential for protecting your business and reputation. This guide compares the top UK specialist insurers, their coverage options, pricing, and customer reviews to help you find the best policy for your teaching practice.
         </p>
 
+        <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
+          <img
+            src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=1200&h=600&crop=entropy"
+            alt="best yoga teacher insurance providers UK comparison professional coverage"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-blue-400 mb-4">Quick Comparison</h2>
           <p className="text-slate-300 mb-4">

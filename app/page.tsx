@@ -88,27 +88,39 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">
-            Yoga Teacher Insurance
-            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"> UK 2025</span>
+      {/* Hero Section with Yoga Background */}
+      <section className="relative py-24 sm:py-32 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&crop=entropy"
+            alt="Peaceful yoga practice meditation morning mindfulness wellness"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
+            Protect Your Practice
+            <span className="block bg-gradient-to-r from-blue-300 to-blue-400 bg-clip-text text-transparent mt-2">with Peace of Mind</span>
           </h1>
-          <p className="text-lg text-slate-400 mb-2">
-            Compare <strong>yoga teacher insurance quotes</strong> from specialist UK providers.
-            Get <strong>professional indemnity & public liability insurance</strong> for yoga instructors,
-            trainers & studio owners.
+          <p className="text-xl text-slate-100 mb-4 font-light">
+            Comprehensive yoga teacher insurance from specialist UK providers
           </p>
-          <p className="text-sm text-slate-500 mb-4">
-            <strong>Yoga teacher insurance from £15/month</strong>. Whether you need professional indemnity,
-            public liability, or combined coverage - compare quotes and save.
+          <p className="text-lg text-slate-200 mb-8">
+            Get <strong>professional indemnity & public liability insurance</strong> for yoga instructors, trainers & studio owners.
           </p>
-          <div className="flex flex-wrap justify-center gap-2 text-xs text-slate-500">
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Professional Indemnity</span>
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Public Liability</span>
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Student Protection</span>
-            <span className="px-3 py-1 bg-slate-800/50 rounded-full">Yoga Alliance</span>
+          <p className="text-sm text-slate-300 mb-6">
+            <strong>Yoga teacher insurance from £15/month</strong> • Compare quotes in minutes • Get instant coverage
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-200">
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Professional Indemnity</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Public Liability</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Yoga Alliance</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Student Protection</span>
           </div>
         </div>
       </section>
