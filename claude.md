@@ -133,12 +133,18 @@ The agent also has `@agent.instructions` decorator that injects user context dyn
 ## Hume Voice Configuration
 
 **Config ID:** 8e6530df-c020-4b82-bfd3-62617a100b17
+**CLM Endpoint:** `https://yoga-insurance-agent-production.up.railway.app/chat/completions`
 
 The voice widget:
 - Fetches OAuth token from `/api/hume-token`
 - Uses `oauth2-cc/token` endpoint (client credentials flow)
 - Passes personalized system prompt with user context
 - Pulsating blue orb in hero section
+
+### To use CLM (Custom Language Model):
+1. In Hume dashboard, edit your config
+2. Set Custom Language Model URL to the CLM endpoint above
+3. This makes Hume voice use the same Pydantic AI brain as the chat
 
 ---
 
