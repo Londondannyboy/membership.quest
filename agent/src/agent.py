@@ -236,6 +236,8 @@ class AppState(BaseModel):
     teaching_locations: list[str] = Field(default_factory=list)  # studio, home, outdoor, online
     student_count: Optional[str] = None  # "1-10", "11-50", "50+"
     has_existing_insurance: bool = False
+    # Current page context from frontend
+    current_page: Optional[str] = None  # e.g., "aerial-yoga-insurance", "homepage"
 
 
 # =====
@@ -316,12 +318,30 @@ agent = Agent(
 )
 
 
+# Page context descriptions
+PAGE_CONTEXTS = {
+    "aerial-yoga-insurance": "The user is on the AERIAL YOGA INSURANCE page. Focus on hammock/silk equipment, fall risks, rigging liability, and specialist coverage requirements.",
+    "hot-yoga-insurance": "The user is on the HOT YOGA INSURANCE page. Focus on heat-related risks, dehydration, Bikram requirements, and heated environment coverage.",
+    "meditation-teacher-insurance": "The user is on the MEDITATION TEACHER INSURANCE page. Focus on mindfulness, breathwork, lower physical risk, and mental health considerations.",
+    "yoga-studio-insurance": "The user is on the YOGA STUDIO INSURANCE page. Focus on business coverage, employer's liability, property insurance, and multi-teacher policies.",
+    "public-liability-insurance": "The user is on the PUBLIC LIABILITY INSURANCE page. Focus on what PL covers, coverage amounts (£1m-£10m), and venue requirements.",
+    "user-profile": "The user is on their PROFILE page. Help them complete their profile and explain how their choices affect insurance needs.",
+    "pilates-instructor-insurance": "The user is on the PILATES INSTRUCTOR page. Focus on combined yoga-pilates coverage.",
+    "compare-providers": "The user is on the COMPARE PROVIDERS page. Help them compare Balens, BGI, Insure4Sport, and others.",
+    "insurance-costs": "The user is on the COSTS page. Focus on pricing, factors affecting cost, and value for money.",
+    "homepage": "The user is on the HOMEPAGE. Give general guidance and help them find what they need.",
+}
+
 # Dynamic instructions that inject user context from state
 @agent.instructions
 async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str:
     """Inject user context into the system prompt dynamically."""
     state = ctx.deps.state
     user = state.user if state else None
+
+    # Get page context
+    current_page = state.current_page if state else None
+    page_context = PAGE_CONTEXTS.get(current_page or "", PAGE_CONTEXTS["homepage"])
 
     # Build user context section
     if user and (user.name or user.firstName):
@@ -330,6 +350,9 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
         locations = ", ".join(state.teaching_locations) if state.teaching_locations else "Not specified"
 
         return dedent(f"""
+            ## CURRENT PAGE CONTEXT
+            {page_context}
+
             ## CURRENT USER CONTEXT
             You are speaking with a logged-in user. Here is their information:
             - Name: {user.name or 'Unknown'}
@@ -344,10 +367,14 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
             - ALWAYS address the user by their first name ({first_name}) in your responses
             - When they ask "what's my name", "who am I", or about their profile, tell them: "{user.name}"
             - Use their preferences to give personalized insurance recommendations
+            - Reference the current page context when relevant
             - If they teach aerial or hot yoga, proactively mention specialist coverage requirements
         """)
     else:
-        return dedent("""
+        return dedent(f"""
+            ## CURRENT PAGE CONTEXT
+            {page_context}
+
             ## GUEST USER
             This user is not logged in. They can browse general insurance information.
             Encourage them to sign in for personalized recommendations.
