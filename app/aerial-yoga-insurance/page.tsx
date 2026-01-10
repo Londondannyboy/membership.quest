@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { Metadata } from "next"
 import { AerialYogaCalculator } from "@/components/AerialYogaCalculator"
+import { AerialYogaHero } from "@/components/AerialYogaHero"
 
 export const metadata: Metadata = {
-  title: "Aerial Yoga Insurance UK 2025 | Equipment & Fall Protection Coverage",
+  title: "Aerial Yoga Insurance UK 2026 | Equipment & Fall Protection Coverage",
   description: "Specialist aerial yoga insurance for UK instructors. Complete coverage for suspension equipment, fall risks, rigging liability & student injuries. Get quotes from £28/month with our calculator.",
   keywords: "aerial yoga insurance UK, aerial yoga insurance cost, suspended yoga insurance, flying yoga insurance, aerial silks insurance, aerial hammock insurance, equipment liability insurance",
   alternates: {
@@ -21,44 +22,27 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen py-16 px-4">
-      <article className="max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-          Aerial Yoga Insurance UK | Complete Equipment & Safety Coverage
-        </h1>
+    <div className="min-h-screen">
+      {/* Hero Section with Voice Widget and Video */}
+      <AerialYogaHero />
 
-        <p className="text-lg text-slate-400 mb-8">
-          Aerial yoga (suspended yoga, flying yoga, anti-gravity yoga) is the highest-risk yoga discipline and requires premium specialized insurance coverage. This comprehensive 2025 guide explains equipment liability, fall protection, safety protocols, coverage needs, and why aerial yoga insurance costs significantly more than standard yoga insurance. Use our calculator below to get instant premium estimates.
-        </p>
-
-        <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8 border border-red-500/20 shadow-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=800&fit=crop&q=80"
-            alt="Aerial yoga instructor performing suspended inversion pose in silk hammock with proper safety equipment and rigging at professional studio height demonstrating advanced aerial technique"
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
-          <div className="absolute bottom-4 left-4 right-4">
-            <p className="text-white text-sm font-semibold">Professional Aerial Yoga Setup</p>
-            <p className="text-slate-300 text-xs">Proper equipment & safety protocols required for insurance coverage</p>
-          </div>
-        </div>
-
+      {/* Main Content */}
+      <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Comparison Site Disclaimer */}
-        <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-8">
-          <div className="flex items-start gap-3">
-            <svg className="w-6 h-6 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div>
-              <p className="text-blue-400 font-semibold mb-1">We Are A Comparison Site</p>
-              <p className="text-slate-300 text-sm">
-                YogaTeacherInsurance.quest is an independent comparison website, not an insurer. We compare specialist aerial yoga insurance providers to help you find suitable cover. We do not provide financial advice. Always verify policy details directly with insurers.
-              </p>
-            </div>
-          </div>
+        <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-3 mb-8">
+          <p className="text-blue-400 text-sm text-center">
+            <span className="font-semibold">Comparison Site</span> — We help you find suitable cover. Verify details directly with providers.
+          </p>
         </div>
+
+        {/* Introduction */}
+        <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+          Aerial yoga (suspended yoga, flying yoga, anti-gravity yoga) is the highest-risk yoga discipline and requires premium specialized insurance coverage.
+
+          <span className="block mt-4">This comprehensive 2026 guide explains equipment liability, fall protection, safety protocols, coverage needs, and why aerial yoga insurance costs significantly more than standard yoga insurance.</span>
+
+          <span className="block mt-4">Use our calculator below to get instant premium estimates.</span>
+        </p>
 
         {/* Aerial Yoga Insurance Calculator */}
         <section id="calculator" className="my-12 scroll-mt-20">
@@ -91,7 +75,7 @@ export default function Page() {
         </div>
 
         <section className="my-12">
-          <h2 className="text-3xl font-bold text-white mb-6">Aerial Yoga Insurance Costs 2025</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Aerial Yoga Insurance Costs 2026</h2>
 
           <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 mb-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -527,7 +511,7 @@ export default function Page() {
               <p className="text-sm text-slate-400">Complete breakdown of aerial yoga equipment insurance pricing</p>
             </Link>
             <Link href="/best-yoga-teacher-insurance-uk" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400 mb-2">⭐ Best Yoga Teacher Insurance UK 2025</p>
+              <p className="font-semibold text-blue-400 mb-2">⭐ Best Yoga Teacher Insurance UK 2026</p>
               <p className="text-sm text-slate-400">Top-rated providers covering aerial yoga and suspended practice</p>
             </Link>
             <Link href="/do-you-need-yoga-teacher-insurance" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
@@ -535,7 +519,7 @@ export default function Page() {
               <p className="text-sm text-slate-400">Risk assessment for aerial yoga instructors and legal requirements</p>
             </Link>
             <Link href="/articles/yoga-insurance-costs-guide" className="p-4 bg-slate-800/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
-              <p className="font-semibold text-blue-400 mb-2">📊 Complete Costs Breakdown 2025</p>
+              <p className="font-semibold text-blue-400 mb-2">📊 Complete Costs Breakdown 2026</p>
               <p className="text-sm text-slate-400">Detailed article on specialty yoga insurance pricing factors</p>
             </Link>
           </div>

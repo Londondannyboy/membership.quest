@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { Metadata } from "next"
+import { PageHero } from "@/components/PageHero"
 
 export const metadata: Metadata = {
-  title: "Hot Yoga Insurance UK | Specialized Coverage 2025",
+  title: "Hot Yoga Insurance UK | Specialized Coverage 2026",
   description: "Hot yoga insurance for UK instructors. Comprehensive coverage for heated yoga classes, Bikram yoga, and thermal conditions. Get quotes from specialists.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/hot-yoga-insurance",
@@ -11,14 +12,21 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen py-16 px-4">
-      <article className="max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-          Hot Yoga Insurance UK | Specialized Coverage
-        </h1>
+    <div className="min-h-screen">
+      {/* Hero Section with Voice Widget */}
+      <PageHero
+        title="Hot Yoga Insurance UK"
+        titleAccent="Specialized Thermal Coverage"
+        subtitle="Comprehensive coverage for heated yoga classes, Bikram yoga, and thermal conditions."
+        badgeText="Heated Environment Specialist"
+        badgeColor="orange"
+      />
 
-        <p className="text-lg text-slate-400 mb-8">
-          Hot yoga and heated yoga classes carry increased liability risks due to the heated environment, dehydration concerns, and higher injury potential. This guide explains why hot yoga requires specialized insurance, what coverage you need, and how to get the best rates.
+      <article className="max-w-4xl mx-auto px-4 py-12">
+        <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+          Hot yoga and heated yoga classes carry increased liability risks due to the heated environment, dehydration concerns, and higher injury potential.
+
+          <span className="block mt-4">This guide explains why hot yoga requires specialized insurance, what coverage you need, and how to get the best rates.</span>
         </p>
 
         <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-orange-500/20">

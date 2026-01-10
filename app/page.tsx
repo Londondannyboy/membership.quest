@@ -3,8 +3,8 @@ import { QuoteCalculator } from '@/components/QuoteCalculator'
 import { HeroVoice } from '@/components/HeroVoice'
 
 export const metadata: Metadata = {
-  title: 'Yoga Teacher Insurance UK 2025 | Compare Quotes from £15/month',
-  description: 'Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.',
+  title: 'Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month',
+  description: 'Yoga teacher insurance UK - compare quotes from specialist providers. Professional indemnity & public liability insurance for yoga instructors, trainers, meditation teachers & studio owners. Affordable coverage from leading UK insurers.',
   alternates: {
     canonical: 'https://yogateacherinsurance.quest',
   },
@@ -121,7 +121,8 @@ export default function HomePage() {
             <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Professional Indemnity</span>
             <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Public Liability</span>
             <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Yoga Alliance</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Student Protection</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Studio Insurance</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Meditation Teachers</span>
           </div>
 
           {/* Voice Assistant */}
@@ -722,6 +723,67 @@ export default function HomePage() {
                 <div className="text-xs text-emerald-400">Browse All →</div>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Specialty Insurance Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-4">
+            Specialist Yoga & Wellness Insurance
+          </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
+            Whether you're a yoga instructor, meditation teacher, studio owner, or fitness trainer, we help you find affordable specialist insurance coverage.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/yoga-studio-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-green-400 group-hover:text-green-300 mb-2">Yoga Studio Insurance</h3>
+              <p className="text-sm text-slate-400">Complete business coverage for studio owners, property, equipment & staff.</p>
+            </a>
+
+            <a href="/meditation-teacher-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-purple-400 group-hover:text-purple-300 mb-2">Meditation Teacher Insurance</h3>
+              <p className="text-sm text-slate-400">Specialist cover for meditation, mindfulness & breathwork instructors.</p>
+            </a>
+
+            <a href="/public-liability-insurance-yoga-teachers" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Public Liability Insurance</h3>
+              <p className="text-sm text-slate-400">Essential coverage for yoga teachers from £10/month. Studio required.</p>
+            </a>
+
+            <a href="/pilates-instructor-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 mb-2">Yoga-Pilates Instructor</h3>
+              <p className="text-sm text-slate-400">Combined coverage for yoga and pilates teaching from one policy.</p>
+            </a>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-slate-400 text-sm">
+              Looking for <strong>cheap yoga insurance</strong> or <strong>affordable yoga instructor insurance</strong>?
+              Compare quotes from UK yoga insurance companies and find the cheapest yoga teacher insurance that meets your needs.
+            </p>
           </div>
         </div>
       </section>
