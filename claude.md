@@ -1,108 +1,144 @@
-# Yoga Teacher Insurance Quest - Development Guide
+# Membership Marketing Agency - Development Guide
 
 ## Project Overview
 
-**Site:** yogateacherinsurance.quest
-**Status:** AI agent integration COMPLETE (CopilotKit + Neon Auth + Hume Voice + Gamification)
-**SEO Win:** Page 1 UK for "aerial yoga teacher insurance" + "hot yoga insurance"
+**Site:** membership.quest
+**Status:** Build complete, ready to deploy
+**Target Keyword:** "membership marketing agency" (UK)
+**Location:** `/Users/dankeegan/membership.quest/`
+
+---
+
+## RESTART PROMPT
+
+Copy this to start a new Claude session:
+
+```
+I'm building a membership marketing agency website at /Users/dankeegan/membership.quest/
+
+Tech stack:
+- Next.js 15 with App Router (frontend, Vercel)
+- Pydantic AI with AG-UI protocol (backend, Railway)
+- CopilotKit for AI chat sidebar
+- Hume EVI for voice conversations
+- Neon Auth for authentication
+
+STATUS: Build complete, ready for deployment.
+
+REMAINING TASKS:
+1. Create new GitHub repo: Londondannyboy/membership.quest
+2. Update git remote: git remote set-url origin https://github.com/Londondannyboy/membership.quest.git
+3. Push to GitHub: git add . && git commit -m "Initial commit - membership marketing agency" && git push -u origin main
+4. Connect Vercel to new repo
+5. Deploy agent to Railway (cd agent && railway up)
+6. Update Vercel env vars with new AGENT_URL
+7. Optional: Delete old yoga-specific pages in /app/ (articles/, balens-yoga-*, etc.)
+8. Set up Calendly at calendly.com/membership-quest/consultation
+
+Read CLAUDE.md and the plan at ~/.claude/plans/breezy-frolicking-fairy.md for full context.
+```
 
 ---
 
 ## Current Implementation Status (January 2026)
 
-### COMPLETED
-- [x] **Phase 1: CopilotKit + Pydantic AI** - Chat agent deployed to Railway
-- [x] **Phase 2: Neon Auth** - User authentication working (Google OAuth)
-- [x] **Phase 3: Hume EVI** - Voice widget in hero section
-- [x] **Gamified Profile Page** - XP system, levels, yoga journey progression
-- [x] **Zep Integration** - API routes for memory persistence
-- [x] **New SEO Pages** - Meditation, Studio, Public Liability insurance pages
-- [x] **Agent Prompt Update** - 5 qualifying questions before recommendations
-- [x] **All 2025 → 2026** - Updated year references across all pages
+### COMPLETED ✅
+- [x] **Phase 1: Rebranding** - package.json, layout.tsx, metadata
+- [x] **Phase 2: Agent Transformation** - Full agent.py rewrite for membership marketing
+- [x] **Phase 3: Frontend Components** - providers.tsx, HeroVoice.tsx, Navigation.tsx
+- [x] **Phase 4: Homepage** - Full homepage with hero, stats, services, case studies, FAQ
+- [x] **Phase 5: Service Pages** - All 10 pages created (5 services, 3 industries, case studies, contact)
+- [x] **Phase 6: Lead Capture** - Contact page with Calendly integration
 
-### CONFIGURED IN VERCEL
-- `AGENT_URL` - https://yoga-insurance-agent-production.up.railway.app/agui/
-- `HUME_API_KEY` - Configured
-- `HUME_SECRET_KEY` - Configured
-- `NEXT_PUBLIC_HUME_CONFIG_ID` - 8e6530df-c020-4b82-bfd3-62617a100b17
-- `ZEP_API_KEY` - Add for memory persistence
+### REMAINING 🔄
+- [ ] Create GitHub repo and push
+- [ ] Deploy to Vercel (frontend)
+- [ ] Deploy to Railway (agent)
+- [ ] Configure production env vars
+- [ ] Delete legacy yoga pages (optional cleanup)
 
 ---
 
-## New Pages (January 2026)
+## Services Offered
 
-| Page | URL | Purpose |
-|------|-----|---------|
-| Meditation Teacher | `/meditation-teacher-insurance` | Mindfulness/breathwork coverage |
-| Yoga Studio | `/yoga-studio-insurance` | Business coverage for studio owners |
-| Public Liability | `/public-liability-insurance-yoga-teachers` | Dedicated PL coverage page |
-
-All pages have:
-- PageHero component with HeroVoice widget
-- Proper SEO metadata
-- FAQ schema for Google
-- Internal linking
+| Service | Description | Monthly Investment |
+|---------|-------------|-------------------|
+| Member Acquisition | Digital campaigns, referrals, events | £2,000 - £8,000 |
+| Member Retention | Onboarding, renewal automation, win-back | £1,500 - £6,000 |
+| Member Engagement | Community, content, gamification | £1,500 - £5,000 |
+| Membership Strategy | Proposition review, pricing, roadmaps | £3,000 - £10,000 |
+| Content Marketing | Thought leadership, SEO, social | £2,000 - £7,000 |
 
 ---
 
-## Gamified Profile Page
+## Target Organisations
 
-The profile page (`/profile`) includes:
-
-### XP System
-- Yoga styles: +10 XP each
-- Locations: +15 XP each
-- Experience: 5-75 XP based on years
-- Qualifications: 20-75 XP each
-- Student count: 10-50 XP
-- Has insurance: +20 XP bonus
-
-### Levels & Titles
-| Level | XP Required | Title |
-|-------|-------------|-------|
-| 1 | 0-49 | Yoga Beginner |
-| 2 | 50-99 | Emerging Teacher |
-| 4 | 150-199 | Growing Instructor |
-| 6 | 250-299 | Experienced Yogi |
-| 8 | 350-399 | Enlightened Teacher |
-| 10+ | 450+ | Yoga Master |
-
-### Features
-- Progress circle showing completion %
-- Confetti celebration on profile complete
-- Animated purple/blue background
-- Next step prompts
-- Saves to Zep for AI memory
+| Type | Description |
+|------|-------------|
+| Professional Bodies | Accountants, engineers, lawyers, healthcare |
+| Trade Associations | Industry representative bodies |
+| Membership Charities | Charitable organisations with supporters |
+| Learned Societies | Academic and research organisations |
+| Member Associations | Clubs, societies, interest groups |
 
 ---
 
 ## Agent Configuration
 
-### System Prompt (Namaste Personality)
-The agent has a zen-like personality and asks 5 qualifying questions before recommending providers:
+### File: `agent/src/agent.py`
 
-1. **Styles** - What yoga styles do you teach?
-2. **Locations** - Where do you teach?
-3. **Experience** - How long have you been teaching?
-4. **Students** - How many students per class?
-5. **Current cover** - Do you have existing insurance?
+**System Prompt:** Friendly membership marketing consultant
 
-### Tools Available
+**Lead Qualification Flow (5 questions):**
+1. **Organisation Type** - Professional body, trade association, charity?
+2. **Member Count** - How many members?
+3. **Primary Challenge** - Acquisition, retention, engagement?
+4. **Goals** - What does success look like?
+5. **Timeline & Budget** - Exploring or ready to start?
+
+### Agent Tools
 | Tool | Purpose |
 |------|---------|
-| `compare_providers` | Compare UK yoga insurance providers |
-| `explain_coverage` | Explain coverage types |
-| `get_style_requirements` | Style-specific requirements |
-| `get_provider_info` | Provider details |
-| `get_quick_quote_checklist` | Quote preparation |
-| `get_my_profile` | User's profile/preferences |
+| `recommend_services` | Recommend services based on challenges |
+| `assess_challenges` | Analyze symptoms and identify root causes |
+| `get_case_studies` | Show relevant success stories |
+| `get_service_info` | Detailed service information |
+| `get_organisation_insights` | Sector-specific insights |
+| `book_consultation` | Capture lead and book call |
+| `get_my_profile` | User's profile information |
+
+---
+
+## Page Structure
+
+```
+app/
+├── page.tsx                              # Homepage ✅
+├── contact/page.tsx                      # Contact page ✅
+├── case-studies/page.tsx                 # Case studies ✅
+├── services/
+│   ├── member-acquisition/page.tsx       # ✅
+│   ├── member-retention/page.tsx         # ✅
+│   ├── member-engagement/page.tsx        # ✅
+│   ├── membership-strategy/page.tsx      # ✅
+│   └── content-marketing/page.tsx        # ✅
+├── industries/
+│   ├── professional-bodies/page.tsx      # ✅
+│   ├── trade-associations/page.tsx       # ✅
+│   └── membership-charities/page.tsx     # ✅
+└── [legacy yoga pages - TO DELETE]
+    ├── articles/
+    ├── balens-yoga-*/
+    ├── yoga-*/
+    └── etc.
+```
 
 ---
 
 ## Tech Stack
 
 ### Frontend (Vercel)
-- Next.js 15 with App Router
+- Next.js 15.5.9 with App Router
 - React 19
 - Tailwind CSS 4
 - @copilotkit/react-core, @copilotkit/react-ui
@@ -121,42 +157,34 @@ The agent has a zen-like personality and asks 5 qualifying questions before reco
 
 ---
 
-## Key Components
+## Key Files Modified
 
-### PageHero (`components/PageHero.tsx`)
-Reusable hero section with HeroVoice widget:
-```tsx
-<PageHero
-  title="Hot Yoga Insurance UK"
-  titleAccent="Specialized Thermal Coverage"
-  subtitle="Comprehensive coverage..."
-  badgeText="Heated Environment Specialist"
-  badgeColor="orange"
-/>
-```
-
-### AerialYogaHero (`components/AerialYogaHero.tsx`)
-Custom hero for aerial page with video banner.
-
-### VideoBanner (`components/VideoBanner.tsx`)
-YouTube video embed with AI chat CTA.
+| File | Change |
+|------|--------|
+| `package.json` | Renamed to membership-marketing-agency |
+| `app/layout.tsx` | Full SEO metadata rewrite |
+| `app/page.tsx` | Complete homepage redesign |
+| `agent/src/agent.py` | Full agent rewrite (~700 lines) |
+| `components/providers.tsx` | Membership page contexts |
+| `components/HeroVoice.tsx` | Voice consultant persona |
+| `components/Navigation.tsx` | New menu structure |
 
 ---
 
 ## Environment Variables
 
-### Vercel (Production)
+### Vercel (Production) - TO CONFIGURE
 ```env
 DATABASE_URL=postgresql://...
-AGENT_URL=https://yoga-insurance-agent-production.up.railway.app/agui/
+AGENT_URL=https://membership-agent-production.up.railway.app/agui/
 NEON_AUTH_BASE_URL=https://...neon.tech
 HUME_API_KEY=...
 HUME_SECRET_KEY=...
-NEXT_PUBLIC_HUME_CONFIG_ID=8e6530df-c020-4b82-bfd3-62617a100b17
+NEXT_PUBLIC_HUME_CONFIG_ID=...
 ZEP_API_KEY=...
 ```
 
-### Railway (Agent)
+### Railway (Agent) - TO CONFIGURE
 ```env
 DATABASE_URL=postgresql://...
 GOOGLE_API_KEY=...
@@ -164,51 +192,55 @@ GOOGLE_API_KEY=...
 
 ---
 
-## Hume Voice Configuration
-
-**Config ID:** 8e6530df-c020-4b82-bfd3-62617a100b17
-**CLM Endpoint:** `https://yoga-insurance-agent-production.up.railway.app/chat/completions`
-
-To use CLM (Custom Language Model):
-1. In Hume dashboard, edit your config
-2. Set Custom Language Model URL to the CLM endpoint
-3. This makes Hume voice use the same Pydantic AI brain
-
----
-
 ## Commands
 
 ### Development
 ```bash
-npm run dev                    # Frontend
-cd agent && uv run uvicorn src.agent:app --reload --port 8000  # Agent
+cd /Users/dankeegan/membership.quest
+npm run dev                    # Frontend at localhost:3000
+cd agent && uv run uvicorn src.agent:app --reload --port 8000  # Agent at localhost:8000
 ```
 
-### Deploy
+### Deployment
 ```bash
-git push origin main           # Frontend auto-deploys via Vercel
-cd agent && railway up         # Agent manual deploy
+# 1. Create new GitHub repo first
+git remote set-url origin https://github.com/Londondannyboy/membership.quest.git
+git add .
+git commit -m "Initial commit - membership marketing agency"
+git push -u origin main
+
+# 2. Connect Vercel to repo (vercel.com dashboard)
+
+# 3. Deploy agent
+cd agent && railway up
 ```
 
 ---
 
-## SEO Keywords Covered
+## Case Studies (in agent + pages)
 
-From Google Search Console data:
-- ✅ aerial yoga insurance
-- ✅ yoga teacher insurance (uk)
-- ✅ hot yoga insurance
-- ✅ meditation teacher insurance (NEW)
-- ✅ yoga studio insurance (NEW)
-- ✅ public liability insurance for yoga teachers (NEW)
-- ✅ yoga instructor insurance
-- ✅ yoga insurance comparison
-- ✅ cheapest yoga teacher insurance (homepage)
-- ✅ affordable yoga insurance (homepage)
+| Client Type | Challenge | Results |
+|-------------|-----------|---------|
+| Professional Body (Finance) | Low engagement, younger members | +47% new members, 3x event attendance, -7% churn |
+| Trade Association (Construction) | Value questioning, low renewals | 86% renewal rate, +29 NPS, +15% revenue |
+| Membership Charity (Healthcare) | Low awareness | 340% traffic, 12 press features, +89% leads |
+| Professional Institute (Tech) | Low resource usage | +156% usage, 2x CPD completion, +28 satisfaction |
 
 ---
 
-## Reference Projects
-- **esportsjobs.quest-v2** - Gamification patterns, Neon Auth
-- **copilotkit-demo** - CopilotKit integration patterns
-- **gtm-quest-v2** - Latest Neon patterns
+## SEO Keywords Target
+
+- ✅ membership marketing agency (primary)
+- membership marketing agency uk
+- association marketing
+- member acquisition
+- member retention
+- membership organisation marketing
+- professional body marketing
+- trade association marketing
+
+---
+
+## Cloned From
+
+**yogateacherinsurance.quest** - Original codebase with full CopilotKit + Hume + Pydantic AI stack.

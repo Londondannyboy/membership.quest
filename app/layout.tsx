@@ -15,43 +15,43 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month",
-    template: "%s | Yoga Teacher Insurance UK"
+    default: "Membership Marketing Agency UK | Grow & Retain Members",
+    template: "%s | Membership Marketing Agency"
   },
-  description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.",
+  description: "Specialist membership marketing agency helping associations, professional bodies, and membership organisations grow and retain members. Expert strategies for acquisition, retention, and engagement.",
   keywords: [
-    "yoga teacher insurance",
-    "yoga teacher insurance uk",
-    "yoga instructor insurance",
-    "insurance for yoga teachers",
-    "insurance for yoga teachers uk",
-    "yoga teachers insurance",
-    "professional indemnity yoga",
-    "yoga teacher liability insurance",
-    "yoga studio insurance",
-    "best yoga teacher insurance uk",
-    "compare yoga teacher insurance",
-    "yoga training insurance"
+    "membership marketing agency",
+    "membership marketing agency uk",
+    "association marketing",
+    "member acquisition",
+    "member retention",
+    "membership organisation marketing",
+    "professional body marketing",
+    "trade association marketing",
+    "membership growth",
+    "member engagement",
+    "membership sector marketing",
+    "membership recruitment"
   ],
-  authors: [{ name: "Yoga Teacher Insurance UK" }],
-  creator: "Yoga Teacher Insurance UK",
-  publisher: "Yoga Teacher Insurance UK",
-  metadataBase: new URL("https://yogateacherinsurance.quest"),
+  authors: [{ name: "Membership Marketing Agency" }],
+  creator: "Membership Marketing Agency",
+  publisher: "Membership Marketing Agency",
+  metadataBase: new URL("https://membership.quest"),
   alternates: {
-    canonical: "https://yogateacherinsurance.quest",
+    canonical: "https://membership.quest",
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://yogateacherinsurance.quest",
-    siteName: "Yoga Teacher Insurance UK",
-    title: "Yoga Teacher Insurance UK 2026 | Compare Quotes",
-    description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors & studio owners.",
+    url: "https://membership.quest",
+    siteName: "Membership Marketing Agency",
+    title: "Membership Marketing Agency UK | Grow & Retain Members",
+    description: "Specialist membership marketing agency helping associations and professional bodies grow their membership through expert acquisition, retention, and engagement strategies.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yoga Teacher Insurance UK | Compare Quotes",
-    description: "Yoga teacher insurance from UK specialists. Compare quotes for yoga instructors, trainers & studio owners.",
+    title: "Membership Marketing Agency UK | Grow Members",
+    description: "Expert membership marketing for associations, professional bodies, and membership organisations.",
   },
   robots: {
     index: true,
@@ -65,35 +65,34 @@ export const metadata: Metadata = {
     },
   },
   appleWebApp: {
-    title: "Yoga Teacher Insurance UK",
+    title: "Membership Marketing Agency",
     capable: true,
     statusBarStyle: "black-translucent",
   },
-  // Icons auto-detected from app/ folder: favicon.ico, icon.png, icon.svg, apple-icon.png
 }
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://yogateacherinsurance.quest/#website",
-  name: "Yoga Teacher Insurance UK",
-  alternateName: ["Yoga Instructor Insurance UK", "Insurance for Yoga Teachers", "Professional Indemnity Yoga"],
-  url: "https://yogateacherinsurance.quest",
-  description: "Yoga teacher insurance UK comparison service. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners from specialist UK insurers.",
+  "@id": "https://membership.quest/#website",
+  name: "Membership Marketing Agency",
+  alternateName: ["Membership Organisation Marketing", "Association Marketing Agency", "Member Growth Specialists"],
+  url: "https://membership.quest",
+  description: "Specialist membership marketing agency helping associations, professional bodies, and membership organisations grow and retain members through expert marketing strategies.",
   inLanguage: "en-GB",
   publisher: {
     "@type": "Organization",
-    "@id": "https://yogateacherinsurance.quest/#organization",
-    name: "Yoga Teacher Insurance UK",
-    url: "https://yogateacherinsurance.quest",
+    "@id": "https://membership.quest/#organization",
+    name: "Membership Marketing Agency",
+    url: "https://membership.quest",
     logo: {
       "@type": "ImageObject",
-      "@id": "https://yogateacherinsurance.quest/#logo",
-      url: "https://yogateacherinsurance.quest/icon.svg",
-      contentUrl: "https://yogateacherinsurance.quest/icon.svg",
+      "@id": "https://membership.quest/#logo",
+      url: "https://membership.quest/icon.svg",
+      contentUrl: "https://membership.quest/icon.svg",
       width: 512,
       height: 512,
-      caption: "Yoga Teacher Insurance UK"
+      caption: "Membership Marketing Agency"
     }
   }
 }
@@ -101,24 +100,22 @@ const organizationJsonLd = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://yogateacherinsurance.quest/#service",
-  name: "Yoga Teacher Insurance UK Comparison",
-  alternateName: "Insurance for Yoga Teachers Comparison",
-  description: "Compare yoga teacher insurance UK quotes from specialist providers. Find professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Compare Yoga Alliance, Balens, specialist providers and more.",
+  "@id": "https://membership.quest/#service",
+  name: "Membership Marketing Services",
+  alternateName: "Membership Organisation Marketing",
+  description: "Expert membership marketing services including member acquisition, retention campaigns, engagement strategies, and content marketing for associations, professional bodies, and membership organisations.",
   provider: {
     "@type": "Organization",
-    name: "Yoga Teacher Insurance UK"
+    name: "Membership Marketing Agency"
   },
   areaServed: {
     "@type": "Country",
     name: "United Kingdom"
   },
-  serviceType: "Yoga Teacher Insurance Comparison",
+  serviceType: "Membership Marketing",
   offers: {
     "@type": "Offer",
-    price: "0",
-    priceCurrency: "GBP",
-    description: "Free yoga teacher insurance quotes UK"
+    description: "Free membership marketing consultation"
   }
 }
 
@@ -129,8 +126,8 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Yoga Teacher Insurance",
-      item: "https://yogateacherinsurance.quest"
+      name: "Membership Marketing Agency",
+      item: "https://membership.quest"
     }
   ]
 }

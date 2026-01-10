@@ -16,52 +16,67 @@ type AgentState = {
     firstName?: string;
     email?: string;
   };
-  yoga_styles: string[];
-  teaching_locations: string[];
-  student_count?: string;
-  has_existing_insurance: boolean;
+  organisation_type?: string;
+  organisation_name?: string;
+  member_count?: string;
+  primary_challenges: string[];
+  budget_range?: string;
+  timeline?: string;
   current_page?: string;
 };
 
 // Get page context from pathname
 function getPageContext(pathname: string): string {
-  if (pathname.includes('aerial')) return 'aerial-yoga-insurance';
-  if (pathname.includes('hot-yoga')) return 'hot-yoga-insurance';
-  if (pathname.includes('meditation')) return 'meditation-teacher-insurance';
-  if (pathname.includes('studio')) return 'yoga-studio-insurance';
-  if (pathname.includes('public-liability')) return 'public-liability-insurance';
+  if (pathname.includes('acquisition')) return 'member-acquisition';
+  if (pathname.includes('retention')) return 'member-retention';
+  if (pathname.includes('engagement')) return 'member-engagement';
+  if (pathname.includes('content-marketing')) return 'content-marketing';
+  if (pathname.includes('strategy')) return 'membership-strategy';
+  if (pathname.includes('professional-bod')) return 'professional-bodies';
+  if (pathname.includes('trade-association')) return 'trade-associations';
+  if (pathname.includes('charit')) return 'membership-charities';
+  if (pathname.includes('case-stud')) return 'case-studies';
+  if (pathname.includes('contact')) return 'contact';
   if (pathname.includes('profile')) return 'user-profile';
-  if (pathname.includes('pilates')) return 'pilates-instructor-insurance';
-  if (pathname.includes('compare')) return 'compare-providers';
-  if (pathname.includes('cost') || pathname.includes('how-much')) return 'insurance-costs';
-  if (pathname.includes('articles')) return 'articles';
   return 'homepage';
 }
 
 // Get initial message based on page
 function getInitialMessage(pathname: string, firstName: string | null): string {
-  const name = firstName ? `Hi ${firstName}!` : 'Hi!';
+  const name = firstName ? `Hi ${firstName}!` : 'Hi there!';
 
-  if (pathname.includes('aerial')) {
-    return `${name} I see you're looking at aerial yoga insurance. Aerial yoga requires specialist coverage due to the equipment and fall risks. Would you like me to explain what coverage you need, or compare providers that cover aerial?`;
+  if (pathname.includes('acquisition')) {
+    return `${name} I see you're looking at member acquisition. Growing your membership is one of the most common challenges we help with. What type of organisation are you? Professional body, trade association, or something else?`;
   }
-  if (pathname.includes('hot-yoga')) {
-    return `${name} I see you're exploring hot yoga insurance. Heated classes have specific requirements due to heat-related risks. Would you like me to explain what coverage you need for hot yoga?`;
+  if (pathname.includes('retention')) {
+    return `${name} Member retention is crucial - it costs 5x more to acquire a new member than keep an existing one. Are you seeing high churn rates, or wanting to be proactive about retention?`;
   }
-  if (pathname.includes('meditation')) {
-    return `${name} Looking at meditation teacher insurance? Good news - it's often lower risk than physical yoga. Would you like me to explain what coverage meditation teachers need?`;
+  if (pathname.includes('engagement')) {
+    return `${name} Engagement is the foundation of strong retention. When members are engaged, they renew at 3x the rate. Are you struggling with a "silent majority" of inactive members?`;
   }
-  if (pathname.includes('studio')) {
-    return `${name} Thinking about yoga studio insurance? Studio owners need more comprehensive coverage than individual teachers - including property, employer's liability, and more. What would you like to know?`;
+  if (pathname.includes('content-marketing')) {
+    return `${name} Great content positions your organisation as the authority in your sector. Are you looking to increase visibility, attract new members, or better serve existing ones?`;
   }
-  if (pathname.includes('public-liability')) {
-    return `${name} Public liability insurance is essential for yoga teachers - most venues require it. Would you like me to explain the coverage levels and costs?`;
+  if (pathname.includes('strategy')) {
+    return `${name} Sometimes you need to step back and look at the bigger picture. Is your membership model feeling outdated, or are you planning a strategic shift?`;
   }
-  if (pathname.includes('profile')) {
-    return `${name} I see you're on your profile page. Completing your profile helps me give you personalized insurance recommendations. Would you like help understanding how your teaching affects your coverage needs?`;
+  if (pathname.includes('professional-bod')) {
+    return `${name} Professional bodies have unique challenges - from demonstrating CPD value to attracting younger members. What's your biggest membership challenge right now?`;
+  }
+  if (pathname.includes('trade-association')) {
+    return `${name} Trade associations need to clearly demonstrate ROI to member businesses. Are you finding it hard to articulate your value proposition?`;
+  }
+  if (pathname.includes('charit')) {
+    return `${name} Membership charities balance mission with growth. Is your challenge more about acquiring new supporters or retaining existing ones?`;
+  }
+  if (pathname.includes('case-stud')) {
+    return `${name} Looking at our success stories? I can help you find case studies relevant to your organisation type and challenges. What sector are you in?`;
+  }
+  if (pathname.includes('contact')) {
+    return `${name} Ready to talk? I can help you prepare for a consultation call. Tell me a bit about your organisation and what you're hoping to achieve.`;
   }
 
-  return `${name} I'm your yoga teacher insurance advisor. I can help you understand what coverage you need, compare UK providers, and explain different insurance types.\n\nWhat would you like to know?`;
+  return `${name} I'm your membership marketing consultant. I help associations, professional bodies, and membership organisations grow and retain their members.\n\nWhat type of organisation are you?`;
 }
 
 // Component that syncs user state to agent - optimized to prevent re-render loops
@@ -76,13 +91,15 @@ function UserStateSync() {
   const prevStateRef = useRef<string>('');
 
   const { setState } = useCoAgent<AgentState>({
-    name: 'yoga_agent',
+    name: 'membership_agent',
     initialState: {
       user: undefined,
-      yoga_styles: [],
-      teaching_locations: [],
-      student_count: undefined,
-      has_existing_insurance: false,
+      organisation_type: undefined,
+      organisation_name: undefined,
+      member_count: undefined,
+      primary_challenges: [],
+      budget_range: undefined,
+      timeline: undefined,
       current_page: 'homepage',
     },
   });
@@ -101,10 +118,12 @@ function UserStateSync() {
           firstName: firstName,
           email: user.email || undefined,
         } : undefined,
-        yoga_styles: [],
-        teaching_locations: [],
-        student_count: undefined,
-        has_existing_insurance: false,
+        organisation_type: undefined,
+        organisation_name: undefined,
+        member_count: undefined,
+        primary_challenges: [],
+        budget_range: undefined,
+        timeline: undefined,
         current_page: currentPage,
       });
     }
@@ -125,12 +144,12 @@ function CopilotWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
-    <CopilotKit runtimeUrl="/api/copilotkit" agent="yoga_agent">
+    <CopilotKit runtimeUrl="/api/copilotkit" agent="membership_agent">
       {/* Sync user state to agent */}
       <UserStateSync />
       <CopilotSidebar
         labels={{
-          title: "Insurance Advisor",
+          title: "Membership Consultant",
           initial: getInitialMessage(pathname, firstName),
         }}
         defaultOpen={false}

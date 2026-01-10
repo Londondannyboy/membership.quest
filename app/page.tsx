@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
-import { QuoteCalculator } from '@/components/QuoteCalculator'
 import { HeroVoice } from '@/components/HeroVoice'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month',
-  description: 'Yoga teacher insurance UK - compare quotes from specialist providers. Professional indemnity & public liability insurance for yoga instructors, trainers, meditation teachers & studio owners. Affordable coverage from leading UK insurers.',
+  title: 'Membership Marketing Agency UK | Grow & Retain Members',
+  description: 'Specialist membership marketing agency helping associations, professional bodies, and membership organisations grow and retain members. Expert strategies for acquisition, retention, and engagement.',
   alternates: {
-    canonical: 'https://yogateacherinsurance.quest',
+    canonical: 'https://membership.quest',
   },
 }
 
@@ -16,66 +16,42 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do yoga teachers need insurance in the UK?',
+      name: 'What does a membership marketing agency do?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'While not legally required by law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against claims from students and provides essential financial protection.',
+        text: 'A membership marketing agency specialises in helping membership organisations grow their member base and retain existing members. We create targeted campaigns for acquisition, develop retention strategies to reduce churn, and implement engagement programmes to increase member participation and lifetime value.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does yoga teacher insurance cover?',
+      name: 'How much does membership marketing cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections. Many providers also offer additional coverage for yoga alliances and online classes.',
+        text: 'Membership marketing services typically range from £1,500 to £10,000 per month depending on the scope of work. Member acquisition campaigns start around £2,000/month, retention programmes from £1,500/month, and comprehensive strategy engagements from £3,000/month. We tailor solutions to your budget and goals.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does yoga teacher insurance cost?',
+      name: 'What types of organisations do you work with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year.',
+        text: 'We work with professional bodies, trade associations, membership charities, learned societies, and member associations. Our clients include organisations representing accountants, engineers, lawyers, healthcare professionals, construction companies, and many other sectors.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the difference between professional indemnity and public liability insurance?',
+      name: 'How do you measure success in membership marketing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. Combined policies are often more cost-effective than buying separately.',
+        text: 'We measure success through key metrics including: new member growth rate, member retention/renewal rate, engagement scores (event attendance, resource usage, community participation), Net Promoter Score (NPS), cost per acquisition, and member lifetime value. We set clear KPIs at the start of every engagement.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do trainee yoga teachers need insurance?',
+      name: 'What is a typical member retention rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is yoga teacher liability insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can hot yoga or aerial yoga be insured?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. Hot yoga requires coverage for heat-related injury risks, while aerial yoga requires coverage for fall and equipment risks. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do studio owners need different yoga insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer\'s liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies.',
+        text: 'Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Our retention programmes typically help clients reduce churn by 15-30%, significantly impacting revenue and member lifetime value.',
       },
     },
   ],
@@ -89,40 +65,37 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero Section with Yoga Background */}
+      {/* Hero Section */}
       <section className="relative py-24 sm:py-32 px-4 overflow-hidden">
-        {/* Background Image */}
+        {/* Background */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&crop=entropy"
-            alt="Peaceful yoga practice meditation morning mindfulness wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-900 to-slate-900"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-8">
+            <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+            Membership Growth Specialists
+          </div>
+
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Protect Your Practice
-            <span className="block bg-gradient-to-r from-blue-300 to-blue-400 bg-clip-text text-transparent mt-2">with Peace of Mind</span>
+            Grow & Retain Your
+            <span className="block bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent mt-2">Members</span>
           </h1>
           <p className="text-xl text-slate-100 mb-4 font-light">
-            Comprehensive yoga teacher insurance from specialist UK providers
+            Specialist membership marketing for associations, professional bodies, and membership organisations
           </p>
-          <p className="text-lg text-slate-200 mb-8">
-            Get <strong>professional indemnity & public liability insurance</strong> for yoga instructors, trainers & studio owners.
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            We help you <strong>acquire new members</strong>, <strong>reduce churn</strong>, and <strong>increase engagement</strong> through proven marketing strategies.
           </p>
-          <p className="text-sm text-slate-300 mb-6">
-            <strong>Yoga teacher insurance from £15/month</strong> • Compare quotes in minutes • Get instant coverage
-          </p>
+
           <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-200 mb-10">
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Professional Indemnity</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Public Liability</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Yoga Alliance</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Studio Insurance</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Meditation Teachers</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Member Acquisition</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Retention Campaigns</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Engagement Strategy</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Content Marketing</span>
           </div>
 
           {/* Voice Assistant */}
@@ -130,462 +103,285 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quote Calculator Section */}
-      <section id="calculator" className="py-8 px-4">
-        <QuoteCalculator />
+      {/* Stats Section */}
+      <section className="py-12 px-4 bg-slate-800/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">15-25%</p>
+              <p className="text-slate-400 text-sm">Average Annual Churn</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-green-400 mb-2">3x</p>
+              <p className="text-slate-400 text-sm">Engaged Members Renew</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5x</p>
+              <p className="text-slate-400 text-sm">Cost to Acquire vs Retain</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">60%</p>
+              <p className="text-slate-400 text-sm">Retention from Onboarding</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Why Insurance Section with Yoga Background */}
-      <section id="coverage" className="relative py-16 px-4 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1920&h=1080&fit=crop&q=80"
-            alt="yoga studio class practice meditation mindfulness wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/92 to-slate-900/95"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto">
+      {/* Services Section */}
+      <section id="services" className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Why Do Yoga Teachers Need Insurance?
+            Membership Marketing Services
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            <strong>Yoga teacher insurance</strong> protects you from liability claims and provides
-            essential coverage for your professional practice. With increasing litigation, the right
-            insurance gives you peace of mind while you teach.
+            Comprehensive solutions to grow your membership and increase member lifetime value.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+            <Link href="/services/member-acquisition" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Professional Protection</h3>
-              <p className="text-sm text-slate-400">
-                Professional indemnity insurance covers claims that your teaching advice or
-                instruction caused injury to a student due to negligence or poor practice.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">Member Acquisition</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Data-driven campaigns to attract and convert new members through digital marketing, events, and referral programmes.
               </p>
-            </div>
+              <p className="text-xs text-blue-400">From £2,000/month</p>
+            </Link>
 
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <Link href="/services/member-retention" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Student Protection</h3>
-              <p className="text-sm text-slate-400">
-                Public liability insurance covers injury to students or damage to property
-                during your classes. Essential for protecting your students and your business.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">Member Retention</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Reduce churn through optimised onboarding, renewal automation, and win-back campaigns for lapsed members.
               </p>
-            </div>
+              <p className="text-xs text-green-400">From £1,500/month</p>
+            </Link>
 
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <Link href="/services/member-engagement" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Legal Support</h3>
-              <p className="text-sm text-slate-400">
-                Coverage includes legal fees and compensation costs if a claim is made against
-                you. Protects your financial security and professional reputation.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">Member Engagement</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Deepen relationships through community building, events, gamification, and personalised member journeys.
               </p>
-            </div>
+              <p className="text-xs text-purple-400">From £1,500/month</p>
+            </Link>
 
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            <Link href="/services/membership-strategy" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Peace of Mind</h3>
-              <p className="text-sm text-slate-400">
-                Focus on teaching while knowing you&apos;re protected. Insurance covers defense
-                against claims and helps resolve disputes professionally.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">Membership Strategy</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Strategic consulting to transform your membership model with proposition review, pricing optimisation, and roadmaps.
               </p>
-            </div>
+              <p className="text-xs text-cyan-400">From £3,000/month</p>
+            </Link>
 
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            <Link href="/services/content-marketing" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-orange-500/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Studio Requirements</h3>
-              <p className="text-sm text-slate-400">
-                Most yoga studios require teachers to carry insurance. Some insurers provide
-                coverage that meets studio owner requirements and Yoga Alliance standards.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-300 transition-colors">Content Marketing</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Position your organisation as the authority in your sector through thought leadership, SEO, and social media.
               </p>
-            </div>
+              <p className="text-xs text-orange-400">From £2,000/month</p>
+            </Link>
 
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+            <Link href="/contact" className="group bg-gradient-to-br from-blue-900/50 to-slate-800/50 hover:from-blue-800/50 hover:to-slate-700/50 rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Affordable Rates</h3>
-              <p className="text-sm text-slate-400">
-                Yoga teacher insurance is reasonably priced. Specialist insurers offer
-                competitive rates from as little as £15/month for comprehensive coverage.
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">Free Consultation</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Book a free 30-minute call to discuss your membership challenges and explore how we can help.
               </p>
-            </div>
+              <p className="text-xs text-blue-400">No obligation</p>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Providers Section */}
-      <section id="providers" className="py-16 px-4">
+      {/* Who We Work With */}
+      <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Leading Yoga Teacher Insurance Providers
+            Who We Work With
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Compare quotes from the UK's leading <strong>yoga teacher insurance</strong> specialists.
-            We help you find the best coverage at the best price.
+            We specialise in membership organisations across sectors, understanding the unique challenges each faces.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Yoga Alliance</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Official insurance for Yoga Alliance registered members. Recognized and trusted provider.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/industries/professional-bodies" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">Professional Bodies</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Accountants, engineers, lawyers, healthcare professionals. We help attract younger members and demonstrate CPD value.
               </p>
-              <p className="text-sm text-slate-500">Professional + Public Liability</p>
-            </div>
+              <p className="text-xs text-slate-500">1,000 - 100,000+ members</p>
+            </Link>
 
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Balens</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Specialist fitness and yoga professional insurance with competitive rates.
+            <Link href="/industries/trade-associations" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">Trade Associations</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Industry representative bodies. We help demonstrate ROI to member businesses and engage SME members.
               </p>
-              <p className="text-sm text-slate-500">Comprehensive Coverage</p>
-            </div>
+              <p className="text-xs text-slate-500">200 - 10,000 members</p>
+            </Link>
 
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Specialist Providers</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                UK insurers specializing in yoga, fitness, and wellness professionals.
+            <Link href="/industries/membership-charities" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">Membership Charities</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Charitable organisations with supporters. We help overcome donor fatigue and convert supporters to regular givers.
               </p>
-              <p className="text-sm text-slate-500">Flexible Options Available</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a
-              href="/best-yoga-teacher-insurance-providers"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              View Detailed Provider Comparison →
-            </a>
-            <p className="text-slate-400 text-sm mt-4">Compare the top 5 yoga insurance specialists | Coverage details | Expert analysis</p>
+              <p className="text-xs text-slate-500">5,000 - 500,000+ supporters</p>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Our Service Section */}
+      {/* Case Studies Preview */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Why Choose Yoga Teacher Insurance UK
+          <h2 className="text-2xl font-bold text-white text-center mb-4">
+            Results That Matter
           </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
+            Real outcomes from organisations we&apos;ve helped transform.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">⚡ Instant Quotes</h3>
-              <p className="text-slate-400">
-                Get personalized insurance quotes in minutes. Our calculator analyzes your specific teaching situation to provide accurate pricing.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <span className="text-blue-400 font-bold">PB</span>
+                </div>
+                <div>
+                  <p className="text-white font-semibold">Professional Body</p>
+                  <p className="text-xs text-slate-500">Finance Sector</p>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm mb-6">
+                &quot;Struggling with declining membership and low engagement among younger professionals.&quot;
               </p>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p className="text-2xl font-bold text-green-400">+47%</p>
+                  <p className="text-xs text-slate-500">New Members</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-blue-400">3x</p>
+                  <p className="text-xs text-slate-500">Event Attendance</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-purple-400">-7%</p>
+                  <p className="text-xs text-slate-500">Churn Rate</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🏆 Specialist Providers</h3>
-              <p className="text-slate-400">
-                We work exclusively with UK insurers who specialize in yoga teacher coverage, understanding your unique risks and needs.
+
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <span className="text-green-400 font-bold">TA</span>
+                </div>
+                <div>
+                  <p className="text-white font-semibold">Trade Association</p>
+                  <p className="text-xs text-slate-500">Construction Sector</p>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm mb-6">
+                &quot;Members questioning value, renewal rates dropping year on year.&quot;
               </p>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p className="text-2xl font-bold text-green-400">86%</p>
+                  <p className="text-xs text-slate-500">Renewal Rate</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-blue-400">+29</p>
+                  <p className="text-xs text-slate-500">NPS Increase</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-purple-400">+15%</p>
+                  <p className="text-xs text-slate-500">Revenue</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">📊 Transparent Pricing</h3>
-              <p className="text-slate-400">
-                No hidden fees or surprises. See exactly what you're paying for with clear breakdowns of professional indemnity and public liability costs.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">✓ Quick Comparison</h3>
-              <p className="text-slate-400">
-                Compare multiple providers side-by-side to find the best coverage at the best price for your teaching situation and requirements.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🎯 Specialized Coverage</h3>
-              <p className="text-slate-400">
-                Whether you teach hot yoga, aerial yoga, or standard classes, we help you find insurance tailored to your specific teaching style.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🚀 Expert Support</h3>
-              <p className="text-slate-400">
-                Our guides and resources help you understand insurance options, making informed decisions about protecting your yoga teaching career.
-              </p>
-            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/case-studies"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              View All Case Studies
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Types of Cover Section */}
+      {/* How It Works */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Types of Yoga Teacher Insurance Cover
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Professional Indemnity</h3>
-              <p className="text-slate-400 mb-4">
-                Covers claims of professional negligence, poor advice, or inadequate instruction
-                that causes injury to a student. Essential for protecting your professional practice.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Covers negligence claims
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Legal defense included
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Compensation costs covered
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Public Liability</h3>
-              <p className="text-slate-400 mb-4">
-                Covers injury to students or damage to property during your classes.
-                Recommended for all yoga teachers, required by most studios.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Student injury covered
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Property damage covered
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Studio requirements met
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Combined Coverage</h3>
-              <p className="text-slate-400 mb-4">
-                Both professional indemnity and public liability insurance in one policy.
-                Best value for comprehensive protection and peace of mind.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Comprehensive professional protection
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Cost-effective bundled rate
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Single renewal and invoice
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Specialized Coverage</h3>
-              <p className="text-slate-400 mb-4">
-                Additional options for hot yoga, aerial yoga, online classes, and studio owners.
-                Customize coverage to match your teaching specialty.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Hot and aerial yoga
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Online class coverage
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Studio owner policies
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who Needs Yoga Insurance Section with Yoga Background */}
-      <section className="relative py-16 px-4 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&q=80"
-            alt="peaceful yoga meditation mindfulness practice wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/95"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Who Needs Yoga Teacher Insurance?
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-green-400 mb-4">✓ You Need Insurance If You:</h3>
-              <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Teach yoga classes to students (group or private)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are self-employed or run a yoga studio</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are training to become a yoga teacher</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Teach specialized styles (hot yoga, aerial yoga)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are a Yoga Alliance member or want accreditation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Work at studios or venues that require insurance</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">📚 Teacher Types We Serve:</h3>
-              <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Experienced teachers</strong> - Established practices seeking comprehensive coverage</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>New teachers</strong> - Recently qualified instructors starting their careers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Trainees</strong> - Students completing yoga teacher training programs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Studio owners</strong> - Multi-teacher studios needing comprehensive protection</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Freelance instructors</strong> - Teaching at multiple venues or online</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Specialists</strong> - Hot yoga, aerial yoga, therapeutic practitioners</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Get Insured Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            How to Get Yoga Teacher Insurance in 4 Steps
+            How We Work
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top--4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">1</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Share Your Details</h3>
+              <div className="absolute -top-4 left-6 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white">1</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Discovery</h3>
                 <p className="text-slate-400 text-sm">
-                  Tell us about your yoga teaching practice - styles you teach, experience level, number of students, and whether you teach online or in-person.
+                  We learn about your organisation, members, challenges, and goals through a free consultation call.
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">2</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Instant Quotes</h3>
+              <div className="absolute -top-4 left-6 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white">2</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Strategy</h3>
                 <p className="text-slate-400 text-sm">
-                  Receive personalized quotes from multiple specialist insurers within minutes. See pricing for different coverage options and compare providers.
+                  We develop a tailored plan with clear KPIs, timelines, and quick wins alongside long-term initiatives.
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">3</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Choose Your Policy</h3>
+              <div className="absolute -top-4 left-6 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white">3</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Execute</h3>
                 <p className="text-slate-400 text-sm">
-                  Select the coverage option that best fits your teaching practice and budget. Choose professional indemnity, public liability, or combined policies.
+                  We implement campaigns, optimise systems, and create content while keeping you informed at every step.
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">4</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Protected</h3>
+              <div className="absolute -top-4 left-6 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white">4</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-blue-300 mb-3">Measure</h3>
                 <p className="text-slate-400 text-sm">
-                  Complete your policy and receive your certificate. You're now fully insured and can start teaching with complete peace of mind.
+                  We track results, report on KPIs, and continuously optimise to ensure you&apos;re getting ROI from your investment.
                 </p>
               </div>
             </div>
@@ -593,198 +389,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why It Matters Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-blue-600/20">
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Why Yoga Teacher Insurance Matters
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            Ready to Grow Your Membership?
           </h2>
-          <p className="text-slate-300 text-lg mb-6">
-            A single injury claim could cost you thousands in legal fees and compensation. Without insurance, you could face:
+          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+            Book a free 30-minute consultation to discuss your challenges and explore how we can help you acquire, retain, and engage more members.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">£10,000+</p>
-              <p className="text-slate-300 text-sm">Average legal defense costs</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">£50,000+</p>
-              <p className="text-slate-300 text-sm">Potential compensation claims</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">Career Risk</p>
-              <p className="text-slate-300 text-sm">Loss of reputation and income</p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-all shadow-lg"
+            >
+              Book Free Consultation
+            </Link>
+            <Link
+              href="/case-studies"
+              className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all"
+            >
+              View Case Studies
+            </Link>
           </div>
-          <p className="text-slate-300 mt-8">
-            Yoga teacher insurance protects your livelihood, reputation, and financial security. For less than £30/month, you get complete peace of mind to focus on teaching.
+          <p className="text-slate-400 text-sm mt-6">
+            No obligation. No hard sell. Just a conversation about your membership goals.
           </p>
-        </div>
-      </section>
-
-      {/* Articles & Resources Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Expert Articles & Guides
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Explore our comprehensive guides on yoga teacher insurance, coverage types, costs, and specialized requirements.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="/articles/yoga-insurance-costs-guide" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-blue-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1542654291-526a40ef6050?w=600&h=400&crop=entropy"
-                  alt="yoga teacher insurance costs 2026 UK pricing guide budget breakdown"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Insurance Costs Guide</h3>
-                <p className="text-sm text-slate-400 mb-4">Complete breakdown of yoga teacher insurance pricing, factors affecting costs, and budgeting tips.</p>
-                <div className="text-xs text-blue-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/hot-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-orange-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&crop=entropy"
-                  alt="hot yoga insurance bikram yoga heated class coverage requirements UK quotes"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-orange-400 group-hover:text-orange-300 mb-2">Hot Yoga Insurance UK</h3>
-                <p className="text-sm text-slate-400 mb-4">Specialized coverage for heated yoga classes, Bikram yoga, heat-related injury protection. Get quotes now.</p>
-                <div className="text-xs text-orange-400">Get Quote →</div>
-              </div>
-            </a>
-
-            <a href="/aerial-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-red-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&crop=entropy"
-                  alt="aerial yoga insurance suspended yoga equipment liability fall protection UK coverage calculator"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-red-400 group-hover:text-red-300 mb-2">Aerial Yoga Insurance UK</h3>
-                <p className="text-sm text-slate-400 mb-4">Complete protection for suspension equipment, fall risks, rigging liability. Use our calculator for instant quotes.</p>
-                <div className="text-xs text-red-400">Get Quote + Calculator →</div>
-              </div>
-            </a>
-
-            <a href="/articles/public-liability-vs-professional-indemnity" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-indigo-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=600&h=400&crop=entropy"
-                  alt="public liability professional indemnity insurance comparison yoga teachers"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-indigo-400 group-hover:text-indigo-300 mb-2">Insurance Types Explained</h3>
-                <p className="text-sm text-slate-400 mb-4">Clear explanation of public liability vs professional indemnity and what each covers.</p>
-                <div className="text-xs text-indigo-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/articles/yoga-alliance-insurance-requirements" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-teal-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&crop=entropy"
-                  alt="yoga alliance insurance requirements accreditation standards membership"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-teal-400 group-hover:text-teal-300 mb-2">Yoga Alliance Requirements</h3>
-                <p className="text-sm text-slate-400 mb-4">Insurance requirements for Yoga Alliance members and professional standards.</p>
-                <div className="text-xs text-teal-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/articles" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-emerald-500/50">
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-12 h-12 text-blue-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17c0 5.523 3.692 10 8 10c1.906 0 3.674-.586 5-1.566 1.326.98 3.094 1.566 5 1.566 4.308 0 8-4.477 8-10 0-6.002-4.5-10.747-10-10.253z" />
-                  </svg>
-                  <p className="text-slate-300 font-semibold">View All Articles</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-emerald-400 group-hover:text-emerald-300 mb-2">Complete Collection</h3>
-                <p className="text-sm text-slate-400 mb-4">Explore our complete collection of yoga teacher insurance guides and educational resources.</p>
-                <div className="text-xs text-emerald-400">Browse All →</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Specialty Insurance Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Specialist Yoga & Wellness Insurance
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Whether you're a yoga instructor, meditation teacher, studio owner, or fitness trainer, we help you find affordable specialist insurance coverage.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/yoga-studio-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-green-400 group-hover:text-green-300 mb-2">Yoga Studio Insurance</h3>
-              <p className="text-sm text-slate-400">Complete business coverage for studio owners, property, equipment & staff.</p>
-            </a>
-
-            <a href="/meditation-teacher-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-purple-400 group-hover:text-purple-300 mb-2">Meditation Teacher Insurance</h3>
-              <p className="text-sm text-slate-400">Specialist cover for meditation, mindfulness & breathwork instructors.</p>
-            </a>
-
-            <a href="/public-liability-insurance-yoga-teachers" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Public Liability Insurance</h3>
-              <p className="text-sm text-slate-400">Essential coverage for yoga teachers from £10/month. Studio required.</p>
-            </a>
-
-            <a href="/pilates-instructor-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 mb-2">Yoga-Pilates Instructor</h3>
-              <p className="text-sm text-slate-400">Combined coverage for yoga and pilates teaching from one policy.</p>
-            </a>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-slate-400 text-sm">
-              Looking for <strong>cheap yoga insurance</strong> or <strong>affordable yoga instructor insurance</strong>?
-              Compare quotes from UK yoga insurance companies and find the cheapest yoga teacher insurance that meets your needs.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -792,103 +422,67 @@ export default function HomePage() {
       <section id="faq" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Yoga Teacher Insurance FAQs
+            Frequently Asked Questions
           </h2>
 
           <div className="space-y-6">
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do yoga teachers need insurance in the UK?
+                What does a membership marketing agency do?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                While not legally required by UK law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against potential claims from students and provides essential financial protection for your teaching business.
+                A membership marketing agency specialises in helping membership organisations grow their member base and retain existing members. We create targeted campaigns for acquisition, develop retention strategies to reduce churn, and implement engagement programmes to increase member participation and lifetime value.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What does yoga teacher insurance cover?
+                How much does membership marketing cost?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections for comprehensive coverage. Many providers also offer additional coverage for yoga alliances and online classes.
+                Membership marketing services typically range from £1,500 to £10,000 per month depending on the scope of work. Member acquisition campaigns start around £2,000/month, retention programmes from £1,500/month, and comprehensive strategy engagements from £3,000/month. We tailor solutions to your budget and goals.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                How much does yoga teacher insurance cost?
+                What types of organisations do you work with?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year. <a href="/articles/yoga-insurance-costs-guide" className="text-blue-400 hover:text-blue-300 underline">Read our complete costs guide</a> for detailed pricing information. Get a personalized quote based on your teaching profile using our calculator.
+                We work with professional bodies, trade associations, membership charities, learned societies, and member associations. Our clients include organisations representing accountants, engineers, lawyers, healthcare professionals, construction companies, and many other sectors.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is the difference between professional indemnity and public liability insurance?
+                How do you measure success?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. <a href="/articles/public-liability-vs-professional-indemnity" className="text-blue-400 hover:text-blue-300 underline">Learn the key differences</a> between these two essential coverage types.
+                We measure success through key metrics including: new member growth rate, member retention/renewal rate, engagement scores (event attendance, resource usage, community participation), Net Promoter Score (NPS), cost per acquisition, and member lifetime value. We set clear KPIs at the start of every engagement.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do trainee yoga teachers need insurance?
+                What is a typical member retention rate?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. <a href="/articles/trainee-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300 underline">Check our trainee insurance guide</a> for affordable coverage options during your training. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is yoga teacher liability insurance?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions. Having this coverage demonstrates professionalism to students and studios.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Can hot yoga or aerial yoga be insured?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. <a href="/articles/hot-yoga-insurance-coverage" className="text-blue-400 hover:text-blue-300 underline">Hot yoga requires coverage for heat-related risks</a>, while <a href="/articles/aerial-yoga-insurance-explained" className="text-blue-400 hover:text-blue-300 underline">aerial yoga requires coverage for fall and equipment risks</a>. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates. When getting quotes, always mention your specific yoga specialties.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do studio owners need different yoga insurance?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer's liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies designed to provide comprehensive protection for the entire business.
+                Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Our retention programmes typically help clients reduce churn by 15-30%, significantly impacting revenue and member lifetime value.
               </p>
             </details>
           </div>

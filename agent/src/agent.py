@@ -1,6 +1,6 @@
 """
-Yoga Teacher Insurance Agent
-CopilotKit + Pydantic AI integration for insurance advice
+Membership Marketing Agency Agent
+CopilotKit + Pydantic AI integration for lead qualification and consultation booking
 """
 from textwrap import dedent
 from typing import Optional, List
@@ -42,12 +42,12 @@ def extract_user_from_instructions(instructions: str) -> dict:
     if id_match:
         result["user_id"] = id_match.group(1)
 
-    # Try multiple formats for name (HeroVoice uses "- Name:" format)
+    # Try multiple formats for name
     name_patterns = [
-        r'User Name:\s*([^\n]+)',      # CopilotKit format
-        r'-\s*Name:\s*([^\n]+)',        # HeroVoice format
-        r'Name:\s*([^\n]+)',            # Simple format
-        r'first name \(([^)]+)\)',      # "first name (Dan)" format
+        r'User Name:\s*([^\n]+)',
+        r'-\s*Name:\s*([^\n]+)',
+        r'Name:\s*([^\n]+)',
+        r'first name \(([^)]+)\)',
     ]
     for pattern in name_patterns:
         name_match = re.search(pattern, instructions, re.IGNORECASE)
@@ -57,9 +57,9 @@ def extract_user_from_instructions(instructions: str) -> dict:
 
     # Try multiple formats for email
     email_patterns = [
-        r'User Email:\s*([^\n]+)',     # CopilotKit format
-        r'-\s*Email:\s*([^\n]+)',       # HeroVoice format
-        r'Email:\s*([^\s\n]+)',         # Simple format
+        r'User Email:\s*([^\n]+)',
+        r'-\s*Email:\s*([^\n]+)',
+        r'Email:\s*([^\s\n]+)',
     ]
     for pattern in email_patterns:
         email_match = re.search(pattern, instructions, re.IGNORECASE)
@@ -85,156 +85,181 @@ def get_effective_user_name(state_user) -> Optional[str]:
 
 
 # =====
-# Insurance Data (Static for MVP, can move to DB later)
+# Membership Marketing Services Data
 # =====
-INSURANCE_PROVIDERS = [
+SERVICES = [
     {
-        "name": "Balens",
-        "specialty": "Yoga and holistic therapies specialist",
-        "public_liability": "£1m - £5m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 60,
-        "annual_cost_to": 150,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.balens.co.uk",
-        "highlights": ["Yoga specialist since 1960s", "Covers 350+ therapies", "Instant cover available"]
+        "name": "Member Acquisition",
+        "description": "Data-driven campaigns to attract and convert new members",
+        "key_activities": [
+            "Targeted digital advertising",
+            "Content marketing and SEO",
+            "Referral programme development",
+            "Event marketing and webinars",
+            "Partnership and sponsorship activation"
+        ],
+        "typical_results": "20-40% increase in new member sign-ups",
+        "ideal_for": ["Growing organisations", "Launching new membership tiers", "Expanding into new markets"],
+        "monthly_investment": "£2,000 - £8,000"
     },
     {
-        "name": "BGI",
-        "specialty": "Fitness and sports insurance",
-        "public_liability": "£1m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 55,
-        "annual_cost_to": 180,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.bgiuk.com",
-        "highlights": ["Part of Hiscox group", "Online quote system", "Covers equipment"]
+        "name": "Member Retention",
+        "description": "Reduce churn and increase lifetime value through engagement strategies",
+        "key_activities": [
+            "Onboarding journey optimisation",
+            "Engagement scoring and intervention",
+            "Renewal campaign automation",
+            "Win-back campaigns for lapsed members",
+            "Member feedback and NPS programmes"
+        ],
+        "typical_results": "15-30% reduction in churn rate",
+        "ideal_for": ["High churn organisations", "Mature membership bases", "Subscription fatigue issues"],
+        "monthly_investment": "£1,500 - £6,000"
     },
     {
-        "name": "Insure4Sport",
-        "specialty": "Sports and fitness professionals",
-        "public_liability": "£1m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 50,
-        "annual_cost_to": 160,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": False,
-        "website": "https://www.insure4sport.co.uk",
-        "highlights": ["Quick online quotes", "Monthly payment option", "24/7 claims"]
+        "name": "Member Engagement",
+        "description": "Deepen member relationships and increase participation",
+        "key_activities": [
+            "Community building and forums",
+            "Content strategy and member resources",
+            "Event programming and networking",
+            "Gamification and recognition programmes",
+            "Member communications optimisation"
+        ],
+        "typical_results": "40-60% increase in active engagement",
+        "ideal_for": ["Low engagement organisations", "Diverse member bases", "Value perception issues"],
+        "monthly_investment": "£1,500 - £5,000"
     },
     {
-        "name": "Sports Coach UK",
-        "specialty": "Coaches and instructors",
-        "public_liability": "£5m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 65,
-        "annual_cost_to": 140,
-        "covers_aerial": False,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.sportscoachuk.org",
-        "highlights": ["Includes first aid cover", "Equipment cover available", "Multi-activity policies"]
+        "name": "Membership Strategy",
+        "description": "Strategic consulting to transform your membership model",
+        "key_activities": [
+            "Membership proposition review",
+            "Pricing and tier optimisation",
+            "Competitive analysis",
+            "Member journey mapping",
+            "Technology and platform assessment"
+        ],
+        "typical_results": "Clear roadmap with quick wins and long-term growth plan",
+        "ideal_for": ["Organisations in transition", "New CEOs/membership directors", "Stagnant growth"],
+        "monthly_investment": "£3,000 - £10,000"
+    },
+    {
+        "name": "Content Marketing",
+        "description": "Position your organisation as the go-to voice in your sector",
+        "key_activities": [
+            "Thought leadership content",
+            "Member magazine/newsletter production",
+            "Podcast and video production",
+            "Social media strategy",
+            "SEO and search visibility"
+        ],
+        "typical_results": "3x increase in organic reach and brand authority",
+        "ideal_for": ["Organisations needing visibility", "Competitive sectors", "Launching new initiatives"],
+        "monthly_investment": "£2,000 - £7,000"
     }
 ]
 
-COVERAGE_TYPES = {
-    "public_liability": {
-        "name": "Public Liability Insurance",
-        "description": "Covers you if a student or member of the public is injured during your class, or if you damage someone's property.",
-        "required": True,
-        "typical_amount": "£1m - £5m",
-        "why_needed": "Most venues require this before you can teach. Covers legal costs if someone sues you for injury.",
-        "examples": [
-            "A student slips on a yoga mat and breaks their wrist",
-            "You accidentally damage a mirror at the studio",
-            "A student trips over your bag and injures themselves"
-        ]
+CASE_STUDIES = [
+    {
+        "client": "Professional Body (Finance Sector)",
+        "challenge": "Declining membership and low engagement among younger professionals",
+        "solution": "Digital-first acquisition campaign + community platform launch",
+        "results": {
+            "new_members": "+47% in 12 months",
+            "engagement": "3x increase in event attendance",
+            "retention": "Churn reduced from 18% to 11%"
+        },
+        "services_used": ["Member Acquisition", "Member Engagement"]
     },
-    "professional_indemnity": {
-        "name": "Professional Indemnity Insurance",
-        "description": "Covers you if a student claims your instruction caused them harm or you gave negligent advice.",
-        "required": True,
-        "typical_amount": "£1m - £5m",
-        "why_needed": "Protects you from claims that your teaching methods or advice caused injury.",
-        "examples": [
-            "A student claims your adjustment caused a back injury",
-            "Someone alleges your breathing instruction caused them to faint",
-            "A student says your advice worsened their condition"
-        ]
+    {
+        "client": "Trade Association (Construction)",
+        "challenge": "Members questioning value; renewal rates dropping",
+        "solution": "Member value proposition refresh + retention automation",
+        "results": {
+            "retention": "Renewal rate up from 72% to 86%",
+            "nps": "NPS improved from +12 to +41",
+            "revenue": "15% increase in membership revenue"
+        },
+        "services_used": ["Member Retention", "Membership Strategy"]
     },
-    "personal_accident": {
-        "name": "Personal Accident Insurance",
-        "description": "Covers YOUR injuries if you're hurt while teaching.",
-        "required": False,
-        "typical_amount": "Up to £50,000",
-        "why_needed": "Provides income protection if you can't work due to injury.",
-        "examples": [
-            "You injure yourself demonstrating a pose",
-            "You slip and hurt your back during class",
-            "You're injured traveling to a class"
-        ]
+    {
+        "client": "Membership Charity (Healthcare)",
+        "challenge": "Low awareness and struggling to compete for attention",
+        "solution": "Content marketing programme + thought leadership campaign",
+        "results": {
+            "visibility": "Featured in 12 national publications",
+            "traffic": "Website traffic up 340%",
+            "leads": "Qualified leads up 89%"
+        },
+        "services_used": ["Content Marketing", "Member Acquisition"]
     },
-    "equipment": {
-        "name": "Equipment Insurance",
-        "description": "Covers your yoga props, mats, speakers, and other teaching equipment.",
-        "required": False,
-        "typical_amount": "Up to £5,000",
-        "why_needed": "Protects your investment in professional equipment.",
-        "examples": [
-            "Your yoga props are stolen from your car",
-            "Your speaker system is damaged in transit",
-            "Your bolsters are damaged by water leak at studio"
-        ]
+    {
+        "client": "Professional Institute (Technology)",
+        "challenge": "Members not engaging with resources; low CPD completion",
+        "solution": "Gamification programme + personalised learning paths",
+        "results": {
+            "engagement": "Resource usage up 156%",
+            "completion": "CPD completion rate doubled",
+            "satisfaction": "Member satisfaction up 28 points"
+        },
+        "services_used": ["Member Engagement", "Content Marketing"]
+    }
+]
+
+ORGANISATION_TYPES = {
+    "professional_body": {
+        "name": "Professional Body",
+        "description": "Organisations representing professionals in a specific field (accountants, engineers, lawyers, etc.)",
+        "common_challenges": ["Younger member recruitment", "Demonstrating CPD value", "Competing with free online content"],
+        "typical_size": "1,000 - 100,000+ members"
+    },
+    "trade_association": {
+        "name": "Trade Association",
+        "description": "Organisations representing businesses in a specific industry",
+        "common_challenges": ["Member ROI justification", "Engaging SME members", "Policy influence visibility"],
+        "typical_size": "200 - 10,000 members"
+    },
+    "membership_charity": {
+        "name": "Membership Charity",
+        "description": "Charitable organisations with a supporter/member base",
+        "common_challenges": ["Donor fatigue", "Demonstrating impact", "Converting supporters to regular givers"],
+        "typical_size": "5,000 - 500,000+ supporters"
+    },
+    "learned_society": {
+        "name": "Learned Society",
+        "description": "Academic and research-focused membership organisations",
+        "common_challenges": ["International member engagement", "Journal/publication competition", "Early career recruitment"],
+        "typical_size": "500 - 50,000 members"
+    },
+    "member_association": {
+        "name": "Member Association",
+        "description": "General membership organisations (clubs, societies, interest groups)",
+        "common_challenges": ["Volunteer engagement", "Modernising operations", "Competing for attention"],
+        "typical_size": "100 - 50,000 members"
     }
 }
 
-YOGA_STYLES = {
-    "aerial": {
-        "name": "Aerial Yoga",
-        "risk_level": "Higher",
-        "insurance_notes": "Requires specialist cover. Not all insurers cover aerial. Check hammock/silk rigging is included.",
-        "typical_premium_increase": "10-30%"
+CHALLENGES = {
+    "acquisition": {
+        "name": "Member Acquisition",
+        "symptoms": ["Declining new member numbers", "High cost per acquisition", "Low awareness in target market"],
+        "recommended_services": ["Member Acquisition", "Content Marketing"]
     },
-    "hot_yoga": {
-        "name": "Hot Yoga / Bikram",
-        "risk_level": "Higher",
-        "insurance_notes": "Higher risk due to heat. Ensure dehydration/heat-related incidents are covered.",
-        "typical_premium_increase": "10-20%"
+    "retention": {
+        "name": "Member Retention",
+        "symptoms": ["High churn rate", "Low renewal rates", "Members questioning value"],
+        "recommended_services": ["Member Retention", "Member Engagement"]
     },
-    "vinyasa": {
-        "name": "Vinyasa Flow",
-        "risk_level": "Standard",
-        "insurance_notes": "Standard coverage usually sufficient. Check adjustment/hands-on work is covered.",
-        "typical_premium_increase": "0%"
+    "engagement": {
+        "name": "Member Engagement",
+        "symptoms": ["Low event attendance", "Poor resource usage", "Silent majority of members"],
+        "recommended_services": ["Member Engagement", "Content Marketing"]
     },
-    "hatha": {
-        "name": "Hatha Yoga",
-        "risk_level": "Lower",
-        "insurance_notes": "Generally lower risk. Most basic policies will cover this.",
-        "typical_premium_increase": "0%"
-    },
-    "yin": {
-        "name": "Yin Yoga",
-        "risk_level": "Lower",
-        "insurance_notes": "Passive style with lower injury risk. Standard cover usually fine.",
-        "typical_premium_increase": "0%"
-    },
-    "prenatal": {
-        "name": "Prenatal/Postnatal Yoga",
-        "risk_level": "Higher",
-        "insurance_notes": "Specialist cover required. Check pregnancy complications are included.",
-        "typical_premium_increase": "15-25%"
-    },
-    "teacher_training": {
-        "name": "Teacher Training",
-        "risk_level": "Standard",
-        "insurance_notes": "Not all policies cover running teacher training courses. Verify before signing up.",
-        "typical_premium_increase": "10-20%"
+    "strategy": {
+        "name": "Strategic Direction",
+        "symptoms": ["Unclear value proposition", "Outdated membership model", "Competitive pressure"],
+        "recommended_services": ["Membership Strategy", "Member Acquisition"]
     }
 }
 
@@ -251,13 +276,15 @@ class UserProfile(BaseModel):
 
 class AppState(BaseModel):
     user: Optional[UserProfile] = None
-    # User's preferences for personalized recommendations
-    yoga_styles: list[str] = Field(default_factory=list)
-    teaching_locations: list[str] = Field(default_factory=list)  # studio, home, outdoor, online
-    student_count: Optional[str] = None  # "1-10", "11-50", "50+"
-    has_existing_insurance: bool = False
+    # Organisation profile for personalised recommendations
+    organisation_type: Optional[str] = None  # professional_body, trade_association, etc.
+    organisation_name: Optional[str] = None
+    member_count: Optional[str] = None  # "under_500", "500_2000", "2000_10000", "over_10000"
+    primary_challenges: list[str] = Field(default_factory=list)  # acquisition, retention, engagement, strategy
+    budget_range: Optional[str] = None  # "under_2k", "2k_5k", "5k_10k", "over_10k"
+    timeline: Optional[str] = None  # "urgent", "3_months", "6_months", "exploring"
     # Current page context from frontend
-    current_page: Optional[str] = None  # e.g., "aerial-yoga-insurance", "homepage"
+    current_page: Optional[str] = None
 
 
 # =====
@@ -267,89 +294,90 @@ agent = Agent(
     model=GoogleModel('gemini-2.0-flash'),
     deps_type=StateDeps[AppState],
     system_prompt=dedent("""
-        You are a friendly, knowledgeable yoga insurance advisor named Namaste (or just "your yoga insurance guide").
-        You speak with a calm, supportive energy - like a trusted yoga teacher helping with practical matters.
+        You are a friendly, knowledgeable membership marketing consultant.
+        You help associations, professional bodies, and membership organisations grow and retain their members.
 
         ## Your Personality
-        - Warm and zen-like - use gentle, calming language
-        - Clear and jargon-free - explain insurance in simple terms
-        - Encouraging - help them feel confident about protecting their practice
-        - Use occasional yoga/mindfulness references naturally (not forced)
+        - Warm and professional - like a trusted advisor
+        - Direct and practical - focus on results and ROI
+        - Knowledgeable - deep expertise in membership sector
+        - Solution-oriented - always connect challenges to solutions
 
-        ## CRITICAL: PROFILE COMPLETION FIRST
-        Before recommending ANY insurance providers, you MUST gather the user's teaching profile.
-        This is like completing a yoga sequence - each step builds on the last.
+        ## CRITICAL: QUALIFICATION FIRST
+        Before recommending ANY services, you MUST understand the prospect's situation.
+        This is like a discovery call - each question builds understanding.
 
         **The 5 Essential Questions (ask one at a time, conversationally):**
 
-        1. **STYLES** - "What yoga styles do you teach?"
-           Examples: Vinyasa, Hatha, Yin, Restorative, Aerial, Hot/Bikram, Prenatal, Meditation
+        1. **ORGANISATION TYPE** - "What type of organisation are you?"
+           Examples: Professional body, Trade association, Membership charity, Learned society
 
-        2. **LOCATIONS** - "Where do you teach your classes?"
-           Examples: Studio, Gym, Private homes, Outdoors, Online, Corporate, Schools
+        2. **MEMBER COUNT** - "Roughly how many members do you have?"
+           Examples: Under 500, 500-2,000, 2,000-10,000, Over 10,000
 
-        3. **EXPERIENCE** - "How long have you been teaching?"
-           Examples: Training now, 0-2 years, 2-5 years, 5+ years
+        3. **PRIMARY CHALLENGE** - "What's your biggest membership challenge right now?"
+           Examples: Acquisition (growing numbers), Retention (reducing churn), Engagement (increasing participation), Strategy (direction/model)
 
-        4. **STUDENTS** - "How many students do you typically teach per class?"
-           Examples: 1-1 private, Small groups (2-10), Medium (11-20), Large (20+)
+        4. **GOALS** - "What would success look like for you in the next 12 months?"
+           Listen for specific targets: % growth, retention improvement, engagement metrics
 
-        5. **CURRENT COVER** - "Do you currently have any yoga teacher insurance?"
-           Yes/No and with whom if yes
+        5. **TIMELINE & BUDGET** - "Are you looking to start immediately or exploring options? And do you have a budget range in mind?"
+           This helps qualify and set expectations
 
-        **Flow like a sun salutation:**
+        **Flow like a consultation:**
         - Ask ONE question at a time
-        - Acknowledge their answer warmly
-        - Build on what they share
-        - Only recommend providers AFTER you understand their needs
+        - Acknowledge their answer and show understanding
+        - Build on what they share with relevant insights
+        - Only recommend services AFTER you understand their needs
 
         ## Your Expertise
-        - UK yoga teacher insurance requirements
-        - Coverage types: public liability, professional indemnity, equipment
-        - Specialist needs for aerial, hot, prenatal yoga
-        - Provider comparison and recommendations
+        - Member acquisition strategies (digital, events, referrals)
+        - Retention and renewal optimisation
+        - Engagement and community building
+        - Membership pricing and proposition
+        - Content and thought leadership
 
         ## Available Tools - ALWAYS USE THEM
         | User needs... | Use this tool |
         |---------------|---------------|
-        | Compare providers | compare_providers |
-        | Explain coverage type | explain_coverage |
-        | Style-specific requirements | get_style_requirements |
-        | Specific provider details | get_provider_info |
-        | Their profile/name | get_my_profile |
-        | Quote preparation | get_quick_quote_checklist |
+        | Service recommendations | recommend_services |
+        | Challenge analysis | assess_challenges |
+        | Success stories | get_case_studies |
+        | Service details | get_service_info |
+        | Their profile | get_my_profile |
+        | Book a call | book_consultation |
 
-        ## Key Insurance Facts
-        - Most venues REQUIRE insurance before you can teach
-        - Public liability: £1m-£5m typical (£5m recommended)
-        - Aerial/hot yoga needs SPECIALIST cover
-        - Prenatal yoga requires pregnancy-specific coverage
-        - Teacher training courses need explicit cover
+        ## Key Stats to Reference
+        - Average membership churn: 15-25% annually
+        - Engaged members 3x more likely to renew
+        - Referrals convert at 4x rate of cold leads
+        - Onboarding impacts 60% of first-year retention
 
         ## Conversation Style
         - Greet logged-in users by name (use get_my_profile)
-        - Be encouraging about their yoga journey
+        - Show you understand their sector
         - Use bullet points for clarity
-        - Include specific prices when available
-        - End with a clear next step
+        - Include specific results from case studies when relevant
+        - End with a clear next step (usually booking a consultation)
 
-        Remember: Complete profile first, recommend second. Namaste! 🧘
+        Remember: Qualify first, recommend second. Your goal is to book consultations with qualified prospects.
     """)
 )
 
 
 # Page context descriptions
 PAGE_CONTEXTS = {
-    "aerial-yoga-insurance": "The user is on the AERIAL YOGA INSURANCE page. Focus on hammock/silk equipment, fall risks, rigging liability, and specialist coverage requirements.",
-    "hot-yoga-insurance": "The user is on the HOT YOGA INSURANCE page. Focus on heat-related risks, dehydration, Bikram requirements, and heated environment coverage.",
-    "meditation-teacher-insurance": "The user is on the MEDITATION TEACHER INSURANCE page. Focus on mindfulness, breathwork, lower physical risk, and mental health considerations.",
-    "yoga-studio-insurance": "The user is on the YOGA STUDIO INSURANCE page. Focus on business coverage, employer's liability, property insurance, and multi-teacher policies.",
-    "public-liability-insurance": "The user is on the PUBLIC LIABILITY INSURANCE page. Focus on what PL covers, coverage amounts (£1m-£10m), and venue requirements.",
-    "user-profile": "The user is on their PROFILE page. Help them complete their profile and explain how their choices affect insurance needs.",
-    "pilates-instructor-insurance": "The user is on the PILATES INSTRUCTOR page. Focus on combined yoga-pilates coverage.",
-    "compare-providers": "The user is on the COMPARE PROVIDERS page. Help them compare Balens, BGI, Insure4Sport, and others.",
-    "insurance-costs": "The user is on the COSTS page. Focus on pricing, factors affecting cost, and value for money.",
-    "homepage": "The user is on the HOMEPAGE. Give general guidance and help them find what they need.",
+    "member-acquisition": "The user is on the MEMBER ACQUISITION page. Focus on growth strategies, digital campaigns, and new member conversion.",
+    "member-retention": "The user is on the MEMBER RETENTION page. Focus on churn reduction, renewal optimisation, and win-back campaigns.",
+    "member-engagement": "The user is on the MEMBER ENGAGEMENT page. Focus on community, events, content, and increasing participation.",
+    "content-marketing": "The user is on the CONTENT MARKETING page. Focus on thought leadership, visibility, and brand authority.",
+    "membership-strategy": "The user is on the MEMBERSHIP STRATEGY page. Focus on proposition, pricing, and transformation.",
+    "professional-bodies": "The user is on the PROFESSIONAL BODIES page. They likely represent accountants, engineers, lawyers, or similar.",
+    "trade-associations": "The user is on the TRADE ASSOCIATIONS page. They likely represent businesses in a specific industry.",
+    "membership-charities": "The user is on the MEMBERSHIP CHARITIES page. They likely work with supporters and donors.",
+    "case-studies": "The user is on the CASE STUDIES page. Share relevant success stories and results.",
+    "contact": "The user is on the CONTACT page. They're ready to talk - help them book a consultation.",
+    "homepage": "The user is on the HOMEPAGE. Understand their needs and guide them to relevant information.",
 }
 
 # Dynamic instructions that inject user context from state
@@ -366,8 +394,8 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
     # Build user context section
     if user and (user.name or user.firstName):
         first_name = user.firstName or (user.name.split()[0] if user.name else None)
-        yoga_styles = ", ".join(state.yoga_styles) if state.yoga_styles else "Not specified"
-        locations = ", ".join(state.teaching_locations) if state.teaching_locations else "Not specified"
+        org_type = state.organisation_type or "Not specified"
+        challenges = ", ".join(state.primary_challenges) if state.primary_challenges else "Not discussed yet"
 
         return dedent(f"""
             ## CURRENT PAGE CONTEXT
@@ -378,17 +406,17 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
             - Name: {user.name or 'Unknown'}
             - First Name: {first_name or 'Unknown'}
             - Email: {user.email or 'Not provided'}
-            - Yoga Styles They Teach: {yoga_styles}
-            - Teaching Locations: {locations}
-            - Student Count: {state.student_count or 'Not specified'}
-            - Has Existing Insurance: {'Yes' if state.has_existing_insurance else 'No'}
+            - Organisation Type: {org_type}
+            - Organisation Name: {state.organisation_name or 'Not provided'}
+            - Member Count: {state.member_count or 'Not discussed'}
+            - Primary Challenges: {challenges}
+            - Budget Range: {state.budget_range or 'Not discussed'}
 
             IMPORTANT INSTRUCTIONS:
             - ALWAYS address the user by their first name ({first_name}) in your responses
             - When they ask "what's my name", "who am I", or about their profile, tell them: "{user.name}"
-            - Use their preferences to give personalized insurance recommendations
+            - Use their organisation context to give personalised recommendations
             - Reference the current page context when relevant
-            - If they teach aerial or hot yoga, proactively mention specialist coverage requirements
         """)
     else:
         return dedent(f"""
@@ -396,8 +424,8 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
             {page_context}
 
             ## GUEST USER
-            This user is not logged in. They can browse general insurance information.
-            Encourage them to sign in for personalized recommendations.
+            This user is not logged in. They can still have a consultation.
+            Focus on understanding their needs and qualifying them for a call.
         """)
 
 
@@ -405,196 +433,201 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
 # Tools
 # =====
 @agent.tool
-def compare_providers(
+def recommend_services(
     ctx: RunContext[StateDeps[AppState]],
-    yoga_style: Optional[str] = None
+    challenge: Optional[str] = None
 ) -> dict:
     """
-    Compare UK yoga teacher insurance providers.
-    Shows pricing, coverage levels, and key features.
+    Recommend membership marketing services based on the user's challenges.
 
     Args:
-        yoga_style: Optional filter for providers that cover specific styles (e.g., "aerial", "hot_yoga")
+        challenge: Optional filter for specific challenge (acquisition, retention, engagement, strategy)
     """
-    providers = INSURANCE_PROVIDERS
+    services = SERVICES
 
-    # Filter by yoga style if specified
-    if yoga_style:
-        style_lower = yoga_style.lower().replace(" ", "_")
-        if style_lower == "aerial":
-            providers = [p for p in providers if p["covers_aerial"]]
-        elif style_lower in ["hot", "hot_yoga", "bikram"]:
-            providers = [p for p in providers if p["covers_hot_yoga"]]
-        elif style_lower in ["teacher_training", "teacher training", "ytt"]:
-            providers = [p for p in providers if p["covers_teacher_training"]]
+    # Filter by challenge if specified
+    if challenge:
+        challenge_lower = challenge.lower()
+        challenge_data = CHALLENGES.get(challenge_lower)
+        if challenge_data:
+            recommended_names = challenge_data["recommended_services"]
+            services = [s for s in services if s["name"] in recommended_names]
 
     return {
-        "title": f"UK Yoga Insurance Providers" + (f" (covering {yoga_style})" if yoga_style else ""),
-        "providers": providers,
-        "note": "Prices are approximate and vary based on coverage level and yoga styles taught."
+        "title": f"Recommended Services" + (f" for {challenge}" if challenge else ""),
+        "services": services,
+        "next_step": "Book a free consultation to discuss which services would work best for your organisation."
     }
 
 
 @agent.tool
-def explain_coverage(
+def assess_challenges(
     ctx: RunContext[StateDeps[AppState]],
-    coverage_type: str
+    symptoms: Optional[List[str]] = None
 ) -> dict:
     """
-    Explain what a specific type of insurance coverage means for yoga teachers.
+    Assess membership challenges based on symptoms described.
 
     Args:
-        coverage_type: The type of coverage to explain (e.g., "public_liability", "professional_indemnity", "equipment")
+        symptoms: List of symptoms/issues the organisation is experiencing
     """
-    # Normalize the input
-    coverage_key = coverage_type.lower().replace(" ", "_")
-
-    # Handle common variations
-    if "liability" in coverage_key and "public" in coverage_key:
-        coverage_key = "public_liability"
-    elif "indemnity" in coverage_key or "professional" in coverage_key:
-        coverage_key = "professional_indemnity"
-    elif "accident" in coverage_key or "personal" in coverage_key:
-        coverage_key = "personal_accident"
-    elif "equipment" in coverage_key or "prop" in coverage_key:
-        coverage_key = "equipment"
-
-    if coverage_key in COVERAGE_TYPES:
-        coverage = COVERAGE_TYPES[coverage_key]
+    if not symptoms:
         return {
-            "coverage_type": coverage["name"],
-            "description": coverage["description"],
-            "required": coverage["required"],
-            "typical_amount": coverage["typical_amount"],
-            "why_needed": coverage["why_needed"],
-            "examples": coverage["examples"]
+            "message": "Tell me what challenges you're facing and I'll help identify the root cause.",
+            "common_symptoms": [
+                "Declining new member numbers",
+                "High churn/low renewal rates",
+                "Members not engaging with resources",
+                "Unclear value proposition",
+                "Competition from free alternatives"
+            ]
         }
-    else:
-        return {
-            "error": f"Unknown coverage type: {coverage_type}",
-            "available_types": list(COVERAGE_TYPES.keys()),
-            "suggestion": "Try: public_liability, professional_indemnity, personal_accident, or equipment"
-        }
+
+    # Match symptoms to challenges
+    identified_challenges = []
+    for challenge_key, challenge_data in CHALLENGES.items():
+        for symptom in symptoms:
+            if any(s.lower() in symptom.lower() for s in challenge_data["symptoms"]):
+                if challenge_data["name"] not in [c["name"] for c in identified_challenges]:
+                    identified_challenges.append({
+                        "name": challenge_data["name"],
+                        "recommended_services": challenge_data["recommended_services"]
+                    })
+
+    return {
+        "symptoms_analysed": symptoms,
+        "identified_challenges": identified_challenges if identified_challenges else [{"name": "Strategy Review", "recommended_services": ["Membership Strategy"]}],
+        "recommendation": "Based on these symptoms, I'd recommend a discovery call to dive deeper into your specific situation."
+    }
 
 
 @agent.tool
-def get_style_requirements(
+def get_case_studies(
     ctx: RunContext[StateDeps[AppState]],
-    yoga_style: str
+    organisation_type: Optional[str] = None,
+    service: Optional[str] = None
 ) -> dict:
     """
-    Get insurance requirements and considerations for a specific yoga style.
+    Get relevant case studies and success stories.
 
     Args:
-        yoga_style: The yoga style to check (e.g., "aerial", "hot_yoga", "vinyasa", "prenatal")
+        organisation_type: Filter by organisation type (professional_body, trade_association, etc.)
+        service: Filter by service used
     """
-    # Normalize the input
-    style_key = yoga_style.lower().replace(" ", "_").replace("-", "_")
+    cases = CASE_STUDIES
 
-    # Handle common variations
-    if "aerial" in style_key:
-        style_key = "aerial"
-    elif "hot" in style_key or "bikram" in style_key:
-        style_key = "hot_yoga"
-    elif "vinyasa" in style_key or "flow" in style_key:
-        style_key = "vinyasa"
-    elif "hatha" in style_key:
-        style_key = "hatha"
-    elif "yin" in style_key or "restorative" in style_key:
-        style_key = "yin"
-    elif "prenatal" in style_key or "postnatal" in style_key or "pregnancy" in style_key:
-        style_key = "prenatal"
-    elif "teacher" in style_key or "training" in style_key or "ytt" in style_key:
-        style_key = "teacher_training"
+    # Filter by service if specified
+    if service:
+        cases = [c for c in cases if any(service.lower() in s.lower() for s in c["services_used"])]
 
-    if style_key in YOGA_STYLES:
-        style = YOGA_STYLES[style_key]
-        # Also get providers that cover this style
-        if style_key == "aerial":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_aerial"]]
-        elif style_key == "hot_yoga":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_hot_yoga"]]
-        elif style_key == "teacher_training":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_teacher_training"]]
-        else:
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS]
-
-        return {
-            "style": style["name"],
-            "risk_level": style["risk_level"],
-            "insurance_notes": style["insurance_notes"],
-            "premium_impact": style["typical_premium_increase"],
-            "suitable_providers": suitable_providers
-        }
-    else:
-        return {
-            "error": f"Unknown yoga style: {yoga_style}",
-            "available_styles": list(YOGA_STYLES.keys()),
-            "suggestion": "Try: aerial, hot_yoga, vinyasa, hatha, yin, prenatal, or teacher_training"
-        }
+    return {
+        "title": "Success Stories",
+        "case_studies": cases,
+        "note": "These are representative results. Actual results depend on your specific situation."
+    }
 
 
 @agent.tool
-def get_provider_info(
+def get_service_info(
     ctx: RunContext[StateDeps[AppState]],
-    provider_name: str
+    service_name: str
 ) -> dict:
     """
-    Get detailed information about a specific insurance provider.
+    Get detailed information about a specific service.
 
     Args:
-        provider_name: The name of the provider (e.g., "Balens", "BGI", "Insure4Sport")
+        service_name: The name of the service to look up
     """
-    provider_lower = provider_name.lower()
+    service_lower = service_name.lower()
 
-    for provider in INSURANCE_PROVIDERS:
-        if provider_lower in provider["name"].lower():
+    for service in SERVICES:
+        if service_lower in service["name"].lower():
             return {
-                "provider": provider["name"],
-                "specialty": provider["specialty"],
-                "public_liability": provider["public_liability"],
-                "professional_indemnity": provider["professional_indemnity"],
-                "annual_cost": f"£{provider['annual_cost_from']} - £{provider['annual_cost_to']}",
-                "covers_aerial": provider["covers_aerial"],
-                "covers_hot_yoga": provider["covers_hot_yoga"],
-                "covers_teacher_training": provider["covers_teacher_training"],
-                "website": provider["website"],
-                "highlights": provider["highlights"]
+                "service": service["name"],
+                "description": service["description"],
+                "key_activities": service["key_activities"],
+                "typical_results": service["typical_results"],
+                "ideal_for": service["ideal_for"],
+                "investment": service["monthly_investment"]
             }
 
     return {
-        "error": f"Provider not found: {provider_name}",
-        "available_providers": [p["name"] for p in INSURANCE_PROVIDERS],
-        "suggestion": "Try: Balens, BGI, Insure4Sport, or Sports Coach UK"
+        "error": f"Service not found: {service_name}",
+        "available_services": [s["name"] for s in SERVICES],
+        "suggestion": "Try: Member Acquisition, Member Retention, Member Engagement, Membership Strategy, or Content Marketing"
     }
 
 
 @agent.tool
-def get_quick_quote_checklist(
-    ctx: RunContext[StateDeps[AppState]]
+def get_organisation_insights(
+    ctx: RunContext[StateDeps[AppState]],
+    organisation_type: str
 ) -> dict:
     """
-    Get a checklist of information needed to get an insurance quote.
-    Useful when preparing to contact insurers.
+    Get insights specific to an organisation type.
+
+    Args:
+        organisation_type: Type of organisation (professional_body, trade_association, etc.)
     """
+    org_key = organisation_type.lower().replace(" ", "_")
+
+    if org_key in ORGANISATION_TYPES:
+        org = ORGANISATION_TYPES[org_key]
+        return {
+            "organisation_type": org["name"],
+            "description": org["description"],
+            "common_challenges": org["common_challenges"],
+            "typical_size": org["typical_size"],
+            "note": "We have deep experience working with organisations like yours."
+        }
+
     return {
-        "title": "Information Needed for Insurance Quote",
-        "checklist": [
-            {"item": "Your qualifications", "detail": "Yoga teacher training certificate, accreditation body"},
-            {"item": "Teaching experience", "detail": "How many years you've been teaching"},
-            {"item": "Yoga styles taught", "detail": "Especially aerial, hot, prenatal - these affect pricing"},
-            {"item": "Teaching locations", "detail": "Studio, gym, private homes, outdoors, online"},
-            {"item": "Class sizes", "detail": "Average and maximum number of students"},
-            {"item": "Annual turnover", "detail": "Approximate income from teaching (if known)"},
-            {"item": "Claims history", "detail": "Any previous insurance claims"},
-            {"item": "Additional activities", "detail": "Workshops, retreats, teacher training courses"}
+        "error": f"Organisation type not found: {organisation_type}",
+        "available_types": list(ORGANISATION_TYPES.keys()),
+        "suggestion": "Try: professional_body, trade_association, membership_charity, learned_society, or member_association"
+    }
+
+
+@agent.tool
+def book_consultation(
+    ctx: RunContext[StateDeps[AppState]],
+    preferred_time: Optional[str] = None,
+    specific_topic: Optional[str] = None
+) -> dict:
+    """
+    Help the user book a consultation call.
+
+    Args:
+        preferred_time: When they'd like to speak (morning, afternoon, specific day)
+        specific_topic: What they'd like to discuss
+    """
+    state = ctx.deps.state
+    user = state.user if state else None
+
+    # Gather what we know about them
+    profile_summary = {
+        "name": user.name if user else _cached_user_context.get("name"),
+        "email": user.email if user else _cached_user_context.get("email"),
+        "organisation_type": state.organisation_type if state else None,
+        "organisation_name": state.organisation_name if state else None,
+        "member_count": state.member_count if state else None,
+        "challenges": state.primary_challenges if state else [],
+        "budget_range": state.budget_range if state else None
+    }
+
+    return {
+        "action": "book_consultation",
+        "message": "Great! I'd love to set up a free 30-minute consultation call.",
+        "profile_captured": profile_summary,
+        "preferred_time": preferred_time,
+        "topic": specific_topic,
+        "next_steps": [
+            "We'll send a calendar invite to your email",
+            "Come prepared to discuss your current challenges",
+            "We'll share some initial ideas on the call",
+            "No obligation - it's a chance to see if we're a good fit"
         ],
-        "tips": [
-            "Get quotes from at least 2-3 providers to compare",
-            "Ask specifically about aerial/hot yoga if you teach these",
-            "Check if online teaching is included (important post-COVID)",
-            "Ask about monthly payment options if budget is tight"
-        ]
+        "calendar_link": "https://calendly.com/membership-marketing-agency/consultation"
     }
 
 
@@ -619,8 +652,8 @@ def get_my_profile(
     if not user_id and not name:
         return {
             "logged_in": False,
-            "message": "You're not currently logged in. Sign in to save your preferences and get personalized insurance recommendations.",
-            "action": "Click 'Sign In' in the top navigation to create an account or log in."
+            "message": "You're browsing as a guest. You can still book a consultation - just let me know when you're ready.",
+            "action": "Sign in to save your preferences, or continue as guest."
         }
 
     return {
@@ -629,13 +662,14 @@ def get_my_profile(
         "name": name,
         "first_name": first_name,
         "email": email,
-        "preferences": {
-            "yoga_styles": state.yoga_styles if state else [],
-            "teaching_locations": state.teaching_locations if state else [],
-            "student_count": state.student_count if state else None,
-            "has_existing_insurance": state.has_existing_insurance if state else False
+        "organisation_profile": {
+            "organisation_type": state.organisation_type if state else None,
+            "organisation_name": state.organisation_name if state else None,
+            "member_count": state.member_count if state else None,
+            "primary_challenges": state.primary_challenges if state else [],
+            "budget_range": state.budget_range if state else None
         },
-        "message": f"Hi {first_name}! Here's your profile information."
+        "message": f"Hi {first_name}! Here's what I know about you and your organisation."
     }
 
 
@@ -646,7 +680,7 @@ def get_my_profile(
 ag_ui_app = agent.to_ag_ui(deps=StateDeps(AppState()))
 
 # Main FastAPI app
-main_app = FastAPI(title="Yoga Insurance Agent", description="AI assistant for yoga teacher insurance")
+main_app = FastAPI(title="Membership Marketing Agent", description="AI assistant for membership marketing consultation")
 
 # CORS middleware
 main_app.add_middleware(
@@ -662,7 +696,7 @@ def root():
     """Health check endpoint."""
     return {
         "status": "ok",
-        "agent": "yoga-insurance-agent",
+        "agent": "membership-marketing-agent",
         "endpoints": [
             "/agui (AG-UI for CopilotKit)",
             "/chat/completions (CLM for Hume Voice)",
@@ -686,7 +720,7 @@ class ChatMessage(BaseModel):
 
 class ChatCompletionRequest(BaseModel):
     messages: List[ChatMessage]
-    model: Optional[str] = "yoga-insurance-agent"
+    model: Optional[str] = "membership-marketing-agent"
     stream: Optional[bool] = True
 
 
@@ -698,7 +732,7 @@ async def stream_sse_response(content: str, msg_id: str):
             "id": msg_id,
             "object": "chat.completion.chunk",
             "created": int(time.time()),
-            "model": "yoga-insurance-agent",
+            "model": "membership-marketing-agent",
             "choices": [{
                 "index": 0,
                 "delta": {"content": word + (' ' if i < len(words) - 1 else '')},
@@ -752,7 +786,7 @@ async def run_agent_for_clm(user_message: str, system_prompt: str = None) -> str
         import traceback
         print(f"[CLM] Agent error: {e}", file=sys.stderr)
         print(f"[CLM] Traceback: {traceback.format_exc()}", file=sys.stderr)
-        return "Sorry, I couldn't process that request. Try asking about yoga teacher insurance!"
+        return "Sorry, I couldn't process that request. Try asking about membership marketing!"
 
 
 @main_app.post("/chat/completions")
@@ -789,7 +823,7 @@ async def clm_endpoint(request: ChatCompletionRequest):
             "id": f"chatcmpl-{uuid.uuid4().hex[:8]}",
             "object": "chat.completion",
             "created": int(time.time()),
-            "model": "yoga-insurance-agent",
+            "model": "membership-marketing-agent",
             "choices": [{
                 "index": 0,
                 "message": {"role": "assistant", "content": response_text},
