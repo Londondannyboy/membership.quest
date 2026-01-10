@@ -1,135 +1,124 @@
-# Yoga Teacher Insurance Quest - Implementation Plan
+# Membership Marketing Agency - Deployment Plan
 
-## Project Goal
-Add AI-powered insurance advisor to yogateacherinsurance.quest using:
-- CopilotKit + Pydantic AI (chat agent)
-- Neon Auth (user management)
-- Hume EVI (voice agent)
-- Zep (memory persistence)
+## STATUS: DEPLOYING 🚀
+
+Code complete. Now configuring Railway + Vercel.
 
 ---
 
-## Implementation Progress (Updated January 2025)
+## COMPLETED ✅
 
-### Phase 1: CopilotKit + Pydantic AI - COMPLETE
-
-| Task | Status | Notes |
-|------|--------|-------|
-| Install frontend deps | Done | @copilotkit/react-core, @copilotkit/react-ui, @ag-ui/client |
-| Create agent folder | Done | /agent/src/agent.py |
-| Build basic agent | Done | 6 tools, Gemini 2.0 Flash model |
-| Add CopilotKit to frontend | Done | providers.tsx with CopilotSidebar |
-| Create API route | Done | /api/copilotkit/route.ts |
-| Deploy to Railway | Done | yoga-insurance-agent-production.up.railway.app |
-
-**Agent Tools Implemented:**
-- `compare_providers(yoga_style)` - Compare UK providers
-- `explain_coverage(coverage_type)` - Explain coverage types
-- `get_style_requirements(yoga_style)` - Style-specific requirements
-- `get_provider_info(provider_name)` - Provider details
-- `get_quick_quote_checklist()` - Quote preparation
-- `get_my_profile()` - User profile retrieval
-
-### Phase 2: Neon Auth - COMPLETE
-
-| Task | Status | Notes |
-|------|--------|-------|
-| Enable Neon Auth | Done | NEON_AUTH_BASE_URL configured |
-| Install @neondatabase/auth | Done | Required --legacy-peer-deps |
-| Create auth files | Done | lib/auth/client.ts, lib/auth/server.ts |
-| Auth API handler | Done | /api/auth/[...path]/route.ts |
-| Auth pages | Done | /auth/sign-in, sign-up, etc. |
-| UserButton in nav | Done | With size="icon" prop |
-| Profile page | Done | /profile with yoga styles, locations |
-
-**Issues Fixed:**
-- Peer dependency conflict with Next.js 16 requirement
-- TypeScript errors with authClient prop (cast as any)
-- UserButton size prop warning
-
-### Phase 3: Hume Voice - COMPLETE (with issues)
-
-| Task | Status | Notes |
-|------|--------|-------|
-| Install @humeai/voice-react | Done | |
-| Token endpoint | Done | Fixed URL to oauth2-cc/token |
-| Voice widget | Done | HeroVoice.tsx with pulsating orb |
-| User context in prompt | Done | Passes name, email to system prompt |
-| Add to hero section | Done | Centered below hero text |
-
-**Issues:**
-- Voice orb click not responding (needs debugging)
-- CLM endpoint not yet implemented (Hume uses its own LLM)
-
-### Phase 4: Zep Memory - PARTIAL
-
-| Task | Status | Notes |
-|------|--------|-------|
-| Install @getzep/zep-cloud | Done | |
-| Create API route | Done | /api/zep/route.ts |
-| Profile saves to Zep | Done | On save, adds facts to graph |
-| Configure ZEP_API_KEY | Pending | Need to add to Vercel |
+| Phase | What Was Done |
+|-------|---------------|
+| Phase 1: Rebrand | `package.json`, `app/layout.tsx` with full SEO |
+| Phase 2: Agent | Complete `agent/src/agent.py` rewrite (~700 lines) |
+| Phase 3: Frontend | `providers.tsx`, `HeroVoice.tsx`, `Navigation.tsx` |
+| Phase 4: Homepage | Full homepage with hero, stats, services, case studies |
+| Phase 5: Pages | 10 pages (5 services, 3 industries, case studies, contact) |
+| Phase 6: Lead Capture | Contact page with Calendly + email |
+| Git Push | Pushed to https://github.com/Londondannyboy/membership.quest |
+| Railway Init | Project created at https://railway.com/project/cd956c4a-bdd9-46cb-8c1a-52fd5303cb88 |
 
 ---
 
-## Known Issues & Debugging
+## REMAINING DEPLOYMENT TASKS
 
-### 1. CopilotKit Sidebar Not Clicking
-**Symptoms:** Clicking the chat icon does nothing
-**Possible Causes:**
-- JavaScript error preventing event handlers
-- z-index conflict (CSS override added)
-- useCoAgent hook was causing errors (removed)
+### 1. Railway Configuration
+Use Railway MCP tools to:
+- Add `DATABASE_URL` variable
+- Add `GOOGLE_API_KEY` variable
+- Generate public domain
 
-**Debug Steps:**
-1. Open browser console, look for errors
-2. Check Network tab for failed requests to /api/copilotkit
-3. Verify AGENT_URL env var is set correctly
+### 2. Vercel Setup
+- Import repo from GitHub: `Londondannyboy/membership.quest`
+- Add environment variables (see below)
+- Deploy
 
-### 2. Voice Orb Not Clicking
-**Symptoms:** Clicking voice orb does nothing
-**Possible Causes:**
-- NEXT_PUBLIC_HUME_CONFIG_ID not set
-- Token endpoint returning error
-- VoiceProvider not initialized properly
+### 3. Connect Services
+- Get Railway domain URL
+- Update `AGENT_URL` in Vercel with Railway URL
 
-**Debug Steps:**
-1. Check browser console for errors
-2. Check Network tab for /api/hume-token requests
-3. Verify Hume env vars are set
-
-### 3. Agent Doesn't Know User Name
-**Symptoms:** Agent says "Hi" but doesn't use user's name when asked
-**Possible Causes:**
-- instructions prop not reaching agent
-- @agent.instructions decorator not working
-- State not being synced via useCoAgent (was removed)
-
-**Debug Steps:**
-1. Check agent logs on Railway for received instructions
-2. Test with curl directly to agent endpoint
-3. Re-add useCoAgent for proper state sync
+### 4. Optional Cleanup
+- Delete legacy yoga pages from /app/
 
 ---
 
-## Environment Variables Checklist
+## ENVIRONMENT VARIABLES
 
-### Vercel
-- [x] DATABASE_URL
-- [x] NEON_AUTH_BASE_URL
-- [x] HUME_API_KEY
-- [x] HUME_SECRET_KEY
-- [x] NEXT_PUBLIC_HUME_CONFIG_ID (8e6530df-c020-4b82-bfd3-62617a100b17)
-- [ ] ZEP_API_KEY (needs to be added)
-- [ ] AGENT_URL (verify set to Railway URL)
+### Railway (2 vars)
+```
+DATABASE_URL=postgresql://neondb_owner:npg_bYHMPRx50lEo@ep-flat-surf-abehvks7-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require
+GOOGLE_API_KEY=<from-google-ai-studio>
+```
 
-### Railway
-- [x] DATABASE_URL
-- [x] GOOGLE_API_KEY
+### Vercel (7 vars)
+```
+DATABASE_URL=postgresql://neondb_owner:npg_bYHMPRx50lEo@ep-flat-surf-abehvks7-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require
+NEON_AUTH_BASE_URL=https://ep-flat-surf-abehvks7.neonauth.eu-west-2.aws.neon.tech/neondb/auth
+AGENT_URL=https://<railway-domain>.up.railway.app/agui/
+HUME_API_KEY=<from-hume-dashboard>
+HUME_SECRET_KEY=<from-hume-dashboard>
+NEXT_PUBLIC_HUME_CONFIG_ID=8e6530df-c020-4b82-bfd3-62617a100b17
+ZEP_API_KEY=z_1dWlkIjoiMmNkYWVjZjktYTU5Ny00ZDlkLWIyMWItNTZjOWI5OTE5MTE4In0.Ssyb_PezcGgacQFq6Slg3fyFoqs8hBhvp6WsE8rO4VK_D70CT5tqDbFOs6ZTf8rw7qYfTRhLz5YFm8RR854rHg
+```
 
 ---
 
-## Architecture Diagram
+## KEY URLS
+
+- **GitHub:** https://github.com/Londondannyboy/membership.quest
+- **Railway:** https://railway.com/project/cd956c4a-bdd9-46cb-8c1a-52fd5303cb88
+- **Vercel:** (create at vercel.com/new)
+
+---
+
+## AGENT CONFIGURATION
+
+### System Prompt
+Friendly membership marketing consultant that qualifies leads by asking:
+1. Organisation type (professional body, trade association, charity?)
+2. Member count
+3. Primary challenge (acquisition, retention, engagement?)
+4. Goals
+5. Timeline & budget
+
+### Tools
+| Tool | Purpose |
+|------|---------|
+| `recommend_services` | Recommend services based on challenges |
+| `assess_challenges` | Analyze symptoms and root causes |
+| `get_case_studies` | Show relevant success stories |
+| `get_service_info` | Detailed service information |
+| `get_organisation_insights` | Sector-specific insights |
+| `book_consultation` | Capture lead and book call |
+| `get_my_profile` | User's profile information |
+
+---
+
+## SERVICES OFFERED
+
+| Service | Price Range |
+|---------|-------------|
+| Member Acquisition | £2,000 - £8,000/mo |
+| Member Retention | £1,500 - £6,000/mo |
+| Member Engagement | £1,500 - £5,000/mo |
+| Membership Strategy | £3,000 - £10,000/mo |
+| Content Marketing | £2,000 - £7,000/mo |
+
+---
+
+## TECH STACK
+
+- **Frontend:** Next.js 15, React 19, Tailwind CSS 4, CopilotKit
+- **Backend:** Python, Pydantic AI, FastAPI, Gemini 2.0 Flash
+- **Voice:** Hume EVI
+- **Auth:** Neon Auth
+- **Memory:** Zep Cloud
+- **Deploy:** Vercel (frontend) + Railway (agent)
+
+---
+
+## ARCHITECTURE
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -140,78 +129,34 @@ Add AI-powered insurance advisor to yogateacherinsurance.quest using:
 │   │   VERCEL     │                    │   RAILWAY    │      │
 │   │  (Next.js)   │                    │  (Python)    │      │
 │   │              │                    │              │      │
-│   │ yogateacher  │ ─── AG-UI ──────► │  Pydantic    │      │
-│   │ insurance    │                    │  AI Agent    │      │
-│   │ .quest       │                    │              │      │
-│   │              │                    │ • 6 Tools    │      │
-│   │ • Frontend   │                    │ • @agent.    │      │
-│   │ • CopilotKit │                    │   instructions│     │
-│   │ • Neon Auth  │                    │              │      │
+│   │ membership   │ ─── AG-UI ──────► │  Pydantic    │      │
+│   │ .quest       │                    │  AI Agent    │      │
+│   │              │                    │              │      │
+│   │ • Frontend   │                    │ • 7 Tools    │      │
+│   │ • CopilotKit │                    │ • Lead qual  │      │
+│   │ • Neon Auth  │                    │ • CLM voice  │      │
 │   │ • HeroVoice  │                    │              │      │
 │   └──────────────┘                    └──────────────┘      │
-│          │                                                   │
 │          │                                                   │
 │          ▼                                                   │
 │   ┌──────────────┐         ┌──────────────┐                 │
 │   │   HUME AI    │         │     ZEP      │                 │
 │   │   (Voice)    │         │   (Memory)   │                 │
-│   │              │         │              │                 │
-│   │ Config:      │         │ User facts   │                 │
-│   │ 8e6530df...  │         │ stored in    │                 │
-│   └──────────────┘         │ knowledge    │                 │
-│                            │ graph        │                 │
-│   ┌──────────────┐         └──────────────┘                 │
+│   └──────────────┘         └──────────────┘                 │
+│                                                              │
+│   ┌──────────────┐                                          │
 │   │    NEON      │                                          │
 │   │  (Database)  │                                          │
-│   │              │                                          │
-│   │ • Auth tables│                                          │
-│   │ • User data  │                                          │
 │   └──────────────┘                                          │
-│                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Next Session Priorities
+## LEGACY CLEANUP
 
-### Priority 1: Fix Click Issues
-Debug why CopilotKit sidebar and voice orb don't respond to clicks.
-- Check browser console for JS errors
-- Verify all env vars are set
-- Test with local dev server
-
-### Priority 2: Configure Zep
-Add ZEP_API_KEY to Vercel and test memory persistence.
-
-### Priority 3: User Context
-Ensure agent properly receives and uses user's name:
-- Test instructions prop flow
-- Consider re-adding useCoAgent with proper error handling
-- Verify @agent.instructions decorator works
-
-### Priority 4: CLM Endpoint
-Add /chat/completions endpoint to agent so Hume uses same brain:
-- OpenAI-compatible SSE streaming
-- Route through same agent logic
-- Configure in Hume dashboard
-
----
-
-## Files Modified This Session
-
-1. `components/providers.tsx` - Added then removed useCoAgent
-2. `components/HeroVoice.tsx` - New voice orb component
-3. `components/Navigation.tsx` - Profile link, UserButton size prop
-4. `app/page.tsx` - Added HeroVoice to hero section
-5. `app/profile/page.tsx` - New profile settings page
-6. `app/api/zep/route.ts` - New Zep API route
-7. `app/globals.css` - z-index overrides for CopilotKit
-8. `agent/src/agent.py` - Added @agent.instructions, get_my_profile tool
-
----
-
-## Reference
-- See CLAUDE.md for detailed documentation
-- copilotkit-demo project for working patterns
-- Zep MCP server available for memory queries
+After deployment verified, delete old yoga pages:
+```bash
+cd /Users/dankeegan/membership.quest/app
+rm -rf articles/ balens-* yoga-* hot-yoga-* pilates-* meditation-* trainee-* public-liability-* fitness-* group-fitness-* compare-yoga-* best-yoga-* do-you-need-yoga-* how-much-yoga-*
+```
