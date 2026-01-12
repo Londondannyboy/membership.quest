@@ -157,11 +157,11 @@ export default function RootLayout({
           <BetaBadge />
           <DebugPanel />
           <Navigation />
+          <CookieConsent />
           <main className="min-h-screen">
             {children}
           </main>
           <Footer />
-          <CookieConsent />
         </Providers>
       </body>
     </html>
