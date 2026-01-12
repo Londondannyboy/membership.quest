@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Membership Marketing Agency UK | Grow & Retain Members",
     template: "%s | Membership Marketing Agency"
   },
-  description: "Specialist membership marketing agency helping associations, professional bodies, and membership organisations grow and retain members. Expert strategies for acquisition, retention, and engagement.",
+  description: "Specialist membership marketing agency helping associations and professional bodies grow and retain members through expert marketing strategies.",
   keywords: [
     "membership marketing agency",
     "membership marketing agency uk",

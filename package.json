@@ -2,6 +2,12 @@
   "name": "membership-marketing-agency",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,6 +26,7 @@
     "@neondatabase/serverless": "^1.0.2",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "critters": "^0.0.23",
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

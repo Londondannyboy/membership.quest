@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/HeroVoice'
+import { HeroVoice } from '@/components/DynamicHeroVoice'
 
 export const metadata: Metadata = {
   title: 'Membership Charity Marketing | Membership Marketing Agency',
@@ -83,7 +83,7 @@ export default function MembershipCharitiesPage() {
               </div>
               <div>
                 <p className="text-white font-semibold">Membership Charity - Healthcare</p>
-                <p className="text-xs text-slate-500">50,000 supporters</p>
+                <p className="text-xs text-slate-400">50,000 supporters</p>
               </div>
             </div>
             <p className="text-slate-400 mb-6">
@@ -92,15 +92,15 @@ export default function MembershipCharitiesPage() {
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-2xl font-bold text-purple-400">340%</p>
-                <p className="text-xs text-slate-500">Traffic Increase</p>
+                <p className="text-xs text-slate-400">Traffic Increase</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-blue-400">12</p>
-                <p className="text-xs text-slate-500">Press Features</p>
+                <p className="text-xs text-slate-400">Press Features</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-green-400">+89%</p>
-                <p className="text-xs text-slate-500">Qualified Leads</p>
+                <p className="text-xs text-slate-400">Qualified Leads</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function MembershipCharitiesPage() {
           <Link href="/contact" className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl transition-all">
             Book Free Consultation
           </Link>
-          <p className="text-slate-500 text-sm mt-6">
+          <p className="text-slate-400 text-sm mt-6">
             Learn more about our <Link href="/" className="text-purple-400 hover:text-purple-300 underline">membership marketing agency</Link> services.
           </p>
         </div>

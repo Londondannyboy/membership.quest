@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/HeroVoice'
+import { HeroVoice } from '@/components/DynamicHeroVoice'
 
 export const metadata: Metadata = {
   title: 'Trade Association Marketing | Membership Marketing Agency',
@@ -83,7 +83,7 @@ export default function TradeAssociationsPage() {
               </div>
               <div>
                 <p className="text-white font-semibold">Trade Association - Construction Sector</p>
-                <p className="text-xs text-slate-500">2,500 member businesses</p>
+                <p className="text-xs text-slate-400">2,500 member businesses</p>
               </div>
             </div>
             <p className="text-slate-400 mb-6">
@@ -92,15 +92,15 @@ export default function TradeAssociationsPage() {
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <p className="text-2xl font-bold text-green-400">86%</p>
-                <p className="text-xs text-slate-500">Renewal Rate</p>
+                <p className="text-xs text-slate-400">Renewal Rate</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-blue-400">+29</p>
-                <p className="text-xs text-slate-500">NPS Increase</p>
+                <p className="text-xs text-slate-400">NPS Increase</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-purple-400">+15%</p>
-                <p className="text-xs text-slate-500">Revenue</p>
+                <p className="text-xs text-slate-400">Revenue</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function TradeAssociationsPage() {
           <Link href="/contact" className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all">
             Book Free Consultation
           </Link>
-          <p className="text-slate-500 text-sm mt-6">
+          <p className="text-slate-400 text-sm mt-6">
             Learn more about our <Link href="/" className="text-green-400 hover:text-green-300 underline">membership marketing agency</Link> services.
           </p>
         </div>

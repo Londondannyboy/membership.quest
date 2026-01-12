@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/HeroVoice'
+import { HeroVoice } from '@/components/DynamicHeroVoice'
 
 export const metadata: Metadata = {
   title: 'Case Studies | Membership Marketing Agency',
@@ -103,17 +103,17 @@ export default function CaseStudiesPage() {
                       </div>
                       <div>
                         <p className="text-white font-semibold">{study.type}</p>
-                        <p className="text-xs text-slate-500">{study.sector} • {study.members}</p>
+                        <p className="text-xs text-slate-400">{study.sector} • {study.members}</p>
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <p className="text-sm text-slate-500 uppercase tracking-wide mb-1">Challenge</p>
+                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Challenge</p>
                       <p className="text-slate-300">{study.challenge}</p>
                     </div>
 
                     <div className="mb-4">
-                      <p className="text-sm text-slate-500 uppercase tracking-wide mb-1">Solution</p>
+                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Solution</p>
                       <p className="text-slate-300">{study.solution}</p>
                     </div>
 
@@ -128,12 +128,12 @@ export default function CaseStudiesPage() {
 
                   {/* Right: Results */}
                   <div className="bg-slate-900/50 rounded-xl p-6">
-                    <p className="text-sm text-slate-500 uppercase tracking-wide mb-4 text-center">Results</p>
+                    <p className="text-sm text-slate-400 uppercase tracking-wide mb-4 text-center">Results</p>
                     <div className="space-y-4">
                       {study.results.map((result, j) => (
                         <div key={j} className="text-center">
                           <p className={`text-3xl font-bold text-${['green', 'blue', 'purple'][j % 3]}-400`}>{result.metric}</p>
-                          <p className="text-xs text-slate-500">{result.label}</p>
+                          <p className="text-xs text-slate-400">{result.label}</p>
                         </div>
                       ))}
                     </div>
@@ -153,7 +153,7 @@ export default function CaseStudiesPage() {
           <Link href="/contact" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
             Book Free Consultation
           </Link>
-          <p className="text-slate-500 text-sm mt-6">
+          <p className="text-slate-400 text-sm mt-6">
             Learn more about our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">membership marketing agency</Link> services.
           </p>
         </div>

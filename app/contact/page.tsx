@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/HeroVoice'
+import { HeroVoice } from '@/components/DynamicHeroVoice'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Membership Marketing Agency',
@@ -125,7 +125,7 @@ export default function ContactPage() {
           <Link href="/services/member-acquisition" className="text-blue-400 hover:text-blue-300 font-semibold">
             Explore Our Services →
           </Link>
-          <p className="text-slate-500 text-sm mt-6">
+          <p className="text-slate-400 text-sm mt-6">
             Return to our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">membership marketing agency</Link> homepage.
           </p>
         </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { HeroVoice } from '@/components/HeroVoice'
+import { HeroVoice } from '@/components/DynamicHeroVoice'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -245,7 +245,7 @@ export default function HomePage() {
               <p className="text-sm text-slate-400 mb-4">
                 Accountants, engineers, lawyers, healthcare professionals. We help attract younger members and demonstrate CPD value.
               </p>
-              <p className="text-xs text-slate-500">1,000 - 100,000+ members</p>
+              <p className="text-xs text-slate-400">1,000 - 100,000+ members</p>
             </Link>
 
             <Link href="/industries/trade-associations" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
@@ -253,7 +253,7 @@ export default function HomePage() {
               <p className="text-sm text-slate-400 mb-4">
                 Industry representative bodies. We help demonstrate ROI to member businesses and engage SME members.
               </p>
-              <p className="text-xs text-slate-500">200 - 10,000 members</p>
+              <p className="text-xs text-slate-400">200 - 10,000 members</p>
             </Link>
 
             <Link href="/industries/membership-charities" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
@@ -261,7 +261,7 @@ export default function HomePage() {
               <p className="text-sm text-slate-400 mb-4">
                 Charitable organisations with supporters. We help overcome donor fatigue and convert supporters to regular givers.
               </p>
-              <p className="text-xs text-slate-500">5,000 - 500,000+ supporters</p>
+              <p className="text-xs text-slate-400">5,000 - 500,000+ supporters</p>
             </Link>
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-white font-semibold">Professional Body</p>
-                  <p className="text-xs text-slate-500">Finance Sector</p>
+                  <p className="text-xs text-slate-400">Finance Sector</p>
                 </div>
               </div>
               <p className="text-slate-400 text-sm mb-6">
@@ -294,15 +294,15 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <p className="text-2xl font-bold text-green-400">+47%</p>
-                  <p className="text-xs text-slate-500">New Members</p>
+                  <p className="text-xs text-slate-400">New Members</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-blue-400">3x</p>
-                  <p className="text-xs text-slate-500">Event Attendance</p>
+                  <p className="text-xs text-slate-400">Event Attendance</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-purple-400">-7%</p>
-                  <p className="text-xs text-slate-500">Churn Rate</p>
+                  <p className="text-xs text-slate-400">Churn Rate</p>
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-white font-semibold">Trade Association</p>
-                  <p className="text-xs text-slate-500">Construction Sector</p>
+                  <p className="text-xs text-slate-400">Construction Sector</p>
                 </div>
               </div>
               <p className="text-slate-400 text-sm mb-6">
@@ -323,15 +323,15 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <p className="text-2xl font-bold text-green-400">86%</p>
-                  <p className="text-xs text-slate-500">Renewal Rate</p>
+                  <p className="text-xs text-slate-400">Renewal Rate</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-blue-400">+29</p>
-                  <p className="text-xs text-slate-500">NPS Increase</p>
+                  <p className="text-xs text-slate-400">NPS Increase</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-purple-400">+15%</p>
-                  <p className="text-xs text-slate-500">Revenue</p>
+                  <p className="text-xs text-slate-400">Revenue</p>
                 </div>
               </div>
             </div>
