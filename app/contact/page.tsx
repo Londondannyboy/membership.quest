@@ -125,6 +125,9 @@ export default function ContactPage() {
           <Link href="/services/member-acquisition" className="text-blue-400 hover:text-blue-300 font-semibold">
             Explore Our Services →
           </Link>
+          <p className="text-slate-500 text-sm mt-6">
+            Return to our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">membership marketing agency</Link> homepage.
+          </p>
         </div>
       </section>
     </div>

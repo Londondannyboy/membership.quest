@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { HeroVoice } from '@/components/HeroVoice'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Membership Marketing Agency UK | Grow & Retain Members',
@@ -81,11 +82,11 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Grow & Retain Your
-            <span className="block bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent mt-2">Members</span>
+            Your Membership Marketing Agency
+            <span className="block bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent mt-2">for Growth & Retention</span>
           </h1>
           <p className="text-xl text-slate-100 mb-4 font-light">
-            Specialist membership marketing for associations, professional bodies, and membership organisations
+            As a specialist <strong>membership marketing agency</strong>, we help associations, professional bodies, and membership organisations thrive
           </p>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
             We help you <strong>acquire new members</strong>, <strong>reduce churn</strong>, and <strong>increase engagement</strong> through proven marketing strategies.
@@ -106,6 +107,15 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-12 px-4 bg-slate-800/50">
         <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/membership-marketing-agency.svg"
+              alt="Membership marketing agency helping organisations grow and retain members"
+              width={200}
+              height={60}
+              className="opacity-80"
+            />
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">15-25%</p>
@@ -131,7 +141,7 @@ export default function HomePage() {
       <section id="services" className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Membership Marketing Services
+            Membership Marketing Agency Services
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive solutions to grow your membership and increase member lifetime value.
@@ -223,10 +233,10 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Who We Work With
+            Who Our Membership Marketing Agency Works With
           </h2>
           <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            We specialise in membership organisations across sectors, understanding the unique challenges each faces.
+            Our membership marketing agency specialises in organisations across sectors, understanding the unique challenges each faces.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -422,7 +432,7 @@ export default function HomePage() {
       <section id="faq" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Frequently Asked Questions
+            Membership Marketing Agency FAQs
           </h2>
 
           <div className="space-y-6">
