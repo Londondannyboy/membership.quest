@@ -3,24 +3,24 @@ import Link from 'next/link'
 import { HeroVoice } from '@/components/DynamicHeroVoice'
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Membership Marketing Agency',
-  description: 'Real results from membership organisations we have helped transform. See how we have helped professional bodies, trade associations, and charities grow.',
+  title: 'What We Believe Is Possible | Membership Marketing Agency',
+  description: 'Example scenarios showing what membership marketing can achieve. These are aspirational outcomes based on industry benchmarks and our approach.',
   alternates: {
     canonical: 'https://membership.quest/case-studies',
   },
 }
 
-const caseStudies = [
+const exampleScenarios = [
   {
     type: 'Professional Body',
     sector: 'Finance Sector',
-    members: '15,000 members',
+    members: '~15,000 members',
     challenge: 'Declining membership and low engagement among younger professionals',
-    solution: 'Digital-first acquisition campaign + community platform launch',
-    results: [
-      { metric: '+47%', label: 'New Members' },
-      { metric: '3x', label: 'Event Attendance' },
-      { metric: '-7%', label: 'Churn Rate' },
+    approach: 'Digital-first acquisition campaign + community platform launch',
+    possibleOutcomes: [
+      { metric: '+40-50%', label: 'New Members' },
+      { metric: '2-3x', label: 'Event Attendance' },
+      { metric: '-5-10%', label: 'Churn Rate' },
     ],
     services: ['Member Acquisition', 'Member Engagement'],
     color: 'blue',
@@ -28,13 +28,13 @@ const caseStudies = [
   {
     type: 'Trade Association',
     sector: 'Construction Sector',
-    members: '2,500 member businesses',
+    members: '~2,500 member businesses',
     challenge: 'Members questioning value, renewal rates dropping year on year',
-    solution: 'Member value proposition refresh + retention automation',
-    results: [
-      { metric: '86%', label: 'Renewal Rate' },
-      { metric: '+29', label: 'NPS Increase' },
-      { metric: '+15%', label: 'Revenue' },
+    approach: 'Member value proposition refresh + retention automation',
+    possibleOutcomes: [
+      { metric: '80-90%', label: 'Renewal Rate' },
+      { metric: '+20-30', label: 'NPS Increase' },
+      { metric: '+10-20%', label: 'Revenue' },
     ],
     services: ['Member Retention', 'Membership Strategy'],
     color: 'green',
@@ -42,13 +42,13 @@ const caseStudies = [
   {
     type: 'Membership Charity',
     sector: 'Healthcare',
-    members: '50,000 supporters',
+    members: '~50,000 supporters',
     challenge: 'Low awareness and struggling to compete for attention',
-    solution: 'Content marketing programme + thought leadership campaign',
-    results: [
-      { metric: '340%', label: 'Traffic Increase' },
-      { metric: '12', label: 'Press Features' },
-      { metric: '+89%', label: 'Qualified Leads' },
+    approach: 'Content marketing programme + thought leadership campaign',
+    possibleOutcomes: [
+      { metric: '200-400%', label: 'Traffic Increase' },
+      { metric: '5-15', label: 'Press Features' },
+      { metric: '+50-100%', label: 'Qualified Leads' },
     ],
     services: ['Content Marketing', 'Member Acquisition'],
     color: 'purple',
@@ -56,13 +56,13 @@ const caseStudies = [
   {
     type: 'Professional Institute',
     sector: 'Technology',
-    members: '8,000 members',
+    members: '~8,000 members',
     challenge: 'Members not engaging with resources, low CPD completion',
-    solution: 'Gamification programme + personalised learning paths',
-    results: [
-      { metric: '+156%', label: 'Resource Usage' },
-      { metric: '2x', label: 'CPD Completion' },
-      { metric: '+28', label: 'Satisfaction Score' },
+    approach: 'Gamification programme + personalised learning paths',
+    possibleOutcomes: [
+      { metric: '+100-200%', label: 'Resource Usage' },
+      { metric: '1.5-2x', label: 'CPD Completion' },
+      { metric: '+15-30', label: 'Satisfaction Score' },
     ],
     services: ['Member Engagement', 'Content Marketing'],
     color: 'cyan',
@@ -79,46 +79,58 @@ export default function CaseStudiesPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Case <span className="text-blue-400">Studies</span>
+            What We <span className="text-blue-400">Believe Is Possible</span>
           </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Real results from membership organisations we&apos;ve helped transform. See how we&apos;ve helped professional bodies, trade associations, and charities grow.
+          <p className="text-xl text-slate-300 mb-4 max-w-2xl mx-auto">
+            These are example scenarios showing what membership marketing can achieve, based on industry benchmarks and proven strategies.
           </p>
+          <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 max-w-xl mx-auto mb-8">
+            <p className="text-amber-200 text-sm">
+              <strong>Transparency note:</strong> We&apos;re a new agency. These aren&apos;t our case studies yet - they&apos;re aspirational examples of the outcomes we aim to help you achieve.
+            </p>
+          </div>
           <HeroVoice />
         </div>
       </section>
 
-      {/* Case Studies */}
+      {/* Example Scenarios */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-white mb-4">Example Scenarios</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Based on industry data and best practices, here&apos;s what organisations like yours could potentially achieve with the right membership marketing strategy.
+            </p>
+          </div>
+
           <div className="space-y-8">
-            {caseStudies.map((study, i) => (
-              <div key={i} className={`bg-slate-800/50 rounded-2xl p-8 border border-${study.color}-500/30`}>
+            {exampleScenarios.map((scenario, i) => (
+              <div key={i} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Left: Info */}
                   <div className="lg:col-span-2">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-12 h-12 rounded-full bg-${study.color}-500/20 flex items-center justify-center`}>
-                        <span className={`text-${study.color}-400 font-bold`}>{study.type.split(' ').map(w => w[0]).join('')}</span>
+                      <div className={`w-12 h-12 rounded-full bg-${scenario.color}-500/20 flex items-center justify-center`}>
+                        <span className={`text-${scenario.color}-400 font-bold`}>{scenario.type.split(' ').map(w => w[0]).join('')}</span>
                       </div>
                       <div>
-                        <p className="text-white font-semibold">{study.type}</p>
-                        <p className="text-xs text-slate-400">{study.sector} • {study.members}</p>
+                        <p className="text-white font-semibold">{scenario.type}</p>
+                        <p className="text-xs text-slate-400">{scenario.sector} • {scenario.members}</p>
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Challenge</p>
-                      <p className="text-slate-300">{study.challenge}</p>
+                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Typical Challenge</p>
+                      <p className="text-slate-300">{scenario.challenge}</p>
                     </div>
 
                     <div className="mb-4">
-                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Solution</p>
-                      <p className="text-slate-300">{study.solution}</p>
+                      <p className="text-sm text-slate-400 uppercase tracking-wide mb-1">Our Approach</p>
+                      <p className="text-slate-300">{scenario.approach}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      {study.services.map((service, j) => (
+                      {scenario.services.map((service, j) => (
                         <span key={j} className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
                           {service}
                         </span>
@@ -126,17 +138,18 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
 
-                  {/* Right: Results */}
+                  {/* Right: Possible Outcomes */}
                   <div className="bg-slate-900/50 rounded-xl p-6">
-                    <p className="text-sm text-slate-400 uppercase tracking-wide mb-4 text-center">Results</p>
+                    <p className="text-sm text-slate-400 uppercase tracking-wide mb-4 text-center">Possible Outcomes*</p>
                     <div className="space-y-4">
-                      {study.results.map((result, j) => (
+                      {scenario.possibleOutcomes.map((result, j) => (
                         <div key={j} className="text-center">
                           <p className={`text-3xl font-bold text-${['green', 'blue', 'purple'][j % 3]}-400`}>{result.metric}</p>
                           <p className="text-xs text-slate-400">{result.label}</p>
                         </div>
                       ))}
                     </div>
+                    <p className="text-xs text-slate-500 mt-4 text-center">*Based on industry benchmarks</p>
                   </div>
                 </div>
               </div>
@@ -148,13 +161,15 @@ export default function CaseStudiesPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">Ready to Be Our Next Success Story?</h2>
-          <p className="text-slate-400 mb-8">Book a free consultation to discuss how we can help your organisation.</p>
+          <h2 className="text-2xl font-bold text-white mb-6">Let&apos;s Explore What&apos;s Possible For You</h2>
+          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
+            Every organisation is different. Book a free consultation to discuss your specific challenges and what realistic outcomes might look like for your membership.
+          </p>
           <Link href="/contact" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
             Book Free Consultation
           </Link>
           <p className="text-slate-400 text-sm mt-6">
-            Learn more about our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">membership marketing agency</Link> services.
+            No pressure, no hard sell - just an honest conversation about your membership goals.
           </p>
         </div>
       </section>

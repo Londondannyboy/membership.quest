@@ -5,7 +5,6 @@ import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { CookieConsent } from "@/components/CookieConsent"
 import { Providers } from "@/components/providers"
-import { Disclaimer } from "@/components/Disclaimer"
 import { DebugPanel, BetaBadge } from "@/components/DebugPanel"
 
 const inter = Inter({
@@ -157,7 +156,6 @@ export default function RootLayout({
         <Providers>
           <BetaBadge />
           <DebugPanel />
-          <Disclaimer />
           <Navigation />
           <main className="min-h-screen">
             {children}

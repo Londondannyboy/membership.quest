@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { CalendlyWidget } from '@/components/DynamicCalendly'
+import { ProfileImage } from '@/components/ProfileImage'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -116,6 +118,7 @@ export default function HomePage() {
               className="opacity-80"
             />
           </div>
+          <p className="text-center text-slate-400 text-sm mb-6">Industry benchmarks we help organisations work towards:</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">15-25%</p>
@@ -137,8 +140,53 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Meet Dan - Personal Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-900/30 to-slate-800/50 rounded-2xl p-8 md:p-12 border border-blue-500/20">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              {/* Photo */}
+              <div className="flex-shrink-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1">
+                  <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+                    <ProfileImage
+                      src="/dan-keegan.jpg"
+                      alt="Dan Keegan - Membership Marketing Consultant"
+                      fallback="DK"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Hey, I&apos;m Dan
+                </h2>
+                <p className="text-blue-400 font-medium mb-4">Membership Marketing Consultant</p>
+                <p className="text-slate-300 mb-4">
+                  I&apos;m building this agency because I believe membership organisations deserve better marketing support. I&apos;ve seen too many associations struggle with declining memberships while using outdated tactics.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  I&apos;m being upfront with you: we&apos;re a new agency. But that means you get my direct attention, competitive rates, and a genuine partnership focused on your success. Let&apos;s have an honest conversation about your membership challenges.
+                </p>
+                <Link
+                  href="#book-consultation"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Book a Chat with Me
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-16 px-4">
+      <section id="services" className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
             Membership Marketing Agency Services
@@ -213,7 +261,7 @@ export default function HomePage() {
               <p className="text-xs text-orange-400">From £2,000/month</p>
             </Link>
 
-            <Link href="/contact" className="group bg-gradient-to-br from-blue-900/50 to-slate-800/50 hover:from-blue-800/50 hover:to-slate-700/50 rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all">
+            <Link href="#book-consultation" className="group bg-gradient-to-br from-blue-900/50 to-slate-800/50 hover:from-blue-800/50 hover:to-slate-700/50 rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -230,7 +278,7 @@ export default function HomePage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
             Who Our Membership Marketing Agency Works With
@@ -267,14 +315,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Case Studies Preview */}
-      <section className="py-16 px-4">
+      {/* What's Possible - Honest Preview */}
+      <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Results That Matter
+            What&apos;s Possible
           </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Real outcomes from organisations we&apos;ve helped transform.
+          <p className="text-slate-400 text-center mb-4 max-w-3xl mx-auto">
+            Based on industry benchmarks, here&apos;s what good membership marketing can achieve.
+          </p>
+          <p className="text-center mb-12">
+            <span className="inline-block bg-amber-500/10 border border-amber-500/30 rounded-lg px-4 py-2 text-amber-200 text-sm">
+              These are aspirational targets, not our case studies (yet!)
+            </span>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -284,25 +337,25 @@ export default function HomePage() {
                   <span className="text-blue-400 font-bold">PB</span>
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Professional Body</p>
+                  <p className="text-white font-semibold">Professional Body Example</p>
                   <p className="text-xs text-slate-400">Finance Sector</p>
                 </div>
               </div>
               <p className="text-slate-400 text-sm mb-6">
-                &quot;Struggling with declining membership and low engagement among younger professionals.&quot;
+                Typical challenge: Declining membership and low engagement among younger professionals.
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <p className="text-2xl font-bold text-green-400">+47%</p>
-                  <p className="text-xs text-slate-400">New Members</p>
+                  <p className="text-2xl font-bold text-green-400">+40-50%</p>
+                  <p className="text-xs text-slate-400">New Members*</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-blue-400">3x</p>
-                  <p className="text-xs text-slate-400">Event Attendance</p>
+                  <p className="text-2xl font-bold text-blue-400">2-3x</p>
+                  <p className="text-xs text-slate-400">Event Attendance*</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-purple-400">-7%</p>
-                  <p className="text-xs text-slate-400">Churn Rate</p>
+                  <p className="text-2xl font-bold text-purple-400">-5-10%</p>
+                  <p className="text-xs text-slate-400">Churn Rate*</p>
                 </div>
               </div>
             </div>
@@ -313,43 +366,45 @@ export default function HomePage() {
                   <span className="text-green-400 font-bold">TA</span>
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Trade Association</p>
+                  <p className="text-white font-semibold">Trade Association Example</p>
                   <p className="text-xs text-slate-400">Construction Sector</p>
                 </div>
               </div>
               <p className="text-slate-400 text-sm mb-6">
-                &quot;Members questioning value, renewal rates dropping year on year.&quot;
+                Typical challenge: Members questioning value, renewal rates dropping year on year.
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <p className="text-2xl font-bold text-green-400">86%</p>
-                  <p className="text-xs text-slate-400">Renewal Rate</p>
+                  <p className="text-2xl font-bold text-green-400">80-90%</p>
+                  <p className="text-xs text-slate-400">Renewal Rate*</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-blue-400">+29</p>
-                  <p className="text-xs text-slate-400">NPS Increase</p>
+                  <p className="text-2xl font-bold text-blue-400">+20-30</p>
+                  <p className="text-xs text-slate-400">NPS Increase*</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-purple-400">+15%</p>
-                  <p className="text-xs text-slate-400">Revenue</p>
+                  <p className="text-2xl font-bold text-purple-400">+10-20%</p>
+                  <p className="text-xs text-slate-400">Revenue*</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <p className="text-center text-slate-500 text-xs mt-6">*Industry benchmark targets based on best practices</p>
 
           <div className="mt-8 text-center">
             <Link
               href="/case-studies"
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
             >
-              View All Case Studies
+              See What&apos;s Possible
             </Link>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">
             How We Work
@@ -371,7 +426,7 @@ export default function HomePage() {
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-blue-300 mb-3">Strategy</h3>
                 <p className="text-slate-400 text-sm">
-                  We develop a tailored plan with clear KPIs, timelines, and quick wins alongside long-term initiatives.
+                  We develop a tailored plan with clear KPIs and quick wins alongside long-term initiatives.
                 </p>
               </div>
             </div>
@@ -381,7 +436,7 @@ export default function HomePage() {
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-blue-300 mb-3">Execute</h3>
                 <p className="text-slate-400 text-sm">
-                  We implement campaigns, optimise systems, and create content while keeping you informed at every step.
+                  We implement campaigns, optimise systems, and create content while keeping you informed.
                 </p>
               </div>
             </div>
@@ -391,7 +446,7 @@ export default function HomePage() {
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-blue-300 mb-3">Measure</h3>
                 <p className="text-slate-400 text-sm">
-                  We track results, report on KPIs, and continuously optimise to ensure you&apos;re getting ROI from your investment.
+                  We track results, report on KPIs, and continuously optimise to ensure you&apos;re getting ROI.
                 </p>
               </div>
             </div>
@@ -399,31 +454,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Ready to Grow Your Membership?
-          </h2>
-          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute consultation to discuss your challenges and explore how we can help you acquire, retain, and engage more members.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-all shadow-lg"
-            >
-              Book Free Consultation
-            </Link>
-            <Link
-              href="/case-studies"
-              className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all"
-            >
-              View Case Studies
-            </Link>
+      {/* Book Consultation - Calendly */}
+      <section id="book-consultation" className="py-16 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Book Your Free Consultation
+            </h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              Let&apos;s have an honest conversation about your membership challenges. No pressure, no hard sell - just helpful advice.
+            </p>
           </div>
-          <p className="text-slate-400 text-sm mt-6">
-            No obligation. No hard sell. Just a conversation about your membership goals.
+
+          <CalendlyWidget />
+
+          <p className="text-slate-400 text-sm text-center mt-6">
+            Can&apos;t find a suitable time? Email me at <a href="mailto:dan@membership.quest" className="text-blue-400 hover:text-blue-300">dan@membership.quest</a>
           </p>
         </div>
       </section>
@@ -492,7 +538,7 @@ export default function HomePage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Our retention programmes typically help clients reduce churn by 15-30%, significantly impacting revenue and member lifetime value.
+                Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Good retention programmes can help reduce churn by 15-30%, significantly impacting revenue and member lifetime value.
               </p>
             </details>
           </div>
