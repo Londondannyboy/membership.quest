@@ -139,7 +139,11 @@ function VoiceOrbInner({
     }
 
     const pageContext = getPageContext(pathname);
-    const sessionId = `membership_${user.id}`;
+    // Session ID format for CLM parsing: "firstName|membership_userId|pageContext"
+    const baseSessionId = `membership_${user.id}`;
+    const sessionId = firstName
+      ? `${firstName}|${baseSessionId}|${pathname}`
+      : `|${baseSessionId}|${pathname}`;
 
     const systemPrompt = `You are the VOICE CONSULTANT for a specialist Membership Marketing Agency.
 You help associations, professional bodies, and membership organisations grow and retain their members.
