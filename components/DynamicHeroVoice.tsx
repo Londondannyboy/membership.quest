@@ -11,6 +11,7 @@ interface UserContext {
 
 interface HeroVoiceProps {
   user?: UserContext;
+  onMessage?: (text: string, role: 'user' | 'assistant') => void;
 }
 
 const DynamicHeroVoice = dynamic(
@@ -34,6 +35,6 @@ const DynamicHeroVoice = dynamic(
 );
 
 // Re-export with props passthrough
-export function HeroVoice({ user }: HeroVoiceProps) {
-  return <DynamicHeroVoice user={user} />;
+export function HeroVoice({ user, onMessage }: HeroVoiceProps) {
+  return <DynamicHeroVoice user={user} onMessage={onMessage} />;
 }

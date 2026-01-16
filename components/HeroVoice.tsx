@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { VoiceProvider, useVoice } from '@humeai/voice-react';
 import Link from 'next/link';
@@ -62,14 +62,23 @@ function getPageContext(pathname: string): string {
 
 /**
  * Inner Voice Orb - Uses useVoice hook (must be inside VoiceProvider)
- * Pattern matches mortgagecalculator.quest VoiceButtonInner
+ * Pattern matches fractional.quest VoiceButton with transcript forwarding
  * User passed as prop to avoid auth context re-renders
  */
-function VoiceOrbInner({ accessToken, user }: { accessToken: string; user?: UserContext }) {
-  const { connect, disconnect, status, sendUserInput } = useVoice();
+function VoiceOrbInner({
+  accessToken,
+  user,
+  onMessage
+}: {
+  accessToken: string;
+  user?: UserContext;
+  onMessage?: (text: string, role: 'user' | 'assistant') => void;
+}) {
+  const { connect, disconnect, status, sendUserInput, messages } = useVoice();
   const [isPending, setIsPending] = useState(false);
   const firstName = user?.name?.split(' ')[0] || null;
   const pathname = usePathname();
+  const lastSentMsgId = useRef<string | null>(null);
 
   const isConnected = status.value === 'connected';
 
@@ -81,6 +90,29 @@ function VoiceOrbInner({ accessToken, user }: { accessToken: string; user?: User
       configId: CONFIG_ID,
     });
   }, [status.value, isConnected, firstName]);
+
+  // Forward voice transcripts to CopilotKit (pattern from fractional.quest)
+  useEffect(() => {
+    if (!onMessage) return;
+
+    // Get all conversation messages (user + assistant)
+    const conversationMsgs = messages.filter(
+      (m: any) => (m.type === 'user_message' || m.type === 'assistant_message') && m.message?.content
+    );
+
+    if (conversationMsgs.length > 0) {
+      const lastMsg = conversationMsgs[conversationMsgs.length - 1] as any;
+      const msgId = lastMsg?.id || `${conversationMsgs.length}-${lastMsg?.message?.content?.slice(0, 20)}`;
+
+      // Only send if this is a new message we haven't sent before
+      if (lastMsg?.message?.content && msgId !== lastSentMsgId.current) {
+        const isUser = lastMsg.type === 'user_message';
+        debug('Transcript', `Forwarding ${isUser ? 'user' : 'assistant'} to CopilotKit: ${lastMsg.message.content.slice(0, 50)}...`);
+        lastSentMsgId.current = msgId;
+        onMessage(lastMsg.message.content, isUser ? 'user' : 'assistant');
+      }
+    }
+  }, [messages, onMessage]);
 
   const handleToggle = useCallback(async () => {
     if (!user) return;
@@ -156,10 +188,16 @@ Greet ${firstName || 'the user'} warmly and ask how you can help with their memb
 
       debug('Action', 'Connected successfully!');
 
-      // CRITICAL: Trigger the AI to speak after connection
+      // CRITICAL: Trigger personalized greeting with user's name
+      // Pattern from fractional.quest - send name as user input to trigger greeting
       setTimeout(() => {
-        debug('Action', 'Sending greeting trigger');
-        sendUserInput('speak your greeting');
+        if (firstName) {
+          debug('Action', `Triggering personalized greeting for: ${firstName}`);
+          sendUserInput(`Hello, my name is ${firstName}`);
+        } else {
+          debug('Action', 'Triggering generic greeting');
+          sendUserInput('Hello, please greet me');
+        }
       }, 500);
 
     } catch (e) {
@@ -243,12 +281,19 @@ Greet ${firstName || 'the user'} warmly and ask how you can help with their memb
 
 /**
  * HeroVoice - Main export
- * Pattern matches mortgagecalculator.quest VoiceWidget:
+ * Pattern matches fractional.quest VoiceInput:
  * 1. Fetch token on mount
  * 2. Only render VoiceProvider once token is available
  * 3. User passed as prop (not from auth hook) to avoid re-mount on auth changes
+ * 4. onMessage callback forwards transcripts to CopilotKit
  */
-export function HeroVoice({ user }: { user?: UserContext }) {
+export function HeroVoice({
+  user,
+  onMessage
+}: {
+  user?: UserContext;
+  onMessage?: (text: string, role: 'user' | 'assistant') => void;
+}) {
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -323,7 +368,7 @@ export function HeroVoice({ user }: { user?: UserContext }) {
       onOpen={() => debug('Status', 'VoiceProvider opened')}
       onClose={(e) => debug('Status', 'VoiceProvider closed:', e)}
     >
-      <VoiceOrbInner accessToken={accessToken} user={user} />
+      <VoiceOrbInner accessToken={accessToken} user={user} onMessage={onMessage} />
     </VoiceProvider>
   );
 }

@@ -1,7 +1,9 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { authClient } from '@/lib/auth/client';
+import { useCopilotChat } from '@copilotkit/react-core';
+import { Role, TextMessage } from '@copilotkit/runtime-client-gql';
 import { HeroVoice } from './HeroVoice';
 
 /**
@@ -10,18 +12,28 @@ import { HeroVoice } from './HeroVoice';
  * CRITICAL: Uses useMemo to prevent creating new user object references
  * on every render, which was causing HeroVoice to re-mount.
  *
- * Also uses mounted state to prevent rendering during SSR/hydration.
+ * Also connects voice transcripts to CopilotKit sidebar via useCopilotChat.
  */
 export function HeroVoiceWithAuth() {
   const [mounted, setMounted] = useState(false);
   const { data: session } = authClient.useSession();
   const user = session?.user;
 
+  // Connect to CopilotKit for transcript forwarding
+  const { appendMessage } = useCopilotChat();
+
   // Memoize user object to prevent new reference on every render
   const userContext = useMemo(() => {
     if (!user) return undefined;
     return { id: user.id, name: user.name, email: user.email };
   }, [user?.id, user?.name, user?.email]);
+
+  // Handler to forward voice transcripts to CopilotKit sidebar
+  const handleVoiceMessage = useCallback((text: string, role: 'user' | 'assistant') => {
+    const messageRole = role === 'user' ? Role.User : Role.Assistant;
+    console.log(`[Voice→CopilotKit] ${role}: ${text.slice(0, 50)}...`);
+    appendMessage(new TextMessage({ content: text, role: messageRole }));
+  }, [appendMessage]);
 
   useEffect(() => {
     setMounted(true);
@@ -44,5 +56,5 @@ export function HeroVoiceWithAuth() {
     );
   }
 
-  return <HeroVoice user={userContext} />;
+  return <HeroVoice user={userContext} onMessage={handleVoiceMessage} />;
 }
