@@ -137,3 +137,55 @@ All yoga/fitness insurance pages have been removed (January 2026):
 - Deleted yoga-related components (AerialYogaCalculator, Yoga3DFigure, etc.)
 - Updated manifest, icons, and db.ts to membership branding
 - Sitemap was already clean with only membership pages
+
+---
+
+## HUME VOICE INTEGRATION
+
+### Working Pattern (from relocation.quest)
+
+**Token Endpoint** (`/api/hume-token/route.ts`):
+```typescript
+// Support both GET and POST
+export async function GET() { return getHumeToken() }
+export async function POST() { return getHumeToken() }
+
+async function getHumeToken() {
+  const authString = Buffer.from(`${apiKey}:${secretKey}`).toString('base64')
+  const response = await fetch('https://api.hume.ai/oauth2-cc/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${authString}`
+    },
+    body: new URLSearchParams({ grant_type: 'client_credentials' }),
+  })
+  return NextResponse.json({ accessToken: data.access_token })
+}
+```
+
+**Zep Context** (`/api/zep-context/route.ts`):
+- Fetch user memory from Zep graph before voice connect
+- Categorize facts: organisation, challenge, goal, service, preference
+- Include in system prompt for personalized responses
+
+**HeroVoice Pattern**:
+1. Uses `authClient.useSession()` for real auth (NOT hardcoded)
+2. Fetches `/api/hume-token` for access token
+3. Fetches `/api/zep-context?userId=...` for user memory
+4. Builds system prompt with user info + Zep context + page context
+5. Connects with `sessionSettings` including `customSessionId`
+
+### Environment Variables (Vercel)
+
+```
+HUME_API_KEY=<from-hume-dashboard>
+HUME_SECRET_KEY=<from-hume-dashboard>
+NEXT_PUBLIC_HUME_CONFIG_ID=<config-id-from-hume>
+ZEP_API_KEY=<zep-api-key>
+```
+
+### Reference Files
+- `/Users/dankeegan/CLAUDE_STARTER_KIT/.claude/reference/hume-voice.md`
+- `/Users/dankeegan/CLAUDE_STARTER_KIT/.claude/reference/lessons-learned.md`
+- `/Users/dankeegan/relocation.quest/` - working implementation
