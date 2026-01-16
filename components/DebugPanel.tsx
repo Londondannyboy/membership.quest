@@ -30,12 +30,25 @@ export function DebugPanel() {
   const currentPage = getPageContext(pathname);
   const firstName = user?.name?.split(' ')[0] || null;
 
-  // Log context changes (only to internal logs, not console - was causing re-renders)
+  // Log context changes
   useEffect(() => {
     const timestamp = new Date().toLocaleTimeString();
     const logEntry = `[${timestamp}] Page: ${currentPage}, User: ${firstName || 'Guest'}`;
     setLogs(prev => [...prev.slice(-19), logEntry]);
-  }, [pathname, currentPage, firstName]);
+
+    // Also log to console for browser dev tools
+    console.log('[Debug] Context:', {
+      pathname,
+      currentPage,
+      user: user ? {
+        id: user.id,
+        name: user.name,
+        firstName,
+        email: user.email,
+      } : null,
+      timestamp,
+    });
+  }, [pathname, currentPage, user, firstName]);
 
   // Only show in development or if user adds ?debug to URL
   const [showDebug, setShowDebug] = useState(false);
