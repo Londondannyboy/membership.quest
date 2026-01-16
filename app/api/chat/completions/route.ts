@@ -52,7 +52,7 @@ async function getZepContext(userId: string): Promise<string> {
   }
 }
 
-// Parse SSE stream and extract text content from Pydantic AI agent
+// Parse SSE stream and extract text content from OpenAI-compatible response
 async function parseSSEStream(response: Response): Promise<string> {
   const reader = response.body?.getReader();
   if (!reader) return '';
@@ -73,13 +73,28 @@ async function parseSSEStream(response: Response): Promise<string> {
 
       for (const line of lines) {
         if (line.startsWith('data: ')) {
+          const dataStr = line.slice(6).trim();
+
+          // Handle [DONE] signal
+          if (dataStr === '[DONE]') continue;
+
           try {
-            const data = JSON.parse(line.slice(6));
-            if (data.type === 'TEXT_MESSAGE_CONTENT' || data.type === 'TextMessageContent') {
+            const data = JSON.parse(dataStr);
+
+            // OpenAI-compatible format: choices[0].delta.content
+            if (data.choices?.[0]?.delta?.content) {
+              content += data.choices[0].delta.content;
+            }
+            // AG-UI format: type === TEXT_MESSAGE_CONTENT
+            else if (data.type === 'TEXT_MESSAGE_CONTENT' || data.type === 'TextMessageContent') {
               content += data.content || data.delta || '';
-            } else if (data.delta?.content) {
+            }
+            // Direct delta.content (legacy)
+            else if (data.delta?.content) {
               content += data.delta.content;
-            } else if (data.content && typeof data.content === 'string') {
+            }
+            // Direct content (non-streaming)
+            else if (data.content && typeof data.content === 'string') {
               content += data.content;
             }
           } catch {
