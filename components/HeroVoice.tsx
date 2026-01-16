@@ -111,27 +111,50 @@ function VoiceOrb() {
     }
 
     if (status.value === 'connected') {
+      console.log('[Hume] Disconnecting...');
       disconnect();
     } else {
       setIsPending(true);
       try {
-        const res = await fetch('/api/hume-token', { method: 'POST' });
-        const { accessToken } = await res.json();
+        console.log('[Hume] Fetching token...');
+        const res = await fetch('/api/hume-token');
+        const tokenData = await res.json();
 
-        const configId = process.env.NEXT_PUBLIC_HUME_CONFIG_ID;
-        if (!configId || !accessToken) {
-          console.error('Missing Hume config or token');
+        if (!res.ok || !tokenData.accessToken) {
+          console.error('[Hume] Token error:', tokenData);
           return;
+        }
+
+        const accessToken = tokenData.accessToken;
+        const configId = process.env.NEXT_PUBLIC_HUME_CONFIG_ID;
+
+        if (!configId) {
+          console.error('[Hume] Missing NEXT_PUBLIC_HUME_CONFIG_ID');
+          return;
+        }
+
+        console.log('[Hume] Token received, fetching Zep context...');
+
+        // Fetch Zep context for personalization (like relocation.quest pattern)
+        let zepContext = '';
+        try {
+          const zepRes = await fetch(`/api/zep-context?userId=${user.id}`);
+          const zepData = await zepRes.json();
+          if (zepData.context) {
+            zepContext = zepData.context;
+            console.log('[Hume] Zep context:', zepContext.substring(0, 100));
+          }
+        } catch (e) {
+          console.log('[Hume] No Zep context available');
         }
 
         // Get page-specific context
         const pageContext = getPageContext(pathname);
 
-        // Build comprehensive system prompt
+        // Build comprehensive system prompt with Zep memory
         const systemPrompt = `## CRITICAL IDENTITY
 You are the VOICE CONSULTANT for a specialist Membership Marketing Agency.
 You help associations, professional bodies, and membership organisations grow and retain their members.
-You are NOT an elf, NOT a fantasy character, NOT a game assistant.
 You are a friendly, knowledgeable membership marketing consultant with a warm, professional personality.
 
 ## USER INFORMATION
@@ -140,7 +163,10 @@ You are a friendly, knowledgeable membership marketing consultant with a warm, p
 - User ID: ${user.id}
 
 IMPORTANT: Address the user by their first name (${firstName || user.name}) in your responses.
-
+${zepContext ? `
+## WHAT I REMEMBER ABOUT ${firstName || user.name}
+${zepContext}
+` : ''}
 ## CURRENT PAGE CONTEXT
 ${pageContext}
 
@@ -177,16 +203,21 @@ ${pageContext}
 
 Remember: You are a membership marketing consultant. Stay focused on helping them grow their membership.`;
 
+        console.log('[Hume] Connecting with config:', configId);
+
         await connect({
           auth: { type: 'accessToken', value: accessToken },
           configId: configId,
           sessionSettings: {
             type: 'session_settings',
             systemPrompt: systemPrompt,
+            customSessionId: `membership_${user.id}`,
           }
         });
+
+        console.log('[Hume] Connected successfully!');
       } catch (e) {
-        console.error('Voice connect error:', e);
+        console.error('[Hume] Voice connect error:', e);
       } finally {
         setIsPending(false);
       }
