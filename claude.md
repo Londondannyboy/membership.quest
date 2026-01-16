@@ -15,13 +15,14 @@
 - [x] All code written and tested (`npm run build` passes)
 - [x] Pushed to GitHub
 - [x] Railway project created: https://railway.com/project/cd956c4a-bdd9-46cb-8c1a-52fd5303cb88
-- [x] Initial Railway deployment triggered
+- [x] Vercel deployed: https://membership.quest
+- [x] Hume voice credentials updated (new account, Jan 16)
+- [x] All yoga content removed
+- [x] Profile page removed, navigation updated
 
 ### 🔄 IN PROGRESS
-- [ ] Add Railway environment variables (GOOGLE_API_KEY, DATABASE_URL)
+- [ ] Add Railway environment variables (GOOGLE_API_KEY, DATABASE_URL) - needs `railway login`
 - [ ] Generate Railway public domain
-- [ ] Create Vercel project from GitHub repo
-- [ ] Add Vercel environment variables
 - [ ] Update AGENT_URL in Vercel with Railway domain
 
 ---
