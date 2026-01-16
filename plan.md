@@ -38,8 +38,8 @@ Use Railway MCP tools to:
 - Get Railway domain URL
 - Update `AGENT_URL` in Vercel with Railway URL
 
-### 4. Optional Cleanup
-- Delete legacy yoga pages from /app/
+### 4. Cleanup - DONE
+- ~~Delete legacy yoga pages from /app/~~ (Completed January 2026)
 
 ---
 
@@ -56,9 +56,9 @@ GOOGLE_API_KEY=<from-google-ai-studio>
 DATABASE_URL=postgresql://neondb_owner:npg_bYHMPRx50lEo@ep-flat-surf-abehvks7-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require
 NEON_AUTH_BASE_URL=https://ep-flat-surf-abehvks7.neonauth.eu-west-2.aws.neon.tech/neondb/auth
 AGENT_URL=https://<railway-domain>.up.railway.app/agui/
-HUME_API_KEY=<from-hume-dashboard>
-HUME_SECRET_KEY=<from-hume-dashboard>
-NEXT_PUBLIC_HUME_CONFIG_ID=8e6530df-c020-4b82-bfd3-62617a100b17
+HUME_API_KEY=uGiokBIyJvWBBPi90z2kWYg9Jss0sor7Xn97cG5ixgs4OLCy
+HUME_SECRET_KEY=gMqhKe3iqlAHHOEuRGW2NWbg5AG0kcZttCoDaQO5hDJt5dgDziQngd74f4igGgIV
+NEXT_PUBLIC_HUME_CONFIG_ID=05b3c327-64f0-4f24-9a0f-33e541fbfa8f
 ZEP_API_KEY=z_1dWlkIjoiMmNkYWVjZjktYTU5Ny00ZDlkLWIyMWItNTZjOWI5OTE5MTE4In0.Ssyb_PezcGgacQFq6Slg3fyFoqs8hBhvp6WsE8rO4VK_D70CT5tqDbFOs6ZTf8rw7qYfTRhLz5YFm8RR854rHg
 ```
 
@@ -153,10 +153,6 @@ Friendly membership marketing consultant that qualifies leads by asking:
 
 ---
 
-## LEGACY CLEANUP
+## LEGACY CLEANUP - COMPLETED (January 2026)
 
-After deployment verified, delete old yoga pages:
-```bash
-cd /Users/dankeegan/membership.quest/app
-rm -rf articles/ balens-* yoga-* hot-yoga-* pilates-* meditation-* trainee-* public-liability-* fitness-* group-fitness-* compare-yoga-* best-yoga-* do-you-need-yoga-* how-much-yoga-*
-```
+All legacy yoga/fitness insurance content has been removed from the codebase.

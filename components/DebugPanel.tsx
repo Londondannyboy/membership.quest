@@ -13,16 +13,17 @@ export function DebugPanel() {
 
   // Get page context (same logic as providers.tsx)
   const getPageContext = (path: string): string => {
-    if (path.includes('aerial')) return 'aerial-yoga-insurance';
-    if (path.includes('hot-yoga')) return 'hot-yoga-insurance';
-    if (path.includes('meditation')) return 'meditation-teacher-insurance';
-    if (path.includes('studio')) return 'yoga-studio-insurance';
-    if (path.includes('public-liability')) return 'public-liability-insurance';
+    if (path.includes('services/member-acquisition')) return 'member-acquisition';
+    if (path.includes('services/member-retention')) return 'member-retention';
+    if (path.includes('services/member-engagement')) return 'member-engagement';
+    if (path.includes('services/membership-strategy')) return 'membership-strategy';
+    if (path.includes('services/content-marketing')) return 'content-marketing';
+    if (path.includes('industries/professional-bodies')) return 'professional-bodies';
+    if (path.includes('industries/trade-associations')) return 'trade-associations';
+    if (path.includes('industries/membership-charities')) return 'membership-charities';
+    if (path.includes('case-studies')) return 'case-studies';
+    if (path.includes('contact')) return 'contact';
     if (path.includes('profile') || path.includes('dashboard')) return 'user-profile';
-    if (path.includes('pilates')) return 'pilates-instructor-insurance';
-    if (path.includes('compare')) return 'compare-providers';
-    if (path.includes('cost') || path.includes('how-much')) return 'insurance-costs';
-    if (path.includes('articles')) return 'articles';
     return 'homepage';
   };
 
@@ -120,9 +121,6 @@ export function DebugPanel() {
     email: user.email,
   } : null,
   current_page: currentPage,
-  yoga_styles: [],
-  teaching_locations: [],
-  has_existing_insurance: false,
 }, null, 2)}
               </pre>
             </div>

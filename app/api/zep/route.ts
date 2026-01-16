@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
         try {
           await client.graph.create({
             graphId: INSURANCE_GRAPH_ID,
-            name: 'Yoga Teacher Insurance Knowledge Graph',
+            name: 'Membership Marketing Knowledge Graph',
           });
           return NextResponse.json({ success: true, graphId: INSURANCE_GRAPH_ID, created: true });
         } catch (e: any) {

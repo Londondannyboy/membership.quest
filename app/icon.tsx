@@ -22,7 +22,7 @@ export default function Icon() {
           borderRadius: '20%',
         }}
       >
-        {/* Stylized Y for Yoga */}
+        {/* Stylized M for Membership */}
         <div
           style={{
             display: 'flex',
@@ -33,7 +33,7 @@ export default function Icon() {
             letterSpacing: '-2px',
           }}
         >
-          Y
+          M
         </div>
       </div>
     ),

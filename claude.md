@@ -43,11 +43,11 @@ NEON_AUTH_BASE_URL=https://ep-flat-surf-abehvks7.neonauth.eu-west-2.aws.neon.tec
 
 AGENT_URL=https://<railway-domain>.up.railway.app/agui/
 
-HUME_API_KEY=<your-hume-api-key>
+HUME_API_KEY=uGiokBIyJvWBBPi90z2kWYg9Jss0sor7Xn97cG5ixgs4OLCy
 
-HUME_SECRET_KEY=<your-hume-secret-key>
+HUME_SECRET_KEY=gMqhKe3iqlAHHOEuRGW2NWbg5AG0kcZttCoDaQO5hDJt5dgDziQngd74f4igGgIV
 
-NEXT_PUBLIC_HUME_CONFIG_ID=8e6530df-c020-4b82-bfd3-62617a100b17
+NEXT_PUBLIC_HUME_CONFIG_ID=05b3c327-64f0-4f24-9a0f-33e541fbfa8f
 
 ZEP_API_KEY=z_1dWlkIjoiMmNkYWVjZjktYTU5Ny00ZDlkLWIyMWItNTZjOWI5OTE5MTE4In0.Ssyb_PezcGgacQFq6Slg3fyFoqs8hBhvp6WsE8rO4VK_D70CT5tqDbFOs6ZTf8rw7qYfTRhLz5YFm8RR854rHg
 ```
@@ -128,10 +128,11 @@ ZEP_API_KEY=z_1dWlkIjoiMmNkYWVjZjktYTU5Ny00ZDlkLWIyMWItNTZjOWI5OTE5MTE4In0.Ssyb_
 
 ---
 
-## LEGACY CLEANUP (Optional)
+## LEGACY CLEANUP - COMPLETED
 
-Delete old yoga pages after deployment is verified:
-```bash
-cd /Users/dankeegan/membership.quest/app
-rm -rf articles/ balens-* yoga-* hot-yoga-* pilates-* meditation-* trainee-* public-liability-* fitness-* group-fitness-* compare-yoga-* best-yoga-* do-you-need-yoga-* how-much-yoga-*
-```
+All yoga/fitness insurance pages have been removed (January 2026):
+- Deleted 18 yoga page directories from /app/
+- Deleted /app/articles/ directory with yoga articles
+- Deleted yoga-related components (AerialYogaCalculator, Yoga3DFigure, etc.)
+- Updated manifest, icons, and db.ts to membership branding
+- Sitemap was already clean with only membership pages

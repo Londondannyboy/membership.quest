@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Yoga Teacher Insurance UK',
-    short_name: 'Yoga Insurance',
-    description: 'Compare yoga teacher insurance quotes from UK specialist providers',
+    name: 'Membership Marketing Agency',
+    short_name: 'Membership Quest',
+    description: 'Expert marketing services for membership organisations - acquisition, retention, and engagement',
     start_url: '/',
     display: 'standalone',
     background_color: '#0f172a',

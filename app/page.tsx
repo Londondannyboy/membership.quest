@@ -390,7 +390,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="text-center text-slate-500 text-xs mt-6">*Industry benchmark targets based on best practices</p>
+          <p className="text-center text-slate-400 text-xs mt-6">*Industry benchmark targets based on best practices</p>
 
           <div className="mt-8 text-center">
             <Link

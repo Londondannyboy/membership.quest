@@ -22,7 +22,7 @@ export default function AppleIcon() {
           borderRadius: '22%',
         }}
       >
-        {/* Stylized Y for Yoga */}
+        {/* Stylized M for Membership */}
         <div
           style={{
             display: 'flex',
@@ -33,7 +33,7 @@ export default function AppleIcon() {
             letterSpacing: '-4px',
           }}
         >
-          Y
+          M
         </div>
       </div>
     ),
