@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { VoiceProvider, useVoice } from '@humeai/voice-react';
 import { authClient } from '@/lib/auth/client';
@@ -18,6 +18,9 @@ const debug = (area: string, message: string, data?: unknown) => {
     console.log(`${prefix} ${area}: ${message}`);
   }
 };
+
+// Store token globally to survive re-renders
+let cachedToken: string | null = null;
 
 // Get page context from pathname
 function getPageContext(pathname: string): string {
@@ -241,21 +244,39 @@ Greet ${firstName || 'the user'} warmly and ask how you can help with their memb
  * Pattern matches mortgagecalculator.quest VoiceWidget:
  * 1. Fetch token on mount
  * 2. Only render VoiceProvider once token is available
+ * 3. Use cached token to survive re-renders
  */
 export function HeroVoice() {
-  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [accessToken, setAccessToken] = useState<string | null>(cachedToken);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const tokenFetchedRef = useRef(false);
 
-  // Fetch token on mount (NOT on click)
+  // Fetch token on mount (NOT on click), but only once
   useEffect(() => {
     setMounted(true);
+
+    // If we already have a cached token, use it
+    if (cachedToken) {
+      debug('Init', 'Using cached token');
+      setAccessToken(cachedToken);
+      return;
+    }
+
+    // Prevent double-fetch
+    if (tokenFetchedRef.current) {
+      debug('Init', 'Token already being fetched, skipping');
+      return;
+    }
+    tokenFetchedRef.current = true;
+
     debug('Init', 'Fetching Hume token...');
     fetch('/api/hume-token')
       .then((res) => res.json())
       .then((data) => {
         if (data.accessToken) {
           debug('Init', 'Token received successfully');
+          cachedToken = data.accessToken; // Cache it globally
           setAccessToken(data.accessToken);
         } else {
           debug('Error', 'No token in response', data);
