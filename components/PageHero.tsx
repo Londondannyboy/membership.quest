@@ -1,6 +1,6 @@
 'use client';
 
-import { HeroVoiceWithAuth } from './HeroVoiceWithAuth';
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth';
 
 interface PageHeroProps {
   title: string;
