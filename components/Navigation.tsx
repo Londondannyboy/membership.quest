@@ -127,13 +127,7 @@ export function Navigation() {
               <div className="w-7 h-7 rounded-full bg-slate-700 animate-pulse" />
             ) : user ? (
               <div className="flex items-center gap-2">
-                <Link
-                  href="/profile"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-300 hover:bg-blue-500/30 text-sm transition-colors"
-                >
-                  <span className="text-xs">👤</span>
-                  <span>My Profile</span>
-                </Link>
+                <span className="text-sm text-slate-300">{user.name?.split(' ')[0]}</span>
                 <div className="w-7 h-7">
                   <UserButton size="sm" />
                 </div>
@@ -234,15 +228,7 @@ export function Navigation() {
                   </Link>
                 )}
                 {user && (
-                  <div className="px-4 space-y-2">
-                    <Link
-                      href="/profile"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors"
-                    >
-                      <span>👤</span>
-                      My Profile
-                    </Link>
+                  <div className="px-4">
                     <div className="flex items-center gap-3 px-4 py-2">
                       <div className="w-7 h-7">
                         <UserButton size="sm" />
