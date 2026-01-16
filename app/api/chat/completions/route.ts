@@ -9,17 +9,12 @@ import { NextRequest, NextResponse } from 'next/server';
  * Pattern from fractional.quest
  */
 
-const AGENT_URL = process.env.AGENT_URL || 'http://localhost:8000';
+// Call Railway's CLM endpoint directly (has its own /chat/completions endpoint)
+const AGENT_CLM_URL = process.env.AGENT_CLM_URL || 'https://membership-agent-production.up.railway.app/chat/completions';
 const ZEP_API_KEY = process.env.ZEP_API_KEY || '';
 
 interface OpenAIMessage {
   role: 'user' | 'assistant' | 'system';
-  content: string;
-}
-
-interface AGUIMessage {
-  id: string;
-  role: 'user' | 'assistant' | 'system' | 'developer';
   content: string;
 }
 
@@ -129,15 +124,16 @@ export async function POST(req: NextRequest) {
     // Fetch Zep context if we have a user ID
     const zepContext = userId ? await getZepContext(userId) : '';
 
-    // Build AG-UI compatible message array
-    const aguiMessages: AGUIMessage[] = [];
+    // Build OpenAI-compatible message array for Railway's CLM endpoint
+    const openaiMessages: OpenAIMessage[] = [];
 
     // Build membership-specific system context
     const systemContext = `You are a VOICE CONSULTANT for a specialist Membership Marketing Agency.
 You help associations, professional bodies, and membership organisations grow and retain their members.
 You are a friendly, knowledgeable membership marketing consultant with a warm, professional personality.
 
-${firstName ? `USER NAME: ${firstName}` : 'USER: Guest'}
+${firstName ? `User Name: ${firstName}` : 'USER: Guest'}
+${userId ? `User ID: ${userId}` : ''}
 ${zepContext}
 ${pageContext ? `\nPAGE CONTEXT: User is on the ${pageContext} page.` : ''}
 
@@ -159,38 +155,33 @@ RULES:
 4. Your goal is to qualify them and book a consultation
 5. ${firstName ? `Address them by name (${firstName}) occasionally` : 'Ask for their name if appropriate'}`;
 
-    aguiMessages.push({
-      id: `sys_${Date.now()}`,
-      role: 'developer',
+    // Add system message with context
+    openaiMessages.push({
+      role: 'system',
       content: systemContext,
     });
 
-    // Convert OpenAI messages to AG-UI format
-    messages.forEach((msg, idx) => {
-      aguiMessages.push({
-        id: `msg_${idx}_${Date.now()}`,
-        role: msg.role === 'system' ? 'developer' : msg.role,
-        content: msg.content,
-      });
+    // Add conversation history (excluding original system messages)
+    messages.forEach((msg) => {
+      if (msg.role !== 'system') {
+        openaiMessages.push({
+          role: msg.role,
+          content: msg.content,
+        });
+      }
     });
 
-    // Build the AG-UI request body
+    // Build the OpenAI-compatible request body for Railway's CLM endpoint
     const agentRequestBody = {
-      messages: aguiMessages,
-      runId: `run_${Date.now()}`,
-      threadId: sessionPart || `thread_${Date.now()}`,
-      state: {
-        user: userId ? { id: userId, name: firstName, firstName } : null,
-        current_page: pageContext || 'homepage',
-        organisation_type: null,
-        primary_challenges: [],
-      },
+      messages: openaiMessages,
+      model: 'membership-marketing-agent',
+      stream: true,
     };
 
-    console.log('[CLM] Calling Pydantic AI agent at:', AGENT_URL);
+    console.log('[CLM] Calling Railway CLM at:', AGENT_CLM_URL);
 
-    // Call the Pydantic AI agent
-    const agentResponse = await fetch(AGENT_URL, {
+    // Call the Railway CLM endpoint
+    const agentResponse = await fetch(AGENT_CLM_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
