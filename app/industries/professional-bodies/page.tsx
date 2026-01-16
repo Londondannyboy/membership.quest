@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 
 export const metadata: Metadata = {
   title: 'Professional Bodies Marketing | Membership Marketing Agency',
@@ -29,7 +29,7 @@ export default function ProfessionalBodiesPage() {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Helping accountants, engineers, lawyers, healthcare professionals, and other professional bodies grow and engage their membership.
           </p>
-          <HeroVoice />
+          <HeroVoiceWithAuth />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 
 export const metadata: Metadata = {
   title: 'What We Believe Is Possible | Membership Marketing Agency',
@@ -89,7 +89,7 @@ export default function CaseStudiesPage() {
               <strong>Transparency note:</strong> We&apos;re a new agency. These aren&apos;t our case studies yet - they&apos;re aspirational examples of the outcomes we aim to help you achieve.
             </p>
           </div>
-          <HeroVoice />
+          <HeroVoiceWithAuth />
         </div>
       </section>
 

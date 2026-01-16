@@ -2,7 +2,18 @@
 
 import dynamic from 'next/dynamic';
 
-const HeroVoice = dynamic(
+// User context interface (matches HeroVoice)
+interface UserContext {
+  id: string;
+  name?: string | null;
+  email?: string | null;
+}
+
+interface HeroVoiceProps {
+  user?: UserContext;
+}
+
+const DynamicHeroVoice = dynamic(
   () => import('./HeroVoice').then((mod) => mod.HeroVoice),
   {
     loading: () => (
@@ -22,4 +33,7 @@ const HeroVoice = dynamic(
   }
 );
 
-export { HeroVoice };
+// Re-export with props passthrough
+export function HeroVoice({ user }: HeroVoiceProps) {
+  return <DynamicHeroVoice user={user} />;
+}

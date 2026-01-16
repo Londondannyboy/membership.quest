@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 import { CalendlyWidget } from '@/components/DynamicCalendly'
 import { ProfileImage } from '@/components/ProfileImage'
 import Link from 'next/link'
@@ -102,7 +102,7 @@ export default function HomePage() {
           </div>
 
           {/* Voice Assistant */}
-          <HeroVoice />
+          <HeroVoiceWithAuth />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 
 export const metadata: Metadata = {
   title: 'Member Retention Services | Reduce Churn & Increase Renewals',
@@ -30,7 +30,7 @@ export default function MemberRetentionPage() {
             Reduce churn and increase lifetime value through optimised onboarding, renewal automation, and win-back campaigns.
           </p>
           <p className="text-lg text-green-400 font-semibold mb-8">From £1,500/month</p>
-          <HeroVoice />
+          <HeroVoiceWithAuth />
         </div>
       </section>
 

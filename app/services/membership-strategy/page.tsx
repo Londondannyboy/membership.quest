@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoice } from '@/components/DynamicHeroVoice'
+import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 
 export const metadata: Metadata = {
   title: 'Membership Strategy Services | Transform Your Membership Model',
@@ -30,7 +30,7 @@ export default function MembershipStrategyPage() {
             Strategic consulting to transform your membership model with proposition review, pricing optimisation, and clear roadmaps.
           </p>
           <p className="text-lg text-cyan-400 font-semibold mb-8">From £3,000/month</p>
-          <HeroVoice />
+          <HeroVoiceWithAuth />
         </div>
       </section>
 

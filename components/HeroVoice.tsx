@@ -3,10 +3,16 @@
 import { useState, useEffect, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { VoiceProvider, useVoice } from '@humeai/voice-react';
-import { authClient } from '@/lib/auth/client';
 import Link from 'next/link';
 
 const CONFIG_ID = process.env.NEXT_PUBLIC_HUME_CONFIG_ID || '';
+
+// User context passed as prop (not from auth hook)
+interface UserContext {
+  id: string;
+  name?: string | null;
+  email?: string | null;
+}
 
 // Debug helper
 const debug = (area: string, message: string, data?: unknown) => {
@@ -57,12 +63,11 @@ function getPageContext(pathname: string): string {
 /**
  * Inner Voice Orb - Uses useVoice hook (must be inside VoiceProvider)
  * Pattern matches mortgagecalculator.quest VoiceButtonInner
+ * User passed as prop to avoid auth context re-renders
  */
-function VoiceOrbInner({ accessToken }: { accessToken: string }) {
+function VoiceOrbInner({ accessToken, user }: { accessToken: string; user?: UserContext }) {
   const { connect, disconnect, status, sendUserInput } = useVoice();
   const [isPending, setIsPending] = useState(false);
-  const { data: session } = authClient.useSession();
-  const user = session?.user;
   const firstName = user?.name?.split(' ')[0] || null;
   const pathname = usePathname();
 
@@ -241,8 +246,9 @@ Greet ${firstName || 'the user'} warmly and ask how you can help with their memb
  * Pattern matches mortgagecalculator.quest VoiceWidget:
  * 1. Fetch token on mount
  * 2. Only render VoiceProvider once token is available
+ * 3. User passed as prop (not from auth hook) to avoid re-mount on auth changes
  */
-export function HeroVoice() {
+export function HeroVoice({ user }: { user?: UserContext }) {
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -317,7 +323,7 @@ export function HeroVoice() {
       onOpen={() => debug('Status', 'VoiceProvider opened')}
       onClose={(e) => debug('Status', 'VoiceProvider closed:', e)}
     >
-      <VoiceOrbInner accessToken={accessToken} />
+      <VoiceOrbInner accessToken={accessToken} user={user} />
     </VoiceProvider>
   );
 }

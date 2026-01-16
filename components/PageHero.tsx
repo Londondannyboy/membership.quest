@@ -1,6 +1,6 @@
 'use client';
 
-import { HeroVoice } from './HeroVoice';
+import { HeroVoiceWithAuth } from './HeroVoiceWithAuth';
 
 interface PageHeroProps {
   title: string;
@@ -70,7 +70,7 @@ export function PageHero({
         {/* Voice Widget - Center Bottom of Hero */}
         {showVoice && (
           <div className="flex justify-center mt-8">
-            <HeroVoice />
+            <HeroVoiceWithAuth />
           </div>
         )}
       </div>
