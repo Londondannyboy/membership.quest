@@ -12,15 +12,11 @@ export async function POST() {
 }
 
 async function getHumeToken() {
+  // IMPORTANT: .trim() is critical - Vercel env vars can have trailing whitespace
   const apiKey = (process.env.HUME_API_KEY || "").trim()
   const secretKey = (process.env.HUME_SECRET_KEY || "").trim()
 
-  // Debug: log key lengths (not the actual keys for security)
-  console.log(`[Hume Token] API Key length: ${apiKey.length}, Secret Key length: ${secretKey.length}`)
-  console.log(`[Hume Token] API Key first 4 chars: ${apiKey.substring(0, 4)}...`)
-
   if (!apiKey || !secretKey) {
-    console.error('[Hume Token] Missing credentials - HUME_API_KEY or HUME_SECRET_KEY not set')
     return NextResponse.json({ error: 'Hume credentials not configured' }, { status: 500 })
   }
 
