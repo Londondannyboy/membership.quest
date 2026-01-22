@@ -84,7 +84,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Your Membership Marketing Agency
+            Membership Marketing Agency
             <span className="block bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent mt-2">for Growth & Retention</span>
           </h1>
           <p className="text-xl text-slate-100 mb-4 font-light">
@@ -140,6 +140,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose a Membership Marketing Agency */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-6">
+            Why Choose a Specialist Membership Marketing Agency?
+          </h2>
+          <div className="prose prose-lg prose-invert mx-auto text-slate-300">
+            <p className="mb-4">
+              A <strong>membership marketing agency</strong> brings specialist expertise that general marketing agencies simply cannot match. We understand the unique dynamics of membership organisations—from the psychology of joining and belonging, to the technical challenges of renewal automation and lapsed member reactivation.
+            </p>
+            <p className="mb-4">
+              Unlike traditional marketing that focuses purely on one-time transactions, membership marketing requires a holistic approach. Your members expect ongoing value, community connection, and professional development. Our membership marketing agency strategies address the entire member lifecycle: from initial awareness and acquisition, through onboarding and engagement, to renewal and advocacy.
+            </p>
+            <p>
+              We work exclusively with professional bodies, trade associations, and membership charities across the UK. This focus means we understand sector-specific challenges like demonstrating CPD value, engaging corporate members, and competing with free online communities. When you work with a specialist membership marketing agency, you benefit from proven frameworks that have delivered results for organisations just like yours.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Meet Dan - Personal Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -151,7 +171,7 @@ export default function HomePage() {
                   <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
                     <ProfileImage
                       src="/dan-keegan.jpg"
-                      alt="Dan Keegan - Membership Marketing Consultant"
+                      alt="Dan Keegan - Membership Marketing Agency Founder"
                       fallback="DK"
                     />
                   </div>
