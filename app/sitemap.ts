@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/industries/professional-bodies`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/industries/trade-associations`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/industries/membership-charities`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/industries/private-members-clubs`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/industries/luxury-fitness-clubs`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
 
     // Legal
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },

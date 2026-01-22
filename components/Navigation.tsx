@@ -26,6 +26,8 @@ export function Navigation() {
     { href: '/industries/professional-bodies', label: 'Professional Bodies', icon: '🏛️' },
     { href: '/industries/trade-associations', label: 'Trade Associations', icon: '🤝' },
     { href: '/industries/membership-charities', label: 'Membership Charities', icon: '💝' },
+    { href: '/industries/private-members-clubs', label: 'Private Members Clubs', icon: '🥂' },
+    { href: '/industries/luxury-fitness-clubs', label: 'Luxury Fitness Clubs', icon: '💪' },
   ]
 
   return (
