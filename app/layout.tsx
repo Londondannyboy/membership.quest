@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
@@ -10,6 +10,13 @@ import { DebugPanel, BetaBadge } from "@/components/DebugPanel"
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-body",
+})
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
 })
 
 export const metadata: Metadata = {
@@ -159,7 +166,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-slate-900 text-white`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-[#FDFCFB] text-[#1A1A1A]`}>
         <Providers>
           <BetaBadge />
           <DebugPanel />

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
-import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
+import { PageHero, ContentSection, SectionHeading } from '@/components/PageHero'
+import { CalendlyWidget } from '@/components/DynamicCalendly'
+import { luxuryImages } from '@/components/UnsplashImage'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Membership Marketing Agency',
@@ -12,124 +13,104 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-900 to-slate-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent"></div>
+    <div className="min-h-screen bg-[#FDFCFB]">
+      <PageHero
+        eyebrow="Get in Touch"
+        title="Let&apos;s Talk"
+        description="Book a complimentary 30-minute consultation to discuss your membership challenges. No obligation, no hard sell—just helpful advice."
+        imageUrl={luxuryImages.contact}
+        imageAlt="Luxury reception representing professional consultation"
+        showVoice={false}
+      />
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Let&apos;s <span className="text-blue-400">Talk</span>
-          </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute consultation to discuss your membership marketing challenges and discover how we can help.
-          </p>
-          <HeroVoiceWithAuth />
-        </div>
-      </section>
-
-      {/* Contact Options */}
-      <section className="py-16 px-4">
+      <ContentSection>
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Book a Call */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-blue-500/30">
-              <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-bold text-white mb-4">Book a Call</h2>
-              <p className="text-slate-400 mb-6">
-                Schedule a free 30-minute consultation with one of our membership marketing experts.
-              </p>
-              <a
-                href="https://calendly.com/membership-quest/consultation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all text-center"
-              >
-                Book Free Consultation
-              </a>
-            </div>
+          <SectionHeading
+            title="Book Your Consultation"
+            description="Choose a time that works for you. We'll have an honest conversation about your challenges and explore how we might help."
+          />
 
-            {/* Email Us */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-green-500/30">
-              <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-bold text-white mb-4">Email Us</h2>
-              <p className="text-slate-400 mb-6">
-                Prefer email? Send us your details and we&apos;ll get back to you within 24 hours.
-              </p>
-              <a
-                href="mailto:hello@membership.quest"
-                className="inline-block w-full px-6 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all text-center"
-              >
-                hello@membership.quest
-              </a>
-            </div>
+          <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8 border border-gray-100">
+            <CalendlyWidget />
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">
+              Prefer email? No problem.
+            </p>
+            <a
+              href="mailto:dan@membership.quest"
+              className="inline-flex items-center gap-2 text-[#B8860B] hover:text-[#996F0A] font-medium text-lg transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              dan@membership.quest
+            </a>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
       {/* What to Expect */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">What to Expect</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { step: '1', title: 'Discovery Call', desc: 'We learn about your organisation, members, and current challenges.' },
-              { step: '2', title: 'Strategy Review', desc: 'We analyse your situation and identify quick wins and long-term opportunities.' },
-              { step: '3', title: 'Custom Proposal', desc: 'You receive a tailored plan with clear deliverables and expected outcomes.' },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-blue-400 font-bold text-xl">{item.step}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-400">{item.desc}</p>
-              </div>
-            ))}
+      <ContentSection background="cream">
+        <SectionHeading
+          title="What to Expect"
+          description="A consultation is simply a conversation—no pressure, no pitch deck."
+        />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#B8860B] flex items-center justify-center shadow-sm">
+              <span className="text-[#B8860B] font-serif text-lg">1</span>
+            </div>
+            <h3 className="text-lg font-serif text-gray-900 mb-2">We Listen</h3>
+            <p className="text-gray-600 text-sm">
+              Tell us about your organisation, your members, and the challenges you&apos;re facing.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#B8860B] flex items-center justify-center shadow-sm">
+              <span className="text-[#B8860B] font-serif text-lg">2</span>
+            </div>
+            <h3 className="text-lg font-serif text-gray-900 mb-2">We Advise</h3>
+            <p className="text-gray-600 text-sm">
+              We&apos;ll share initial thoughts on approaches that might work for your situation.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#B8860B] flex items-center justify-center shadow-sm">
+              <span className="text-[#B8860B] font-serif text-lg">3</span>
+            </div>
+            <h3 className="text-lg font-serif text-gray-900 mb-2">You Decide</h3>
+            <p className="text-gray-600 text-sm">
+              If there&apos;s a fit, we can explore working together. If not, you&apos;ll leave with useful insights.
+            </p>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* FAQ */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">Common Questions</h2>
-          <div className="space-y-4">
-            {[
-              { q: 'Is the consultation really free?', a: 'Yes, completely free with no obligation. We use it to understand your challenges and see if we can help.' },
-              { q: 'How long until I see results?', a: 'Most clients see measurable improvements within 3-6 months, with quick wins often in the first few weeks.' },
-              { q: 'What size organisations do you work with?', a: 'We work with membership organisations from 500 to 500,000+ members across all sectors.' },
-              { q: 'Do you work with organisations outside the UK?', a: 'Yes, we work with membership organisations globally, with particular expertise in UK, EU, and North American markets.' },
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-                <h3 className="text-lg font-semibold text-white mb-2">{item.q}</h3>
-                <p className="text-slate-400">{item.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Back to Services */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      {/* Location */}
+      <ContentSection>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">Want to learn more first?</p>
-          <Link href="/services/member-acquisition" className="text-blue-400 hover:text-blue-300 font-semibold">
-            Explore Our Services →
-          </Link>
-          <p className="text-slate-400 text-sm mt-6">
-            Return to our <Link href="/" className="text-blue-400 hover:text-blue-300 underline">membership marketing agency</Link> homepage.
-          </p>
+          <SectionHeading
+            title="Based in London"
+            description="We work with membership organisations across the UK and beyond."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-serif text-gray-900 mb-3">Remote Consultations</h3>
+              <p className="text-gray-600 text-sm">
+                Most of our consultations happen over video call—convenient for you and efficient for both of us.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-serif text-gray-900 mb-3">In-Person Meetings</h3>
+              <p className="text-gray-600 text-sm">
+                For London-based organisations, we&apos;re happy to meet in person. Just mention it when booking.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
+      </ContentSection>
     </div>
   )
 }

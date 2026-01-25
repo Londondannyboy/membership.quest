@@ -1,13 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  /* Luxury Light Theme - Conde Nast aesthetic */
+  --background: #FDFCFB;
+  --background-alt: #F7F5F3;
+  --foreground: #1A1A1A;
+  --foreground-muted: #6B6B6B;
+
+  /* Accent colors */
+  --accent-gold: #B8860B;
+  --accent-gold-hover: #996F0A;
+  --accent-bronze: #CD7F32;
+
+  /* Borders */
+  --border: #E8E4E0;
+  --border-subtle: #F0EDE9;
+
+  /* Legacy dark for overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+/* Luxury typography */
+.font-heading {
+  font-family: var(--font-heading), 'Playfair Display', serif;
+}
+
+/* Luxury button styles */
+.btn-luxury {
+  @apply bg-[var(--accent-gold)] text-white px-8 py-4 rounded-full;
+  @apply font-medium tracking-wide uppercase text-sm;
+  @apply hover:bg-[var(--accent-gold-hover)] transition-colors duration-300;
+}
+
+.btn-luxury-outline {
+  @apply border-2 border-[var(--accent-gold)] text-[var(--accent-gold)] px-8 py-4 rounded-full;
+  @apply font-medium tracking-wide uppercase text-sm;
+  @apply hover:bg-[var(--accent-gold)] hover:text-white transition-colors duration-300;
+}
+
+.btn-luxury-white {
+  @apply bg-white text-[var(--foreground)] px-8 py-4 rounded-full;
+  @apply font-medium tracking-wide uppercase text-sm;
+  @apply hover:bg-gray-100 transition-colors duration-300;
+}
+
+/* Luxury card style */
+.luxury-card {
+  @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+  @apply hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Image overlay for text legibility */
+.image-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent;
+}
+
+.image-overlay-full {
+  @apply absolute inset-0 bg-black/50;
+}
+
+/* Section backgrounds */
+.section-cream {
+  @apply bg-[var(--background)];
+}
+
+.section-cream-alt {
+  @apply bg-[var(--background-alt)];
 }
 
 /* Summary marker removal for FAQ */

@@ -1,350 +1,134 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
+import { PageHero, ContentSection, SectionHeading, FeatureCard, ProcessStep, FAQItem, CTASection } from '@/components/PageHero'
+import { luxuryImages } from '@/components/UnsplashImage'
 
 export const metadata: Metadata = {
   title: 'Membership Strategy Services | Transform Your Membership Model',
-  description: 'Strategic consulting to transform your membership model. Proposition review, pricing optimisation, competitive analysis, and transformation roadmaps. From £3,000/month.',
+  description: 'Strategic consulting to transform your membership model. Proposition review, pricing optimisation, and growth roadmaps. From £3,000/month.',
   alternates: {
     canonical: 'https://membership.quest/services/membership-strategy',
   },
 }
 
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'When should a membership organisation invest in strategy consulting?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Key triggers include: stagnant membership growth despite marketing efforts, declining renewal rates, members questioning value, increasing competition from free alternatives, new leadership seeking a fresh perspective, planned digital transformation, or merger/restructure situations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does a membership strategy project take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A comprehensive strategy project typically takes 8-12 weeks, including research, analysis, stakeholder interviews, strategy development, and roadmap creation. Quick diagnostic projects can be completed in 4-6 weeks. Implementation support is ongoing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does a membership proposition review involve?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We audit your current value proposition against member needs (through surveys and interviews), benchmark against competitors, analyse pricing elasticity, map the member journey, and identify gaps between what you offer and what members actually value.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do you optimise membership pricing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We analyse price sensitivity through member research, benchmark competitor pricing, model different tier structures, calculate optimal price points based on lifetime value, and develop pricing strategies that balance revenue growth with member value perception.',
-      },
-    },
-  ],
-}
-
 export default function MembershipStrategyPage() {
   return (
-    <div className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+    <div className="min-h-screen bg-[#FDFCFB]">
+      <PageHero
+        eyebrow="Strategy Service"
+        title="Membership Strategy"
+        description="Strategic consulting to refine your proposition, optimise pricing, and create a roadmap for sustainable membership growth."
+        price="From £3,000/month"
+        imageUrl={luxuryImages.strategy}
+        imageAlt="Strategic boardroom meeting for membership planning"
       />
 
-      {/* Hero */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900 via-slate-900 to-slate-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300 text-sm mb-6">
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            Strategy Service
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Membership <span className="text-cyan-400">Strategy</span> Services
-          </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Strategic consulting to transform your membership model with proposition review, pricing optimisation, and clear roadmaps.
-          </p>
-          <p className="text-lg text-cyan-400 font-semibold mb-8">From £3,000/month</p>
-          <HeroVoiceWithAuth />
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-16 px-4">
+      <ContentSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-6">
-            Before Tactics, Get the Strategy Right
-          </h2>
-          <div className="prose prose-lg prose-invert mx-auto text-slate-300">
-            <p className="mb-4">
-              Many membership organisations invest heavily in marketing campaigns without first addressing fundamental questions: Is our value proposition compelling? Are we priced correctly? Are we targeting the right audience? Without clear answers, even well-executed tactics will underperform.
-            </p>
-            <p className="mb-4">
-              Our strategy services help you step back and examine the foundations of your membership model. Drawing on frameworks from{' '}
-              <a
-                href="https://www.strategyzer.com/canvas/value-proposition-canvas"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 underline"
-              >
-                value proposition design
-              </a>
-              {' '}and membership sector best practices, we help you understand what members truly value and how to deliver it profitably.
-            </p>
-            <p>
-              Strategy work often reveals that operational changes—not just marketing—are needed. We provide the analysis and roadmap; you decide which recommendations to implement, when, and how.
-            </p>
+          <SectionHeading eyebrow="Our Approach" title="Strategic Thinking for Membership Success" />
+          <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
+            <p>Before tactics come strategy. Many membership organisations struggle because they&apos;re executing marketing activities without a clear strategic foundation.</p>
+            <p>Our strategy work addresses fundamental questions: Who should be your members? What unique value do you provide? How should you price and package membership? What does success look like, and how will you measure it?</p>
+            <p>We combine deep membership sector expertise with proven strategic frameworks to help you build a membership model that&apos;s fit for the future.</p>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* When You Need Strategy */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">When You Need Strategy</h2>
-          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-            These signals suggest it&apos;s time for strategic review rather than more marketing.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">Stagnant growth</h3>
-              <p className="text-sm text-slate-400">Membership numbers have plateaued despite marketing efforts. The problem may be product, not promotion.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">Value perception issues</h3>
-              <p className="text-sm text-slate-400">Members questioning what they get for their subscription. Renewal conversations focus on price, not value.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">Competitive pressure</h3>
-              <p className="text-sm text-slate-400">Free alternatives or competitors eating into your market. Need to differentiate or reposition.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">New leadership</h3>
-              <p className="text-sm text-slate-400">New CEO or membership director wanting a fresh perspective and evidence-based direction.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">Digital transformation</h3>
-              <p className="text-sm text-slate-400">Need to modernise your membership experience but unsure where to invest first.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">Merger or restructure</h3>
-              <p className="text-sm text-slate-400">Combining memberships or reorganising tiers. Need a coherent new model.</p>
-            </div>
+      <ContentSection background="cream">
+        <SectionHeading title="When You Need Strategy Work" description="Strategic intervention is valuable at key inflection points." />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <FeatureCard title="Declining or Stagnant Membership" description="When growth has plateaued or reversed, it's time to examine whether your proposition still resonates with your target market." />
+          <FeatureCard title="Competitive Pressure" description="New competitors, free alternatives, or changing industry dynamics require strategic response—not just tactical adjustments." />
+          <FeatureCard title="Digital Transformation" description="Moving from physical to digital benefits, or integrating technology into your member experience, requires strategic planning." />
+          <FeatureCard title="Pricing Review" description="When was your pricing last reviewed strategically? Many organisations leave money on the table or price themselves out of markets." />
+          <FeatureCard title="Merger or Expansion" description="Growing into new markets, merging with another organisation, or launching new membership tiers needs strategic foundations." />
+          <FeatureCard title="Leadership Change" description="New CEO, board refresh, or strategic planning cycle—these are opportunities to reset and realign your membership strategy." />
+        </div>
+      </ContentSection>
+
+      <ContentSection>
+        <SectionHeading eyebrow="What We Do" title="Our Strategy Services" description="Comprehensive strategic consulting for membership organisations." />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <FeatureCard title="Proposition Review" description="We analyse your current value proposition, benchmark against competitors, and identify gaps and opportunities to differentiate." note="Member research, Competitor analysis" />
+          <FeatureCard title="Pricing Strategy" description="We review your pricing structure, model willingness to pay, and recommend pricing that maximises both revenue and accessibility." note="Price elasticity, Tier optimisation" />
+          <FeatureCard title="Member Segmentation" description="We identify distinct member segments with different needs, and develop tailored strategies for each group." note="Persona development, Journey mapping" />
+          <FeatureCard title="Growth Roadmap" description="We create a prioritised plan for membership growth with clear milestones, resource requirements, and success metrics." note="3-5 year planning horizons" />
+          <FeatureCard title="Business Case Development" description="We build compelling business cases for investment in membership growth, helping you secure board and stakeholder buy-in." note="ROI modelling, Investment cases" />
+          <FeatureCard title="Operating Model Review" description="We assess whether your team structure, processes, and technology are optimised to deliver your membership strategy." note="Capability assessment, Tech audit" />
+        </div>
+      </ContentSection>
+
+      <ContentSection background="cream">
+        <SectionHeading eyebrow="Our Process" title="How We Develop Strategy" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ProcessStep number="01" title="Discovery" description="Deep dive into your organisation, members, market, and competitive landscape through interviews and data analysis." />
+          <ProcessStep number="02" title="Analysis" description="We synthesise findings, identify patterns, and develop strategic options with pros, cons, and implications." />
+          <ProcessStep number="03" title="Recommendations" description="We present clear, actionable recommendations with prioritisation, resource requirements, and implementation approach." />
+          <ProcessStep number="04" title="Roadmap" description="We create a detailed implementation roadmap with milestones, dependencies, and success metrics." />
+        </div>
+      </ContentSection>
+
+      <ContentSection>
+        <SectionHeading title="What You Get" description="Tangible outputs from our strategy engagements." />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 className="text-lg font-serif text-gray-900 mb-3">Strategic Analysis</h3>
+            <p className="text-gray-600 text-sm mb-4">Comprehensive analysis of your current state, market position, and opportunities.</p>
+            <ul className="text-gray-600 text-sm space-y-2">
+              <li>• Member research findings</li>
+              <li>• Competitor benchmarking</li>
+              <li>• SWOT analysis</li>
+            </ul>
+          </div>
+          <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 className="text-lg font-serif text-gray-900 mb-3">Strategic Recommendations</h3>
+            <p className="text-gray-600 text-sm mb-4">Clear, prioritised recommendations with rationale and implications.</p>
+            <ul className="text-gray-600 text-sm space-y-2">
+              <li>• Proposition refinements</li>
+              <li>• Pricing recommendations</li>
+              <li>• Strategic priorities</li>
+            </ul>
+          </div>
+          <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 className="text-lg font-serif text-gray-900 mb-3">Implementation Roadmap</h3>
+            <p className="text-gray-600 text-sm mb-4">Detailed plan to turn strategy into action with clear milestones.</p>
+            <ul className="text-gray-600 text-sm space-y-2">
+              <li>• Phased implementation plan</li>
+              <li>• Resource requirements</li>
+              <li>• Success metrics</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* What We Do */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">Our Strategy Services</h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            We provide the analysis, frameworks, and recommendations you need to make informed strategic decisions.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Proposition Review</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Audit your current value proposition against member needs and competitors. Identify gaps and opportunities.
-              </p>
-              <p className="text-xs text-cyan-400">Member research, Value mapping</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Pricing Optimisation</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Analyse pricing elasticity and optimise tiers for maximum revenue without damaging retention.
-              </p>
-              <p className="text-xs text-cyan-400">Price testing, Tier design, LTV modelling</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Competitive Analysis</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Benchmark against competitors and identify differentiation opportunities in your market.
-              </p>
-              <p className="text-xs text-cyan-400">Market mapping, Positioning strategy</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Member Journey Mapping</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Map the end-to-end member experience and identify friction points and improvement opportunities.
-              </p>
-              <p className="text-xs text-cyan-400">
-                Connects to <Link href="/services/member-engagement" className="underline hover:text-cyan-300">engagement</Link> &amp; <Link href="/services/member-retention" className="underline hover:text-cyan-300">retention</Link>
-              </p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Technology Assessment</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Evaluate your tech stack and recommend improvements to support your membership goals.
-              </p>
-              <p className="text-xs text-cyan-400">CRM, Website, Member portal review</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Transformation Roadmap</h3>
-              <p className="text-sm text-slate-400 mb-3">
-                Prioritised plan with quick wins and long-term initiatives, budget estimates, and success metrics.
-              </p>
-              <p className="text-xs text-cyan-400">90-day plan, Annual roadmap</p>
-            </div>
-          </div>
+      <ContentSection background="cream">
+        <SectionHeading eyebrow="Questions" title="Membership Strategy FAQs" />
+        <div className="max-w-4xl mx-auto space-y-4">
+          <FAQItem question="How long does a strategy engagement take?" answer="A typical strategy engagement takes 6-12 weeks depending on scope. This includes discovery, analysis, recommendation development, and roadmap creation." />
+          <FAQItem question="Do you help with implementation too?" answer="Yes. Strategy without execution is just a document. We can support implementation through our other services (acquisition, retention, engagement, content) or by providing ongoing advisory support." />
+          <FAQItem question="How do you involve our team?" answer="We believe the best strategies are developed collaboratively. We involve your team through interviews, workshops, and review sessions. This ensures we understand your context fully and that your team has ownership of the final strategy." />
         </div>
-      </section>
+      </ContentSection>
 
-      {/* Deliverables */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">What You Get</h2>
-          <p className="text-slate-400 mb-12 max-w-2xl mx-auto">
-            Tangible deliverables you can use immediately and reference for years to come.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              'Strategic audit report',
-              'Competitor benchmarking',
-              'Pricing recommendations',
-              'Member personas',
-              'Journey maps',
-              'Tech assessment',
-              'Prioritised roadmap',
-              'Implementation support',
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-800/50 rounded-xl p-4 border border-cyan-500/30">
-                <p className="text-sm text-white">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Membership Strategy FAQs
-          </h2>
-          <div className="space-y-6">
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                When should a membership organisation invest in strategy consulting?
-                <svg className="w-5 h-5 text-cyan-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Key triggers include: stagnant membership growth despite marketing efforts, declining renewal rates, members questioning value, increasing competition from free alternatives, new leadership seeking a fresh perspective, planned digital transformation, or merger/restructure situations.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                How long does a membership strategy project take?
-                <svg className="w-5 h-5 text-cyan-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                A comprehensive strategy project typically takes 8-12 weeks, including research, analysis, stakeholder interviews, strategy development, and roadmap creation. Quick diagnostic projects can be completed in 4-6 weeks. Implementation support is ongoing.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What does a membership proposition review involve?
-                <svg className="w-5 h-5 text-cyan-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                We audit your current value proposition against member needs (through surveys and interviews), benchmark against competitors, analyse pricing elasticity, map the member journey, and identify gaps between what you offer and what members actually value.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                How do you optimise membership pricing?
-                <svg className="w-5 h-5 text-cyan-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                We analyse price sensitivity through member research, benchmark competitor pricing, model different tier structures, calculate optimal price points based on lifetime value, and develop pricing strategies that balance revenue growth with member value perception.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Services */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">Related Services</h2>
-          <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-            Strategy informs execution. Once you have direction, these services help you get there.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/services/member-acquisition" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">Member Acquisition</h3>
-              <p className="text-sm text-slate-400">
-                Execute on your growth strategy with targeted campaigns that attract the right members.
-              </p>
-            </Link>
-
-            <Link href="/services/member-retention" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">Member Retention</h3>
-              <p className="text-sm text-slate-400">
-                Implement the onboarding and renewal improvements identified in your strategy review.
-              </p>
-            </Link>
-
-            <Link href="/services/member-engagement" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">Member Engagement</h3>
-              <p className="text-sm text-slate-400">
-                Build the community and participation programmes your strategy identifies as priorities.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h2>
-          <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-            Book a free consultation to discuss your strategic challenges and explore whether a strategy review is right for you.
-          </p>
-          <Link href="/contact" className="inline-block px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-xl transition-all">
-            Book Free Consultation
+      <ContentSection>
+        <SectionHeading title="Strategy Into Action" description="Our operational services bring your strategy to life." />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Acquisition</h3>
+            <p className="text-gray-600 text-sm">Execute your growth strategy with targeted acquisition campaigns.</p>
           </Link>
-          <p className="text-slate-400 text-sm mt-6">
-            Learn more about our <Link href="/" className="text-cyan-400 hover:text-cyan-300 underline">membership marketing agency</Link> services.
-          </p>
+          <Link href="/services/member-retention" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Retention</h3>
+            <p className="text-gray-600 text-sm">Implement retention programmes aligned with your strategic goals.</p>
+          </Link>
+          <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Engagement</h3>
+            <p className="text-gray-600 text-sm">Build the engaged community your strategy envisions.</p>
+          </Link>
         </div>
-      </section>
+      </ContentSection>
+
+      <CTASection title="Ready for Strategic Clarity?" description="Book a free consultation to discuss your strategic challenges and explore how we can help you build a stronger membership model." />
     </div>
   )
 }
