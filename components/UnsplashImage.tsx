@@ -40,8 +40,13 @@ export function UnsplashImage({
   // Fallback image if Unsplash fails
   const fallbackSrc = 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80'
 
+  // When fill is true, the wrapper needs absolute positioning to fill parent
+  const wrapperClasses = fill
+    ? `absolute inset-0 overflow-hidden ${containerClassName}`
+    : `relative overflow-hidden ${containerClassName}`
+
   return (
-    <div className={`relative overflow-hidden ${containerClassName}`}>
+    <div className={wrapperClasses}>
       {/* Loading placeholder */}
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
