@@ -70,11 +70,11 @@ export function VideoHero({
     }
   }, [isMobile, prefersReducedMotion])
 
-  const showVideo = !isMobile && !prefersReducedMotion
+  const showVideo = !isMobile && !prefersReducedMotion && videoUrl && videoUrl.length > 0
 
   return (
     <section className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}>
-      {/* Video Background (desktop only) */}
+      {/* Video Background (desktop only, if video URL provided) */}
       {showVideo && (
         <video
           ref={videoRef}
