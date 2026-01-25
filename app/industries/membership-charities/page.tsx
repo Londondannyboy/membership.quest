@@ -70,19 +70,19 @@ export default function MembershipCharitiesPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Supporter Acquisition</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Supporter Acquisition</h3>
             <p className="text-gray-600 text-sm">Attract new supporters who connect with your mission and want to belong.</p>
           </Link>
           <Link href="/services/member-retention" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Supporter Retention</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Supporter Retention</h3>
             <p className="text-gray-600 text-sm">Keep supporters giving and engaged year after year.</p>
           </Link>
           <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Supporter Engagement</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Supporter Engagement</h3>
             <p className="text-gray-600 text-sm">Create community and purpose beyond financial contributions.</p>
           </Link>
           <Link href="/services/content-marketing" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Impact Storytelling</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Impact Storytelling</h3>
             <p className="text-gray-600 text-sm">Compelling narratives that demonstrate your charity&apos;s difference.</p>
           </Link>
         </div>

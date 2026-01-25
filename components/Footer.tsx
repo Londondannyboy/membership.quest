@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-[#9A7B0A] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[#7A6208] flex items-center justify-center">
                 <span className="text-white font-serif font-bold text-lg">M</span>
               </div>
               <span className="text-lg font-serif font-semibold text-gray-900">
@@ -29,27 +29,27 @@ export function Footer() {
             <h4 className="text-gray-900 font-semibold mb-6 text-sm uppercase tracking-wider">Services</h4>
             <ul className="space-y-4 text-sm">
               <li>
-                <Link href="/services/member-acquisition" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/services/member-acquisition" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Member Acquisition
                 </Link>
               </li>
               <li>
-                <Link href="/services/member-retention" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/services/member-retention" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Member Retention
                 </Link>
               </li>
               <li>
-                <Link href="/services/member-engagement" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/services/member-engagement" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Member Engagement
                 </Link>
               </li>
               <li>
-                <Link href="/services/membership-strategy" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/services/membership-strategy" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Membership Strategy
                 </Link>
               </li>
               <li>
-                <Link href="/services/content-marketing" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/services/content-marketing" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Content Marketing
                 </Link>
               </li>
@@ -61,27 +61,27 @@ export function Footer() {
             <h4 className="text-gray-900 font-semibold mb-6 text-sm uppercase tracking-wider">Industries</h4>
             <ul className="space-y-4 text-sm">
               <li>
-                <Link href="/industries/professional-bodies" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/industries/professional-bodies" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Professional Bodies
                 </Link>
               </li>
               <li>
-                <Link href="/industries/trade-associations" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/industries/trade-associations" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Trade Associations
                 </Link>
               </li>
               <li>
-                <Link href="/industries/membership-charities" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/industries/membership-charities" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Membership Charities
                 </Link>
               </li>
               <li>
-                <Link href="/industries/private-members-clubs" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/industries/private-members-clubs" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Private Members Clubs
                 </Link>
               </li>
               <li>
-                <Link href="/industries/luxury-fitness-clubs" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/industries/luxury-fitness-clubs" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Luxury Fitness Clubs
                 </Link>
               </li>
@@ -93,22 +93,22 @@ export function Footer() {
             <h4 className="text-gray-900 font-semibold mb-6 text-sm uppercase tracking-wider">Company</h4>
             <ul className="space-y-4 text-sm">
               <li>
-                <Link href="/case-studies" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/case-studies" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/contact" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/privacy" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-600 hover:text-[#9A7B0A] transition-colors">
+                <Link href="/terms" className="text-gray-600 hover:text-[#7A6208] transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -118,7 +118,7 @@ export function Footer() {
             <div className="mt-8">
               <a
                 href="mailto:dan@membership.quest"
-                className="text-[#9A7B0A] hover:text-[#7D640A] text-sm font-medium transition-colors"
+                className="text-[#7A6208] hover:text-[#5C4B06] text-sm font-medium transition-colors"
               >
                 dan@membership.quest
               </a>

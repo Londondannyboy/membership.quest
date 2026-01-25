@@ -40,7 +40,7 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:dan@membership.quest"
-              className="inline-flex items-center gap-2 text-[#9A7B0A] hover:text-[#7D640A] font-medium text-lg transition-colors"
+              className="inline-flex items-center gap-2 text-[#7A6208] hover:text-[#5C4B06] font-medium text-lg transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -59,8 +59,8 @@ export default function ContactPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#9A7B0A] flex items-center justify-center shadow-sm">
-              <span className="text-[#9A7B0A] font-serif text-lg">1</span>
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#7A6208] flex items-center justify-center shadow-sm">
+              <span className="text-[#7A6208] font-serif text-lg">1</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">We Listen</h3>
             <p className="text-gray-600 text-sm">
@@ -68,8 +68,8 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#9A7B0A] flex items-center justify-center shadow-sm">
-              <span className="text-[#9A7B0A] font-serif text-lg">2</span>
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#7A6208] flex items-center justify-center shadow-sm">
+              <span className="text-[#7A6208] font-serif text-lg">2</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">We Advise</h3>
             <p className="text-gray-600 text-sm">
@@ -77,8 +77,8 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#9A7B0A] flex items-center justify-center shadow-sm">
-              <span className="text-[#9A7B0A] font-serif text-lg">3</span>
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#7A6208] flex items-center justify-center shadow-sm">
+              <span className="text-[#7A6208] font-serif text-lg">3</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">You Decide</h3>
             <p className="text-gray-600 text-sm">

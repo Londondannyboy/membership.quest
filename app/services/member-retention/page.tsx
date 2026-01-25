@@ -145,15 +145,15 @@ export default function MemberRetentionPage() {
         <SectionHeading title="Related Services" description="Retention works best as part of a complete member lifecycle strategy." />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Acquisition</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Member Acquisition</h3>
             <p className="text-gray-600 text-sm">Attract quality members who are more likely to stay long-term.</p>
           </Link>
           <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Engagement</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Member Engagement</h3>
             <p className="text-gray-600 text-sm">Engaged members renew at higher rates and become advocates.</p>
           </Link>
           <Link href="/services/membership-strategy" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Membership Strategy</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Membership Strategy</h3>
             <p className="text-gray-600 text-sm">Strategic review of your proposition to ensure ongoing relevance.</p>
           </Link>
         </div>

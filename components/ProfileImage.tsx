@@ -38,7 +38,7 @@ export function ProfileImage({ src, alt, fallback, size = 160 }: ProfileImagePro
 
   if (hasError) {
     return (
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#9A7B0A] to-[#8B6914]">
+      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#7A6208] to-[#8B6914]">
         <span className="text-5xl font-serif text-white">{fallback}</span>
       </div>
     );

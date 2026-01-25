@@ -70,19 +70,19 @@ export default function PrivateMembersClubsPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Acquisition</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Member Acquisition</h3>
             <p className="text-gray-600 text-sm">Attract qualified applicants who will cherish membership and contribute to club life.</p>
           </Link>
           <Link href="/services/member-retention" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Retention</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Member Retention</h3>
             <p className="text-gray-600 text-sm">Keep members engaged and renewing by reinforcing the value of belonging.</p>
           </Link>
           <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Engagement</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Member Engagement</h3>
             <p className="text-gray-600 text-sm">Events and programming that bring members together and create memorable experiences.</p>
           </Link>
           <Link href="/services/membership-strategy" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Membership Strategy</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#7A6208] transition-colors">Membership Strategy</h3>
             <p className="text-gray-600 text-sm">Strategic review of your proposition, positioning, and member experience.</p>
           </Link>
         </div>

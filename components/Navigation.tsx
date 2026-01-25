@@ -53,7 +53,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" aria-label="Membership Marketing Agency - Home">
             <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-              scrolled ? 'bg-[#9A7B0A]' : 'bg-white/20 backdrop-blur-sm'
+              scrolled ? 'bg-[#7A6208]' : 'bg-white/20 backdrop-blur-sm'
             }`}>
               <span className="text-white font-serif font-bold text-lg">M</span>
             </div>
@@ -73,7 +73,7 @@ export function Navigation() {
                 onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
                   scrolled
-                    ? 'text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50'
+                    ? 'text-gray-700 hover:text-[#7A6208] hover:bg-gray-50'
                     : 'text-white/90 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -89,7 +89,7 @@ export function Navigation() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
                     >
                       {service.label}
                     </Link>
@@ -105,7 +105,7 @@ export function Navigation() {
                 onBlur={() => setTimeout(() => setIndustriesOpen(false), 150)}
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
                   scrolled
-                    ? 'text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50'
+                    ? 'text-gray-700 hover:text-[#7A6208] hover:bg-gray-50'
                     : 'text-white/90 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -121,7 +121,7 @@ export function Navigation() {
                     <Link
                       key={industry.href}
                       href={industry.href}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
                     >
                       {industry.label}
                     </Link>
@@ -135,7 +135,7 @@ export function Navigation() {
               href="/case-studies"
               className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
                 scrolled
-                  ? 'text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50'
+                  ? 'text-gray-700 hover:text-[#7A6208] hover:bg-gray-50'
                   : 'text-white/90 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -146,7 +146,7 @@ export function Navigation() {
               href="/contact"
               className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
                 scrolled
-                  ? 'text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50'
+                  ? 'text-gray-700 hover:text-[#7A6208] hover:bg-gray-50'
                   : 'text-white/90 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -171,7 +171,7 @@ export function Navigation() {
             ) : (
               <Link
                 href="#book-consultation"
-                className="bg-[#9A7B0A] hover:bg-[#7D640A] text-white px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors"
+                className="bg-[#7A6208] hover:bg-[#5C4B06] text-white px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors"
               >
                 Book Consultation
               </Link>
@@ -214,7 +214,7 @@ export function Navigation() {
                   key={service.href}
                   href={service.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-6 py-3 text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
                 >
                   {service.label}
                 </Link>
@@ -229,7 +229,7 @@ export function Navigation() {
                   key={industry.href}
                   href={industry.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-6 py-3 text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
                 >
                   {industry.label}
                 </Link>
@@ -242,14 +242,14 @@ export function Navigation() {
               <Link
                 href="/case-studies"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-6 py-3 text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                className="px-6 py-3 text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
               >
                 Case Studies
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-6 py-3 text-gray-700 hover:text-[#9A7B0A] hover:bg-gray-50 transition-colors"
+                className="px-6 py-3 text-gray-700 hover:text-[#7A6208] hover:bg-gray-50 transition-colors"
               >
                 Contact
               </Link>
@@ -260,7 +260,7 @@ export function Navigation() {
                   <Link
                     href="#book-consultation"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block bg-[#9A7B0A] hover:bg-[#7D640A] text-white px-6 py-3 rounded-full text-center font-medium transition-colors"
+                    className="block bg-[#7A6208] hover:bg-[#5C4B06] text-white px-6 py-3 rounded-full text-center font-medium transition-colors"
                   >
                     Book Consultation
                   </Link>

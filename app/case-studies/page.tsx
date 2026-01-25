@@ -137,29 +137,29 @@ export default function CaseStudiesPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#9A7B0A]/10 flex items-center justify-center">
-              <span className="text-[#9A7B0A] font-serif text-lg">1</span>
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+              <span className="text-[#7A6208] font-serif text-lg">1</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">Discovery</h3>
             <p className="text-gray-600 text-sm">Deep dive into your data, members, and challenges</p>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#9A7B0A]/10 flex items-center justify-center">
-              <span className="text-[#9A7B0A] font-serif text-lg">2</span>
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+              <span className="text-[#7A6208] font-serif text-lg">2</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">Strategy</h3>
             <p className="text-gray-600 text-sm">Develop a tailored plan with clear objectives</p>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#9A7B0A]/10 flex items-center justify-center">
-              <span className="text-[#9A7B0A] font-serif text-lg">3</span>
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+              <span className="text-[#7A6208] font-serif text-lg">3</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">Execute</h3>
             <p className="text-gray-600 text-sm">Implement campaigns and programmes systematically</p>
           </div>
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#9A7B0A]/10 flex items-center justify-center">
-              <span className="text-[#9A7B0A] font-serif text-lg">4</span>
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+              <span className="text-[#7A6208] font-serif text-lg">4</span>
             </div>
             <h3 className="text-lg font-serif text-gray-900 mb-2">Optimise</h3>
             <p className="text-gray-600 text-sm">Track results and continuously improve</p>
