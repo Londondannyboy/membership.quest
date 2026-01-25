@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Membership Marketing Agency UK | Grow & Retain Members',
-  description: 'Specialist membership marketing agency helping associations, professional bodies, and membership organisations grow and retain members. Expert strategies for acquisition, retention, and engagement.',
+  description: 'UK membership marketing agency for associations and professional bodies. Expert member acquisition, retention, and engagement strategies.',
   alternates: {
     canonical: 'https://membership.quest',
   },
@@ -77,7 +77,7 @@ export default function HomePage() {
       <VideoHero
         videoUrl={luxuryVideos.hotelLobby}
         fallbackImageUrl={luxuryImages.hero}
-        fallbackImageAlt="Luxury private members club interior representing elite membership organisations"
+        fallbackImageAlt="Membership marketing agency services for elite private members clubs and associations"
         overlayOpacity={0.5}
       >
         <div className="max-w-4xl mx-auto text-center px-4 pt-20">
@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link
               href="#book-consultation"
-              className="bg-[#B8860B] hover:bg-[#996F0A] text-white px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider transition-all shadow-lg hover:shadow-xl"
+              className="bg-[#9A7B0A] hover:bg-[#7D640A] text-white px-10 py-4 rounded-full text-sm font-medium uppercase tracking-wider transition-all shadow-lg hover:shadow-xl"
             >
               Book Consultation
             </Link>
@@ -132,7 +132,7 @@ export default function HomePage() {
             <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <UnsplashImage
                 src={luxuryImages.intro}
-                alt="Luxury business lounge representing premium membership experience"
+                alt="Membership marketing agency client lounge representing premium member experience"
                 fill
                 priority
                 className="object-cover"
@@ -141,7 +141,7 @@ export default function HomePage() {
 
             {/* Content */}
             <div className="lg:pl-8">
-              <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+              <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
                 Welcome
               </p>
 
@@ -176,7 +176,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="#about"
-                  className="inline-flex items-center gap-2 text-[#B8860B] hover:text-[#996F0A] font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-[#9A7B0A] hover:text-[#7D640A] font-medium transition-colors"
                 >
                   Meet the founder
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -196,7 +196,7 @@ export default function HomePage() {
       <section id="services" className="py-20 md:py-32 bg-[#F7F5F3]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+            <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
               What We Offer
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -214,13 +214,13 @@ export default function HomePage() {
               <div className="relative h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
                 <UnsplashImage
                   src={luxuryImages.acquisition}
-                  alt="Professional networking event for member acquisition"
+                  alt="Membership marketing agency networking event for member acquisition campaigns"
                   fill
                   overlay
                   overlayClassName="bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-serif group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="text-white text-xl font-serif group-hover:text-[#9A7B0A] transition-colors">
                     Member Acquisition
                   </h3>
                 </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Data-driven campaigns to attract qualified prospects who align with your membership proposition.
               </p>
-              <p className="text-[#B8860B] text-sm mt-3 font-medium">From £2,000/month</p>
+              <p className="text-[#9A7B0A] text-sm mt-3 font-medium">From £2,000/month</p>
             </Link>
 
             {/* Service Card 2 */}
@@ -242,7 +242,7 @@ export default function HomePage() {
                   overlayClassName="bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-serif group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="text-white text-xl font-serif group-hover:text-[#9A7B0A] transition-colors">
                     Member Retention
                   </h3>
                 </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Reduce churn through personalised journeys, renewal optimisation, and win-back programmes.
               </p>
-              <p className="text-[#B8860B] text-sm mt-3 font-medium">From £1,500/month</p>
+              <p className="text-[#9A7B0A] text-sm mt-3 font-medium">From £1,500/month</p>
             </Link>
 
             {/* Service Card 3 */}
@@ -264,7 +264,7 @@ export default function HomePage() {
                   overlayClassName="bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-serif group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="text-white text-xl font-serif group-hover:text-[#9A7B0A] transition-colors">
                     Member Engagement
                   </h3>
                 </div>
@@ -272,7 +272,7 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Build deeper connections through events, community initiatives, and tailored communications.
               </p>
-              <p className="text-[#B8860B] text-sm mt-3 font-medium">From £1,500/month</p>
+              <p className="text-[#9A7B0A] text-sm mt-3 font-medium">From £1,500/month</p>
             </Link>
 
             {/* Service Card 4 */}
@@ -280,13 +280,13 @@ export default function HomePage() {
               <div className="relative h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
                 <UnsplashImage
                   src={luxuryImages.strategy}
-                  alt="Strategic boardroom meeting for membership planning"
+                  alt="Membership marketing agency strategy session in boardroom"
                   fill
                   overlay
                   overlayClassName="bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-serif group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="text-white text-xl font-serif group-hover:text-[#9A7B0A] transition-colors">
                     Membership Strategy
                   </h3>
                 </div>
@@ -294,7 +294,7 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Strategic consulting to refine your proposition, pricing, and member experience roadmap.
               </p>
-              <p className="text-[#B8860B] text-sm mt-3 font-medium">From £3,000/month</p>
+              <p className="text-[#9A7B0A] text-sm mt-3 font-medium">From £3,000/month</p>
             </Link>
 
             {/* Service Card 5 */}
@@ -302,13 +302,13 @@ export default function HomePage() {
               <div className="relative h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
                 <UnsplashImage
                   src={luxuryImages.content}
-                  alt="Luxury lifestyle editorial content creation"
+                  alt="Membership marketing agency content creation for luxury organisations"
                   fill
                   overlay
                   overlayClassName="bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-serif group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="text-white text-xl font-serif group-hover:text-[#9A7B0A] transition-colors">
                     Content Marketing
                   </h3>
                 </div>
@@ -316,12 +316,12 @@ export default function HomePage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Position your organisation as the authority through thought leadership and compelling narratives.
               </p>
-              <p className="text-[#B8860B] text-sm mt-3 font-medium">From £2,000/month</p>
+              <p className="text-[#9A7B0A] text-sm mt-3 font-medium">From £2,000/month</p>
             </Link>
 
             {/* CTA Card */}
             <div className="bg-white rounded-2xl p-8 shadow-lg flex flex-col justify-center border border-gray-100">
-              <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-3 font-medium">
+              <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-3 font-medium">
                 Get Started
               </p>
               <h3 className="text-2xl font-serif text-gray-900 mb-4">
@@ -332,7 +332,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="#book-consultation"
-                className="bg-[#B8860B] hover:bg-[#996F0A] text-white px-8 py-3 rounded-full text-sm font-medium text-center transition-colors"
+                className="bg-[#9A7B0A] hover:bg-[#7D640A] text-white px-8 py-3 rounded-full text-sm font-medium text-center transition-colors"
               >
                 Book Now
               </Link>
@@ -348,7 +348,7 @@ export default function HomePage() {
       <section className="py-20 md:py-32">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+            <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
               Our Expertise
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -476,19 +476,19 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl md:text-5xl font-serif text-[#B8860B] mb-2">15-25%</p>
+              <p className="text-4xl md:text-5xl font-serif text-[#9A7B0A] mb-2">15-25%</p>
               <p className="text-white/80 text-sm">Average Annual Churn</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-serif text-[#B8860B] mb-2">3x</p>
+              <p className="text-4xl md:text-5xl font-serif text-[#9A7B0A] mb-2">3x</p>
               <p className="text-white/80 text-sm">Engaged Members Renew</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-serif text-[#B8860B] mb-2">5x</p>
+              <p className="text-4xl md:text-5xl font-serif text-[#9A7B0A] mb-2">5x</p>
               <p className="text-white/80 text-sm">Cost: Acquire vs Retain</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-serif text-[#B8860B] mb-2">60%</p>
+              <p className="text-4xl md:text-5xl font-serif text-[#9A7B0A] mb-2">60%</p>
               <p className="text-white/80 text-sm">Retention from Onboarding</p>
             </div>
           </div>
@@ -504,7 +504,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Content - Left */}
             <div>
-              <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+              <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
                 The Founder
               </p>
 
@@ -538,7 +538,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="#book-consultation"
-                  className="inline-flex items-center gap-3 bg-[#B8860B] hover:bg-[#996F0A] text-white px-8 py-4 rounded-full font-medium transition-colors"
+                  className="inline-flex items-center gap-3 bg-[#9A7B0A] hover:bg-[#7D640A] text-white px-8 py-4 rounded-full font-medium transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -551,7 +551,7 @@ export default function HomePage() {
             {/* Image - Right */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[#B8860B]/20 shadow-2xl">
+                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[#9A7B0A]/20 shadow-2xl">
                   <ProfileImage
                     src="/dan-keegan.jpg"
                     alt="Dan Keegan - Membership Marketing Agency Founder"
@@ -559,7 +559,7 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Decorative element */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#B8860B]/10 rounded-full -z-10"></div>
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#9A7B0A]/10 rounded-full -z-10"></div>
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#F7F5F3] rounded-full -z-10"></div>
               </div>
             </div>
@@ -573,7 +573,7 @@ export default function HomePage() {
       <section className="py-20 md:py-32 bg-[#F7F5F3]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+            <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
               Our Process
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -593,8 +593,8 @@ export default function HomePage() {
               { num: '04', title: 'Measure', desc: 'We track results, report on KPIs, and continuously refine to ensure you see meaningful ROI.' },
             ].map((step) => (
               <div key={step.num} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-white border-2 border-[#B8860B] flex items-center justify-center">
-                  <span className="text-[#B8860B] font-serif text-xl">{step.num}</span>
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-white border-2 border-[#9A7B0A] flex items-center justify-center">
+                  <span className="text-[#9A7B0A] font-serif text-xl">{step.num}</span>
                 </div>
                 <h3 className="text-xl font-serif text-gray-900 mb-3">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
@@ -614,7 +614,7 @@ export default function HomePage() {
         minHeight="min-h-[400px]"
       >
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <svg className="w-12 h-12 mx-auto mb-6 text-[#B8860B]" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-12 h-12 mx-auto mb-6 text-[#9A7B0A]" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
           </svg>
           <blockquote className="text-2xl md:text-3xl font-serif text-white mb-8 leading-relaxed italic">
@@ -634,7 +634,7 @@ export default function HomePage() {
       <section id="faq" className="py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+            <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
               Questions & Answers
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -668,7 +668,7 @@ export default function HomePage() {
               <details key={i} className="group bg-white rounded-xl border border-gray-200 shadow-sm">
                 <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                   <h3 className="text-lg font-medium text-gray-900 pr-4">{faq.q}</h3>
-                  <svg className="w-5 h-5 text-[#B8860B] transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#9A7B0A] transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
@@ -687,7 +687,7 @@ export default function HomePage() {
       <section id="book-consultation" className="py-20 md:py-32 bg-[#F7F5F3]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+            <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
               Let&apos;s Talk
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -706,7 +706,7 @@ export default function HomePage() {
 
           <p className="text-gray-500 text-sm text-center mt-8">
             Can&apos;t find a suitable time? Email{' '}
-            <a href="mailto:dan@membership.quest" className="text-[#B8860B] hover:text-[#996F0A] transition-colors">
+            <a href="mailto:dan@membership.quest" className="text-[#9A7B0A] hover:text-[#7D640A] transition-colors">
               dan@membership.quest
             </a>
           </p>

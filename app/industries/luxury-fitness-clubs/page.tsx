@@ -70,19 +70,19 @@ export default function LuxuryFitnessClubsPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Acquisition</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Acquisition</h3>
             <p className="text-gray-600 text-sm">Attract affluent, committed members who value premium experiences.</p>
           </Link>
           <Link href="/services/member-retention" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Retention</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Retention</h3>
             <p className="text-gray-600 text-sm">Beat the fitness industry&apos;s high churn through engagement and habit-building.</p>
           </Link>
           <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Engagement</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Engagement</h3>
             <p className="text-gray-600 text-sm">Build community that keeps members coming for the experience, not just the workout.</p>
           </Link>
           <Link href="/services/content-marketing" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Content Marketing</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Content Marketing</h3>
             <p className="text-gray-600 text-sm">Position your club as the aspirational choice for health-conscious professionals.</p>
           </Link>
         </div>

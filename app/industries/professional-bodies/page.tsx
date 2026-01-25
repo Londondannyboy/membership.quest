@@ -69,19 +69,19 @@ export default function ProfessionalBodiesPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link href="/services/member-acquisition" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Acquisition</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Acquisition</h3>
             <p className="text-gray-600 text-sm">Targeted campaigns to reach qualified professionals at key career stages.</p>
           </Link>
           <Link href="/services/member-retention" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Retention</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Retention</h3>
             <p className="text-gray-600 text-sm">Keep members engaged beyond their initial qualification journey.</p>
           </Link>
           <Link href="/services/member-engagement" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Member Engagement</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Member Engagement</h3>
             <p className="text-gray-600 text-sm">Build communities where members actively contribute and connect.</p>
           </Link>
           <Link href="/services/content-marketing" className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#B8860B] transition-colors">Content Marketing</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-2 group-hover:text-[#9A7B0A] transition-colors">Content Marketing</h3>
             <p className="text-gray-600 text-sm">Position your body as the definitive voice in your profession.</p>
           </Link>
         </div>

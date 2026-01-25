@@ -30,10 +30,11 @@ export const luxuryImages = {
 }
 
 // Pre-selected luxury video URLs from Pexels (free to use)
+// Using HD versions for better compatibility and faster loading
 export const luxuryVideos = {
-  hotelLobby: 'https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4',
-  businessMeeting: 'https://videos.pexels.com/video-files/3252127/3252127-uhd_2560_1440_30fps.mp4',
-  luxuryInterior: 'https://videos.pexels.com/video-files/4065906/4065906-uhd_2560_1440_30fps.mp4',
+  hotelLobby: 'https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4',
+  businessMeeting: 'https://videos.pexels.com/video-files/3252127/3252127-hd_1920_1080_30fps.mp4',
+  luxuryInterior: 'https://videos.pexels.com/video-files/4065906/4065906-hd_1920_1080_30fps.mp4',
   cityLondon: 'https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_30fps.mp4',
-  elegantVenue: 'https://videos.pexels.com/video-files/4057313/4057313-uhd_2560_1440_25fps.mp4',
+  elegantVenue: 'https://videos.pexels.com/video-files/4057313/4057313-hd_1920_1080_25fps.mp4',
 }

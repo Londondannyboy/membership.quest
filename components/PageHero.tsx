@@ -49,7 +49,7 @@ export function PageHero({
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium text-white mb-6 leading-tight">
           {title}
           {subtitle && (
-            <span className="block text-[#B8860B] mt-2">{subtitle}</span>
+            <span className="block text-[#9A7B0A] mt-2">{subtitle}</span>
           )}
         </h1>
 
@@ -60,7 +60,7 @@ export function PageHero({
         )}
 
         {price && (
-          <p className="text-lg text-[#B8860B] font-medium mb-8">
+          <p className="text-lg text-[#9A7B0A] font-medium mb-8">
             {price}
           </p>
         )}
@@ -115,7 +115,7 @@ export function SectionHeading({
   return (
     <div className={`mb-12 ${alignment}`}>
       {eyebrow && (
-        <p className="text-[#B8860B] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+        <p className="text-[#9A7B0A] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
           {eyebrow}
         </p>
       )}
@@ -140,7 +140,7 @@ interface StatCardProps {
 
 export function StatCard({ value, label, color = 'gold' }: StatCardProps) {
   const colorClasses = {
-    gold: 'border-[#B8860B]/20 text-[#B8860B]',
+    gold: 'border-[#9A7B0A]/20 text-[#9A7B0A]',
     green: 'border-green-500/20 text-green-600',
     red: 'border-red-500/20 text-red-600',
   }
@@ -166,7 +166,7 @@ export function FeatureCard({ title, description, note }: FeatureCardProps) {
     <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed mb-3">{description}</p>
-      {note && <p className="text-[#B8860B] text-xs font-medium">{note}</p>}
+      {note && <p className="text-[#9A7B0A] text-xs font-medium">{note}</p>}
     </div>
   )
 }
@@ -181,8 +181,8 @@ interface ProcessStepProps {
 export function ProcessStep({ number, title, description }: ProcessStepProps) {
   return (
     <div className="text-center">
-      <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#B8860B] flex items-center justify-center shadow-sm">
-        <span className="text-[#B8860B] font-serif text-lg">{number}</span>
+      <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white border-2 border-[#9A7B0A] flex items-center justify-center shadow-sm">
+        <span className="text-[#9A7B0A] font-serif text-lg">{number}</span>
       </div>
       <h3 className="text-lg font-serif text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
@@ -201,7 +201,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
     <details className="group bg-white rounded-xl border border-gray-200 shadow-sm">
       <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
         <h3 className="text-lg font-medium text-gray-900 pr-4">{question}</h3>
-        <svg className="w-5 h-5 text-[#B8860B] transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-[#9A7B0A] transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </summary>
@@ -233,7 +233,7 @@ export function CTASection({
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">{description}</p>
         <a
           href={buttonHref}
-          className="inline-block px-10 py-4 bg-[#B8860B] hover:bg-[#996F0A] text-white font-medium rounded-full transition-colors uppercase tracking-wider text-sm"
+          className="inline-block px-10 py-4 bg-[#9A7B0A] hover:bg-[#7D640A] text-white font-medium rounded-full transition-colors uppercase tracking-wider text-sm"
         >
           {buttonText}
         </a>
