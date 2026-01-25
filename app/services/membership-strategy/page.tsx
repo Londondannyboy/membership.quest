@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHero, ContentSection, SectionHeading, FeatureCard, ProcessStep, FAQItem, CTASection } from '@/components/PageHero'
-import { luxuryImages } from '@/components/UnsplashImage'
+import { luxuryImages } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Membership Strategy Services | Transform Your Membership Model',

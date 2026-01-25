@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { PageHero, ContentSection, SectionHeading } from '@/components/PageHero'
 import { CalendlyWidget } from '@/components/DynamicCalendly'
-import { luxuryImages } from '@/components/UnsplashImage'
+import { luxuryImages } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Membership Marketing Agency',

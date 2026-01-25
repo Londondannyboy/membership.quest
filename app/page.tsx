@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
 import { CalendlyWidget } from '@/components/DynamicCalendly'
 import { ProfileImage } from '@/components/ProfileImage'
-import { VideoHero, luxuryVideos } from '@/components/VideoHero'
-import { UnsplashImage, ImageSection, luxuryImages } from '@/components/UnsplashImage'
+import { VideoHero } from '@/components/VideoHero'
+import { UnsplashImage, ImageSection } from '@/components/UnsplashImage'
+import { luxuryImages, luxuryVideos } from '@/lib/images'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
