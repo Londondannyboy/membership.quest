@@ -54,7 +54,7 @@ const faqJsonLd = {
       name: 'What is a typical member retention rate?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Our retention programmes typically help clients reduce churn by 15-30%, significantly impacting revenue and member lifetime value.',
+        text: 'Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Industry data suggests that targeted retention programmes can reduce churn by 15-30%, significantly impacting revenue and member lifetime value.',
       },
     },
   ],
@@ -181,6 +181,213 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          OUR METHOD - AI-POWERED MEMBER IDENTIFICATION
+      ============================================ */}
+      <section id="our-method" className="py-20 md:py-32 bg-[#F7F5F3]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-[#7A6208] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+              Our Method
+            </p>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
+              AI-Powered Member Identification
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              We use artificial intelligence to identify individuals who are most likely
+              to be ideal members for your organisation—before you ever reach out to them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* How it works */}
+            <div>
+              <h3 className="text-2xl font-serif text-gray-900 mb-6">How It Works</h3>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+                    <span className="text-[#7A6208] font-serif">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">You Brief Us</h4>
+                    <p className="text-gray-600 text-sm">
+                      Tell us about your ideal member—their profession, interests, values, and what makes them a great fit for your organisation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+                    <span className="text-[#7A6208] font-serif">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">AI Analyses Online Presence</h4>
+                    <p className="text-gray-600 text-sm">
+                      Our AI tools analyse publicly available information: social profiles, professional networks, published content, and the signals people share online.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#7A6208]/10 flex items-center justify-center">
+                    <span className="text-[#7A6208] font-serif">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">We Deliver a Qualified List</h4>
+                    <p className="text-gray-600 text-sm">
+                      You receive a curated list of potential members who match your criteria—ready for your team to engage, or we can reach out on your behalf.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* What we analyse */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-serif text-gray-900 mb-6">What We Analyse</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#7A6208] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-medium text-gray-900">Social Profiles</p>
+                    <p className="text-gray-600 text-sm">Professional backgrounds, interests, and affiliations</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#7A6208] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-medium text-gray-900">Social Signals</p>
+                    <p className="text-gray-600 text-sm">What people post, share, and engage with online</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#7A6208] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-medium text-gray-900">Online Presence</p>
+                    <p className="text-gray-600 text-sm">Published articles, speaking engagements, thought leadership</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#7A6208] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-medium text-gray-900">Network Connections</p>
+                    <p className="text-gray-600 text-sm">Who they follow, interact with, and are connected to</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          LINKEDIN SIGNALS EXAMPLE
+      ============================================ */}
+      <section className="py-20 md:py-32">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Content */}
+            <div>
+              <p className="text-[#7A6208] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
+                Example: LinkedIn
+              </p>
+              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6 leading-tight">
+                The Signals That Matter
+              </h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                LinkedIn is often one of the richest sources for identifying potential members.
+                Users openly share information that reveals whether they&apos;d be a great fit for your organisation.
+              </p>
+
+              <div className="space-y-4">
+                <div className="bg-[#F7F5F3] rounded-xl p-4">
+                  <p className="font-medium text-gray-900 mb-1">Job Title & Seniority</p>
+                  <p className="text-gray-600 text-sm">
+                    Indicates professional level, decision-making authority, and likely income bracket.
+                  </p>
+                </div>
+
+                <div className="bg-[#F7F5F3] rounded-xl p-4">
+                  <p className="font-medium text-gray-900 mb-1">Location</p>
+                  <p className="text-gray-600 text-sm">
+                    Essential for clubs with physical premises or regional membership criteria.
+                  </p>
+                </div>
+
+                <div className="bg-[#F7F5F3] rounded-xl p-4">
+                  <p className="font-medium text-gray-900 mb-1">Industry & Experience</p>
+                  <p className="text-gray-600 text-sm">
+                    Helps identify professionals in sectors relevant to your organisation.
+                  </p>
+                </div>
+
+                <div className="bg-[#F7F5F3] rounded-xl p-4">
+                  <p className="font-medium text-gray-900 mb-1">Who They Follow & What They Post</p>
+                  <p className="text-gray-600 text-sm">
+                    Reveals interests, values, and engagement with topics relevant to your membership.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Visual */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded bg-[#0A66C2] flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <span className="text-lg font-medium text-gray-900">Example Prospect Signals</span>
+              </div>
+
+              <div className="space-y-4 text-sm">
+                <div className="border-b border-gray-100 pb-3">
+                  <p className="text-gray-500">Title</p>
+                  <p className="text-gray-900 font-medium">Managing Director, Private Equity</p>
+                </div>
+                <div className="border-b border-gray-100 pb-3">
+                  <p className="text-gray-500">Location</p>
+                  <p className="text-gray-900 font-medium">London, Greater London</p>
+                </div>
+                <div className="border-b border-gray-100 pb-3">
+                  <p className="text-gray-500">Experience</p>
+                  <p className="text-gray-900 font-medium">20+ years in financial services</p>
+                </div>
+                <div className="border-b border-gray-100 pb-3">
+                  <p className="text-gray-500">Follows</p>
+                  <p className="text-gray-900 font-medium">The Economist, FT, industry thought leaders</p>
+                </div>
+                <div>
+                  <p className="text-gray-500">Recent Activity</p>
+                  <p className="text-gray-900 font-medium">Posts about leadership, networking events</p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center gap-2 text-[#7A6208]">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-medium">High match score for private members club</span>
+                </div>
               </div>
             </div>
           </div>
@@ -531,7 +738,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================
-          TESTIMONIAL SECTION
+          OUR COMMITMENT SECTION
       ============================================ */}
       <ImageSection
         src={luxuryImages.testimonial}
@@ -540,15 +747,19 @@ export default function HomePage() {
         minHeight="min-h-[400px]"
       >
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <svg className="w-12 h-12 mx-auto mb-6 text-[#7A6208]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-          <blockquote className="text-2xl md:text-3xl font-serif text-white mb-8 leading-relaxed italic">
-            &ldquo;Working with a specialist membership marketing agency transformed how we approach
-            member acquisition. The results speak for themselves.&rdquo;
-          </blockquote>
-          <p className="text-white/80 text-sm uppercase tracking-wider">
-            — Membership Director, Professional Body
+          <p className="text-[#7A6208] text-sm uppercase tracking-[0.2em] mb-6 font-medium">
+            Our Commitment
+          </p>
+          <h2 className="text-2xl md:text-3xl font-serif text-white mb-8 leading-relaxed">
+            We&apos;re a new agency, and we believe in transparency.
+            <br className="hidden md:block" />
+            No inflated claims. No fake testimonials.
+            <br className="hidden md:block" />
+            Just honest, AI-powered marketing that delivers real results.
+          </h2>
+          <p className="text-white/80 text-sm max-w-xl mx-auto">
+            We&apos;d rather earn your trust through our work than make promises we haven&apos;t yet proven.
+            Let&apos;s build something together.
           </p>
         </div>
       </ImageSection>
@@ -588,7 +799,7 @@ export default function HomePage() {
               },
               {
                 q: 'What is a typical member retention rate?',
-                a: 'Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Our retention programmes typically help clients reduce churn by 15-30%, significantly impacting revenue and member lifetime value. Even a small improvement in retention can have substantial financial impact.'
+                a: 'Average membership retention rates typically fall between 75-85% annually, meaning 15-25% churn. Top-performing organisations achieve 90%+ retention. Industry data suggests that targeted retention programmes can reduce churn by 15-30%, significantly impacting revenue and member lifetime value. Even a small improvement in retention can have substantial financial impact.'
               },
             ].map((faq, i) => (
               <details key={i} className="group bg-white rounded-xl border border-gray-200 shadow-sm">

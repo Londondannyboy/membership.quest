@@ -3,8 +3,8 @@ import { PageHero, ContentSection, SectionHeading, StatCard, CTASection } from '
 import { luxuryImages } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'What We Believe Is Possible | Membership Marketing Agency',
-  description: 'Example scenarios showing what membership marketing can achieve. These are aspirational outcomes based on industry benchmarks and our approach.',
+  title: 'Target Scenarios | Membership Marketing Agency',
+  description: 'Hypothetical scenarios showing target outcomes we aim to achieve. We are a new agency - these are goals based on industry benchmarks, not past results.',
   alternates: {
     canonical: 'https://membership.quest/case-studies',
   },
@@ -14,9 +14,9 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-[#FDFCFB]">
       <PageHero
-        eyebrow="Results"
-        title="What&apos;s Possible"
-        description="Aspirational outcomes based on industry benchmarks and our approach to membership marketing."
+        eyebrow="Target Scenarios"
+        title="What We Aim to Achieve"
+        description="Hypothetical examples showing the outcomes we're working towards. These are targets, not past results."
         imageUrl={luxuryImages.caseStudies}
         imageAlt="Success celebration representing membership growth"
         showVoice={false}
@@ -24,10 +24,16 @@ export default function CaseStudiesPage() {
 
       <ContentSection>
         <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+            <p className="text-amber-800 font-medium mb-2">Important Note</p>
+            <p className="text-amber-700">
+              We&apos;re a new agency and these are <strong>hypothetical scenarios</strong>, not case studies from past work.
+              The numbers shown are <strong>target outcomes</strong> based on industry benchmarks and our strategic approach.
+              We believe these results are achievable, but we want to be transparent that we haven&apos;t achieved them yet.
+            </p>
+          </div>
           <p className="text-lg text-gray-600 leading-relaxed">
-            We&apos;re a new agency, so we don&apos;t yet have case studies to share.
-            Below are example scenarios showing what we believe is achievable based on
-            industry benchmarks and our strategic approach.
+            Below are example scenarios showing the kind of results we&apos;re working to deliver for our clients.
           </p>
         </div>
       </ContentSection>
@@ -41,9 +47,9 @@ export default function CaseStudiesPage() {
             centered={false}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <StatCard value="+35%" label="New member applications" color="gold" />
-            <StatCard value="+12%" label="Renewal rate improvement" color="green" />
-            <StatCard value="-40%" label="Cost per acquisition" color="gold" />
+            <StatCard value="+35%" label="Target: New member applications" color="gold" />
+            <StatCard value="+12%" label="Target: Renewal rate improvement" color="green" />
+            <StatCard value="-40%" label="Target: Cost per acquisition" color="gold" />
           </div>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
@@ -75,9 +81,9 @@ export default function CaseStudiesPage() {
             centered={false}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <StatCard value="3x" label="Event attendance" color="gold" />
-            <StatCard value="+50%" label="Content engagement" color="green" />
-            <StatCard value="+25" label="NPS improvement" color="gold" />
+            <StatCard value="3x" label="Target: Event attendance" color="gold" />
+            <StatCard value="+50%" label="Target: Content engagement" color="green" />
+            <StatCard value="+25" label="Target: NPS improvement" color="gold" />
           </div>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
@@ -106,9 +112,9 @@ export default function CaseStudiesPage() {
             centered={false}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <StatCard value="2x" label="Quality applications" color="gold" />
-            <StatCard value="95%" label="Renewal rate" color="green" />
-            <StatCard value="+40%" label="Member referrals" color="gold" />
+            <StatCard value="2x" label="Target: Quality applications" color="gold" />
+            <StatCard value="95%" label="Target: Renewal rate" color="green" />
+            <StatCard value="+40%" label="Target: Member referrals" color="gold" />
           </div>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
