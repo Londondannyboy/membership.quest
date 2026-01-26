@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
 import { HeroVoiceWithAuth } from '@/components/HeroVoiceWithAuth'
-import { CalendlyWidget } from '@/components/DynamicCalendly'
-import { ProfileImage } from '@/components/ProfileImage'
 import { VideoHero } from '@/components/VideoHero'
 import { UnsplashImage, ImageSection } from '@/components/UnsplashImage'
 import { luxuryImages, luxuryVideos } from '@/lib/images'
@@ -175,10 +173,10 @@ export default function HomePage() {
 
               <div className="mt-10">
                 <Link
-                  href="#about"
+                  href="#services"
                   className="inline-flex items-center gap-2 text-[#7A6208] hover:text-[#5C4B06] font-medium transition-colors"
                 >
-                  Meet the founder
+                  Explore our services
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -496,78 +494,6 @@ export default function HomePage() {
       </ImageSection>
 
       {/* ============================================
-          MEET DAN SECTION
-          Keyword: mentioned naturally
-      ============================================ */}
-      <section id="about" className="py-20 md:py-32">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Content - Left */}
-            <div>
-              <p className="text-[#7A6208] text-sm uppercase tracking-[0.2em] mb-4 font-medium">
-                The Founder
-              </p>
-
-              <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-8 leading-tight">
-                Hello, I&apos;m Dan
-              </h2>
-
-              <div className="space-y-6 text-gray-600 leading-relaxed">
-                <p>
-                  I founded this membership marketing agency because I believe elite organisations
-                  deserve marketing that matches their standards.
-                </p>
-
-                <p>
-                  Too often, I&apos;ve seen prestigious clubs and associations settle for
-                  generic marketing that fails to capture what makes them special.
-                </p>
-
-                <p>
-                  I&apos;m being transparent: we&apos;re a boutique agency.
-                  That means you get my direct attention, bespoke strategies,
-                  and a genuine partnership focused on your success.
-                </p>
-
-                <p className="text-gray-500 text-sm italic">
-                  Let&apos;s have an honest conversation about your membership challenges.
-                  No hard sell—just helpful advice.
-                </p>
-              </div>
-
-              <div className="mt-10">
-                <Link
-                  href="#book-consultation"
-                  className="inline-flex items-center gap-3 bg-[#7A6208] hover:bg-[#5C4B06] text-white px-8 py-4 rounded-full font-medium transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Book a Chat
-                </Link>
-              </div>
-            </div>
-
-            {/* Image - Right */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[#7A6208]/20 shadow-2xl">
-                  <ProfileImage
-                    src="/dan-keegan.jpg"
-                    alt="Dan Keegan - Membership Marketing Agency Founder"
-                    fallback="DK"
-                  />
-                </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#7A6208]/10 rounded-full -z-10"></div>
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#F7F5F3] rounded-full -z-10"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================
           HOW WE WORK SECTION
       ============================================ */}
       <section className="py-20 md:py-32 bg-[#F7F5F3]">
@@ -700,12 +626,33 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8 border border-gray-100">
-            <CalendlyWidget />
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100 text-center">
+            <div className="max-w-md mx-auto">
+              <svg className="w-16 h-16 mx-auto mb-6 text-[#7A6208]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <h3 className="text-xl font-serif text-gray-900 mb-4">
+                Choose a Time That Works for You
+              </h3>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Select a convenient slot for your complimentary 30-minute consultation.
+              </p>
+              <a
+                href="https://calendly.com/my-first-quest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#7A6208] hover:bg-[#5C4B06] text-white px-10 py-4 rounded-full font-medium transition-colors text-lg"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Book Your Call
+              </a>
+            </div>
           </div>
 
           <p className="text-gray-500 text-sm text-center mt-8">
-            Can&apos;t find a suitable time? Email{' '}
+            Prefer email? Reach out at{' '}
             <a href="mailto:dan@membership.quest" className="text-[#7A6208] hover:text-[#5C4B06] transition-colors">
               dan@membership.quest
             </a>

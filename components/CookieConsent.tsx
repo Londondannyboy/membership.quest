@@ -28,21 +28,21 @@ export function CookieConsent() {
   if (!showBanner) return null
 
   return (
-    <div className="bg-slate-800/95 backdrop-blur-sm border-b border-slate-700/50">
-      <div className="max-w-6xl mx-auto px-4 py-2">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 text-sm">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-t border-slate-700/50">
+      <div className="max-w-6xl mx-auto px-4 py-3">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-sm">
           <p className="text-slate-300 text-center sm:text-left">
             We use cookies to improve your experience.{' '}
             <Link
               href="/privacy"
-              className="text-blue-400 hover:text-blue-300 underline"
+              className="text-[#7A6208] hover:text-[#a8860b] underline"
             >
               Privacy Policy
             </Link>
           </p>
           <button
             onClick={dismiss}
-            className="flex-shrink-0 px-4 py-1 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-md transition-colors"
+            className="flex-shrink-0 px-5 py-2 text-sm font-medium text-white bg-[#7A6208] hover:bg-[#5C4B06] rounded-full transition-colors"
           >
             Got it
           </button>
